@@ -1,6 +1,6 @@
 # Exercise 1: Setting up Pre-Requisites for Store operations Agent
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
