@@ -1,6 +1,6 @@
 # Store Operations with Microsoft Copilot Studio
 
-### Overall Estimated Duration : 2 Hours
+### Overall Estimated Duration : 3 Hours
 
 ## Overview
 

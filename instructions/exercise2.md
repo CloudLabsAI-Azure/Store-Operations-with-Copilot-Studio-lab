@@ -1,6 +1,6 @@
 # Exercise 2: Create Store‑Operations Agent in Copilot Studio
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 45 Minutes
 
 ## Overview
 
@@ -123,6 +123,10 @@ In this task, you will connect knowledge sources such as the product catalog, po
    ![](./media/ex2img18.png)
 
 1. You have now successfully added all the necessary data as a knowledge source for this agent.
+
+1. Select **Overview (1)** tab from top menu, scroll down to **Knowledge** and make **Allow the AI to use its own general knowledge** option as **Disabled (2)**.
+
+   ![](./media/ex2img26.png)
 
 1. To test if the agent is ingested with knowledge or not, use the right message box to test the agent with some sample prompts given below:
 
