@@ -1,1 +1,0 @@
-# Store-Operations-with-Copilot-Studio-lab

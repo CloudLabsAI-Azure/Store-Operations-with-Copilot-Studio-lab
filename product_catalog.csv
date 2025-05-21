@@ -1,0 +1,11 @@
+ProductID,Name,Description,Price (USD),Category
+P101,Tailwind Sneakers,"Lightweight, breathable sneakers with cushioned soles.",79.99,Footwear
+P102,Performance Hoodie,Moisture-wicking hoodie with adjustable drawstring hood.,49.99,Apparel
+P103,All-Weather Jacket,"Windproof, water-resistant jacket with breathable lining.",129.99,Outerwear
+P104,Pro-Grip Running Shorts,Ergonomic shorts with inner liner and zip pocket.,34.99,Apparel
+P105,Trailblazer Backpack,20L backpack with multiple compartments and padded straps.,59.99,Accessories
+P106,Hydration Water Bottle,1L BPA-free water bottle with easy-spout lid.,19.99,Accessories
+P107,Endurance Sports Socks,Pack of 3 moisture-control athletic socks.,14.99,Apparel
+P108,Reflective Safety Vest,High-visibility vest with reflective strips for safety.,24.99,Safety Gear
+P109,Galaxy Fitness Tracker,Wearable tracker with heart-rate and step monitoring.,99.99,Electronics
+P1010,UltraLight Yoga Mat,Foldable yoga mat with non-slip surface.,39.99,Fitness
