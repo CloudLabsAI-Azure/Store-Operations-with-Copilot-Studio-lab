@@ -2,7 +2,7 @@
     {
         "Name": "Store Operations with Microsoft Copilot Studio",
         "Language": "English",
-        "BaseURL": "https://github.com/CloudLabsAI-Azure/Azure-Infra-Monitoring/tree/main",
+        "BaseURL": "https://github.com/CloudLabsAI-Azure/Store-Operations-with-Copilot-Studio-lab",
         "Files": [
             {
                 "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Store-Operations-with-Copilot-Studio-lab/refs/heads/main/instructions/getting-started.md",
@@ -17,11 +17,11 @@
                 "Order": 3
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Infra-Monitoring/main/instructions/ex3.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Store-Operations-with-Copilot-Studio-lab/refs/heads/main/instructions/exercise3.md",
                 "Order": 4
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Azure-Infra-Monitoring/main/instructions/ex4.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Store-Operations-with-Copilot-Studio-lab/refs/heads/main/instructions/exercise4.md",
                 "Order": 5
             }
         ]
