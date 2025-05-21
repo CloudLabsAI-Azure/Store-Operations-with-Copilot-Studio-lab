@@ -181,3 +181,5 @@ In this task, you will set up and configure a ServiceNow instance to enable auto
 ## Summary
 
 In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured a ServiceNow instance to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
+
+### You have successfully completed this exercise, please continue to next one >>

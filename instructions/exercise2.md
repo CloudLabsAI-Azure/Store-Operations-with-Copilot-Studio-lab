@@ -56,7 +56,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets`, select **Product_catalogue.csv**.
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
 
    ![](./media/ex2img11.png)
 
@@ -70,7 +70,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets`, select **Sample_orders.csv**.
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
 
    ![](./media/ex2img11.png)
 
@@ -84,7 +84,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/ex2img4.png)
 
-1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Fabrikam Returns Policy for Customers` file.
+1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
 
    ![](./media/ex2img5.png)
 
@@ -142,3 +142,4 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 In this exercise, you created a Copilot Studio agent that served as the foundation for your store operations assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
 
+### You have successfully completed this exercise, please continue to next one >>

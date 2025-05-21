@@ -22,3 +22,9 @@ In this task, you will create a topic that allows users to place product orders 
 ## Task 2: Create a “Support Ticket” topic and integrate with ServiceNow
 
 In this task, you will build a topic that enables users to request support by creating a service ticket. The topic will gather information like the issue description, urgency level, and user contact details. Once the data is collected, the agent will connect to ServiceNow and automatically generate a corresponding incident ticket. This integration ensures quick and efficient resolution of customer issues without manual ticket creation.
+
+## Summary
+
+In this exercise, you enhanced your StoreOps Assistant by building advanced AI workflows that extended beyond static knowledge responses. You created dynamic topics that allowed users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and ServiceNow. These enhancements enabled your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+
+### You have successfully completed this exercise, please continue to next one >>
