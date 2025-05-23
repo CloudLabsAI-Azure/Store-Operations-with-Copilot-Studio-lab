@@ -34,7 +34,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
     ![](./media/ex2img12.png)
 
-1. Once after adding the details, click on **Create** to create the agent.
+1. Once after adding the details, click on **Continue** to create the agent.
 
 1. You have successfully created the StoreOps Assistant. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
