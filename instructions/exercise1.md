@@ -16,61 +16,56 @@ You will be able to complete the following tasks:
 
 ## Task 1 : Provisioning power platform environmnet
 
-In this task, you will provision and configure your Power Platform environment enabling Dataverse, opt new features and activating the Copilot Studio trial.
+1. Navigate to [Power Apps](https://make.powerapps.com/) using a new tab in the browser.
 
-1. From your browser, navigate to **Power Platform Admin Center** using this link [Power Platform](https://admin.powerplatform.microsoft.com/)
+1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
 
-1. If the **Sign in** page is prompted, use the provided credentials to sign in to Power Platform and click **Next**.
+   ![](./media/ex3img71.png)
 
-   - Email/Username: <inject key="AzureAdUserEmail"></inject>
+1. In the new pane for creating New Database, click on **Create my Database**.
 
-     ![](./media/pp-1.png)
+   ![](./media/ex3img72.png)
 
-1. Now, enter the following password and click on **Sign in**.
+1. Once done, click on **Create with Excel or .CSV file**.
 
-   - Password: <inject key="AzureAdUserPassword"></inject>
+   ![](./media/ex3img73.png)
 
-     ![](./media/pp-2.png)
-   
-1. On the **Stay signed in** pane, click on **No**.
+1. In the pop up window to create a environment, Click on **Create**. This will create a new power platform developer environment.
 
-   ![](./media/pp-3.png)
+   ![](./media/ex3img74.png)
+   >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
 
-1. Once you are in the **Power Platform Admin center** page, select **Manage (1)** from left menu and click on **+ New (2)**, to create a new environment.
+1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
-   ![](./media/pp-4-updated.png)
+   ![](./media/ex2img10.png)
 
-1. In the **New environment** page, provide the following details and click on **Next (5)** :
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
 
-   - **Name**: provide as **odl_user_<inject key="DeploymentID" enableCopy="false" />_env** **(1)**.
+   ![](./media/ex2img11.png)
 
-   - **Get new features early**: Toggle this option to **Yes (2)**.
+1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
 
-   - **Type**: Select **Production (3)** from dropdown.
+   ![](./media/ex2img19.png)
 
-   - **Add a Dataverse data store**: Toggle this option to **Yes (4)**.
+   ![](./media/ex2img20.png)
 
-     ![](./media/pp-5.png)
+1. Again, select **Tabes (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
-1. In the next pane, click on **+ Select** under **Security group**.
+   ![](./media/ex2img10.png)
 
-   ![](./media/pp-6.png)
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
 
-1. In the **Edit security group** pane, choose **None** option and click on **Done**.
+   ![](./media/ex2img11.png)
 
-   ![](./media/pp-7.png)
+1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
 
-1. Once configurations are done, click on **Save**.
+   ![](./media/ex2img19.png)
 
-   ![](./media/pp-8.png)
+   ![](./media/ex2img20.png)
 
-1. Now the environment creation will start, please wait till the **State** changes from **Preparing** to **Ready**.
+   ![](./media/ex3img71.png)
 
-   ![](./media/pp-9.png)
-
-    **Note**: You can also use the **Refresh** button to check if the **State** is **Ready** after some time.
-
-1. As you have now created a new environment, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
+1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
    
 1. In the pop-up window that appears click on **Start Free Trial**
 
