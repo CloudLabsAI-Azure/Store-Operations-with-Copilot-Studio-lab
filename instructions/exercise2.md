@@ -44,43 +44,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
-1. Before adding knowledge base to the agent, you have to create two dataverse tables for product catalogue and order details.
-
-1. Navigate to [Power Apps](https://make.powerapps.com/) using a new tab in the browser.
-
-1. Once you are in power apps portal, change the environment to the one that you have created before.
-
-   ![](./media/ex2img9.png)
-
-1. Once done, select **Tabes (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
-
-   ![](./media/ex2img10.png)
-
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
-
-   ![](./media/ex2img11.png)
-
-1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
-
-   ![](./media/ex2img19.png)
-
-   ![](./media/ex2img20.png)
-
-1. Again, select **Tabes (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
-
-   ![](./media/ex2img10.png)
-
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
-
-   ![](./media/ex2img11.png)
-
-1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
-
-   ![](./media/ex2img19.png)
-
-   ![](./media/ex2img20.png)
-
-1. Navigate back to Copilot Studio tab, and select **Knowledge (1)** tab from top menu and click on **+ Add knowledge (2)**.
+1. Navigate to Copilot Studio tab, and select **Knowledge (1)** tab from top menu and click on **+ Add knowledge (2)**.
 
    ![](./media/ex2img4.png)
 
