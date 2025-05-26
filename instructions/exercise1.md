@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will provision a Power Platform environment—enabling Dataverse, Azure AI services, and the Copilot Studio trial. You will also set up and configure a ServiceNow instance to handle incident management. Together, these foundational steps establish the infrastructure needed to build and deploy your RAG‑driven store operations agent.
+In this exercise, you will provision a Power Platform environment—enabling Dataverse, Azure AI services, and the Copilot Studio trial. You will also set up and configure zendesk to handle incident management. Together, these foundational steps establish the infrastructure needed to build and deploy your RAG‑driven store operations agent.
 
 ## Objectives
 
@@ -12,7 +12,7 @@ You will be able to complete the following tasks:
 
 - Task 1 : Provisioning power platform environmnet
 
-- Task 2 : Setting up ServiceNow for incident management
+- Task 2 : Setting up zendesk for incident management
 
 ## Task 1 : Provisioning power platform environmnet
 
@@ -85,96 +85,88 @@ You will be able to complete the following tasks:
 
    ![](./media/pp-11.png)
 
-## Task 2 : Setting up ServiceNow for incident management
+## Task 2 : Setting up zendesk for incident management
 
-In this task, you will set up and configure a ServiceNow instance to enable automated incident management for your store operations agent.
+In this task, you will set up and configure zendesk to enable automated incident management for your store operations agent.
 
-**ServiceNow** is a cloud-based platform that provides enterprise workflow automation solutions to streamline and manage business processes. It offers tools for IT service management (ITSM), IT operations management (ITOM), and IT business management (ITBM), enabling organizations to improve efficiency, reduce manual tasks, and enhance collaboration across departments. ServiceNow's centralized platform allows for incident tracking, service requests, change management, and integration with various third-party tools. Now you will set up the servicenow account.
+**Zendesk** is a cloud-based customer service and engagement platform designed to improve customer support operations and enhance user satisfaction. It offers a suite of tools for ticket management, live chat, help center creation, and customer self-service. Zendesk supports omnichannel communication, enabling businesses to manage customer interactions across email, chat, phone, and social media from a centralized interface. Its automation features help streamline workflows, assign tickets, and provide analytics for performance tracking. Now you will set up the Zendesk account.
 
-1. Navigate to [ServiceNow Developer Portal](https://developer.servicenow.com/dev.do) using a new tab in your browser.
+1. Navigate to [Zendesk Portal](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChsSEwjbjIaHh8GNAxUfi7kFHWltF80YACICCAEQARoCdG0&co=1&gclid=EAIaIQobChMI24yGh4fBjQMVH4u5BR1pbRfNEAAYAiAAEgI3qvD_BwE&ohost=www.google.com&cid=CAASJeRozdrFK5n5mqcvpdaujD2HlLH524rvNzYIn6bFLaPbbXX2vcQ&sig=AOD64_2ES2d8GYvQCxT77uWXGF2XHo1E-g&q&adurl&ved=2ahUKEwjQnoGHh8GNAxWUoq8BHcQ6KTUQ0Qx6BAggEAE) using a new tab in your browser.
 
-1. Once you are in the portal, select **Sign up and Start Building**.
+1. Once you are in the portal, under **Work email** add the value as **<inject key="AzureAdUserEmail"></inject>** and click on **Start your free trail**.
 
-    ![](./media/snimg1.png)
+   ![](./media/ex4img1.png)
 
-1. Now you will be navigated to **Sign Up** page. Please fill up the details and click on **Sign Up**.
+1. In the next pane, provide the first name as **ODL** and clik on next.
 
-    ![](./media/r16.png)
+   ![](./media/ex4img2.png)
 
-    > **Note:** For the details, you can use your own credentials to sign up for servicenow account.
+1. Next, provide last name as **User** and click on Next.
 
-1. Once after signing up, you will get a verification mail to the account which you have provided.
+   ![](./media/ex4img3.png)
 
-    ![](./media/snimg3.png)
+1. For **Phone number**, you can provide any 10 digit number as shown below and click on **Next**.
 
-1. Please click on **verify Email**, and login using your credentials.
+   ![](./media/ex4img4.png)
 
-    ![](./media/snimgup.png)
+1. Provide company name as **Contoso** and click on **Next**.
 
-1. Once verified, you will be navigated to ServiceNow developer portal.
+   ![](./media/ex4img5.png)
 
-1. In the **Do you code ?** pop up, select **No** and click on **Next**. In the next pane, **Enable** the checkbox for I have read and agree to the ServiceNowDeveloper site terms of use and then click on **Finish Setup**.
+1. In the next pane, provide job title as **Cloud Engineer** or you can provide any job title here.
 
-    ![](./media/snimg4new.png)
+   ![](./media/ex4img6.png)
 
-1. From the navigation menu of developer portal, click on **Request Instance**.
+1. Next, select **1-9** from the drop down for the size of the company and click on **Next**.
 
-    ![](./media/snimg5.png)
+   ![](./media/ex4img7.png)
 
-1. On the **Request an Instance** pane, select **Xanadu (1)** release and click on **Request (2)**
+1. For **Language**, select **English** and click on Next.
 
-    ![](./media/snimg6.png)
+   ![](./media/ex4img8.png)
 
-    >**Note:** It will take few minutes to get the instance allocated.
+1. In the last pane, provide password as **<inject key="AzureAdUserPassword"></inject>** and click on **Complete trial signup**.
 
-1. Once the instance is allocated, click on your profile.
+   ![](./media/ex4img9.png)
 
-    ![](./media/snimg7.png)
+1. To verify the account, select **Open Outlook** option from the pop up.
 
-1. Now, you have to assign the user with **Admin** role. To do that, click on **<> Change User Role** option.
+   ![](./media/ex4img10.png)
 
-    ![](./media/snimg8.png)
+1. Once selected, you will be navigated to Outlook, complete the sign in and open the verification mail from ZenDesk. Click on **Verify your account**.
 
-1. In **Change User Role** page, select **Admin** and Click on **Change User Role**.
+   ![](./media/ex4img11.png)
 
-    ![](./media/snimg9.png)
+1. Again, you will be navigated to Zendesk portal. On **Welcome to your free trial** page, click on **Let's go ->**.
 
-1. Once the role is set to admin, again from the profile menu, select **Manage instance password**.
+   ![](./media/ex4img12.png)
 
-    ![](./media/snimg10.png)
+1. In the next pane, click on **Next**.
 
-1. In the **Manage Instance password** pane, copy `Instance URL` **(1)**, `Username` **(2)** and `Password` **(3)** values to your notepad. You will be using these values further in this task.
+   ![](./media/ex4img13.png)
 
-    ![](./media/snimg11.png)
+1. To skip auto-response setup, select **I don't want an auto-response** option.
 
-1. Navigate back to the home page of **Developer Portal**.
+   ![](./media/ex4img14.png)
 
-1. From the home page, click on **Start Building** option.
+1. Next, click on **Skip** to skip the team invitation.
 
-    ![](./media/snimg12.png)
+   ![](./media/ex4img15.png)
 
-1. Now you will be navigated to creator portal. From the navigation menu, select **All (1)** and click on **Incidents (2)** from the dropdown.
+1. In the next pane to configure connector, click on **Skip**.
 
-    ![](./media/snimg13.png)
+   ![](./media/ex4img16.png)
 
-1. Once you are in the **Incidents** pane, click on **View: Self Service** option to remove the filters.
+1. Next, click on **Solve a test ticket**. You will be navigated to a test ticket.
 
-    ![](./media/snimg17.png)
+   ![](./media/ex4img17.png)
 
-1. Now from the options, select **View** as **Default View** and **Filters** as **--None--**.
+1. Once you are in the tickets portal, click on the **Home icon** from the left menu as shown. You will initially see sample test tickets displayed on this page. Once you configure the agent, any tickets generated by the agent will also appear here.
 
-    ![](./media/snimg14.png)
-
-    ![](./media/snimg15.png)
-
-1. Now, you will be able to see all the incidents that are reported. The incidents which are already present are the demo incidents which are present by default.
-
-    ![](./media/snimg16.png)
-
-1. Now the ServiceNow is completly setup to get the incidents from Store Operations Agent.
+   ![](./media/ex4img18.png)
 
 ## Summary
 
-In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured a ServiceNow instance to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
+In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured zendesk to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
 
 ### You have successfully completed this exercise, please continue to next one >>
