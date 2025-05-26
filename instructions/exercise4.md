@@ -12,15 +12,51 @@ You will be able to complete the following tasks:
 
 - Task 1: Publish the agent to a Microsoft Teams channel
 
-- Task 2: Validate the agent functionality using test prompts
-
 ## Task 1: Publish the agent to a Microsoft Teams channel
 
 In this task, you will configure and publish your StoreOps Assistant to Microsoft Teams. You will complete the necessary steps to make the agent available within a Teams channel, ensuring that team members can access and use it as part of their daily workflow.
 
-## Task 2: Validate the agent functionality using test prompts
+1. Now that you've configured the agent, it's time to publish it so it can be used across different platforms.
 
-Once the assistant is published, you will validate its performance by interacting with it in Teams. You will test key scenarios such as looking up product information, placing an order, and creating a support ticket. This helps ensure that the agent functions as expected across all integrated workflows.
+1. From the top menu, click on **Channels (2)** option, if you can't see it directly click on **+1 (1)** so that you can see it.
+
+   ![](./media/ex3imgup9.png)
+
+1. From the list of channels, select **Teams and Microsoft 365 Copilot**. Configuring this channel will publish the agent to both Teams and Microsoft 365 Copilot.
+
+   ![](./media/ex3imgup10.png)
+
+1. In the next pane, click on **Add channel**.
+
+   ![](./media/ex3imgup11.png)
+
+1. Click on **Publish** in the pop up window to publlish your agent to the selected channel.
+
+   ![](./media/ex3imgup12.png)
+
+1. Once published, in the same pane, click on **See agent in Teams**.
+
+   ![](./media/ex3imgup13.png)
+
+1. Now, you will be navigated to a new browser tab, Click on **Use the webapp instead**.
+
+   ![](./media/ex3imgup14.png)
+
+1. In the next pane, Click on **Open** to open the **StoreOps Assistant** in Teams.
+
+   ![](./media/ex3imgup15.png)
+
+1. Now the **StoreOps Assistant** will be opened in teams, you can tryout some prompts to validate it.
+
+   ![](./media/ex3imgup16.png)
+
+1. Once done, navigate back to Copilot Studio and select **See agent in Microsoft 365**.
+
+   ![](./media/ex3imgup17.png)
+
+1. In the next pane, Click on **Add** to add the StoreOps Assistant to Microsoft 365 copilot.
+
+   ![](./media/ex3imgup18.png)
 
 ## Summary
 

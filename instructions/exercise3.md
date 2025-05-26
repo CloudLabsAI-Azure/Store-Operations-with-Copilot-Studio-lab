@@ -72,7 +72,7 @@ In this task, you will create a topic that allows users to place product orders 
 
 1. In the text area, add the message as `The product is not avaiable, please look for other products we have!`.
 
-   ![](./media/ex3img13.png)
+   ![](./media/ex3imgup1.png)
 
 1. Once done, add one more node below that, now from list, select **Topic management (1)** and click on **Go to step (2)**.
 
@@ -154,11 +154,11 @@ In this task, you will create a topic that allows users to place product orders 
 
 ## Task 2: Define an Agent Flow to Insert Order Details into Dataverse
 
-In this task, you will create an Agent Flow (formerly known as an Action) that inserts the collected order details—such as customer name, product name, and delivery address—into a Dataverse table. This Agent Flow will be triggered by the topic you created earlier and will handle the data insertion into the appropriate table within Microsoft Dataverse.
+In this task, you will create an action that inserts the collected order details—such as customer name, product name, and delivery address—into a Dataverse table. This Agent Flow will be triggered by the topic you created earlier and will handle the data insertion into the appropriate table within Microsoft Dataverse.
 
-1. Once the flow is saved, click on **+** to add the new node under the previous node. Select **Add a tool (1)** option from the list and click on **New Agent flow (2)** to create a new flow.
+1. Once the flow is saved, click on **+** to add the new node under the previous node. Select **Add an action (1)** option from the list and click on **New Agent flow (2)** to create a new flow.
 
-   ![](./media/ex3img29.png)
+   ![](./media/ex3imgup2.png)
 
 1. You will be navigated to a new designer experience, click on **When an agent calls the flow** node.
 
@@ -208,6 +208,22 @@ In this task, you will create an Agent Flow (formerly known as an Action) that i
 
    ![](./media/ex3img41.png)
 
+1. In the **Create connection** pane, click n **Sign in**.
+
+   ![](./media/ex3imgup3.png)
+
+1. Once done, a pop up window will be opened to pick an account for authentication. Select the user account which you are using for this lab.
+
+   ![](./media/ex3imgup5.png)
+
+   >**Note:** If you're unable to see a pop-up window or are encountering an error, it's likely that pop-ups are blocked in your browser. Please click the pop-up icon in your browser's address bar and allow pop-ups for this site.
+
+   ![](./media/ex3imgup4.png)
+
+1. Once done, in the next pane, click on **Allow access** Option to grant the agent access to update the Dataverse table.
+
+   ![](./media/ex3imgup6.png)
+
 1. In the configuration page, please select **Order Record** from the list under **Table name**.
 
    ![](./media/ex3img42.png)
@@ -256,7 +272,15 @@ In this task, you will create an Agent Flow (formerly known as an Action) that i
 
    ![](./media/ex3img54.png)
 
-1. Once navigated to topic, you can see a new **Action** will be added, under Username parameter click on **... (1)** and select **UserName (2)** variable.
+1. Once navigated to Actions, select **Topics (1)** from the top menu and click on **Place Order (2)** topic.
+
+   ![](./media/ex3imgup7.png)
+
+1. Once you are inside the topic, click on **+** and, click on **Add an action (1)** and select **Untitled (2)**.
+
+   ![](./media/ex3imgup8.png)
+
+1. In the **Action** node, under Username parameter click on **... (1)** and select **UserName (2)** variable.
 
    ![](./media/ex3img55.png)
 

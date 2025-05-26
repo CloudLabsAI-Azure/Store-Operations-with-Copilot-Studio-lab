@@ -69,7 +69,7 @@ You will be able to complete the following tasks:
    
 1. In the pop-up window that appears click on **Start Free Trial**
 
-     ![](./media/gt12.png)
+   ![](./media/gt12.png)
 
 1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
 
