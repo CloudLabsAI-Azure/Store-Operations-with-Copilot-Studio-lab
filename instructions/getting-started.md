@@ -4,7 +4,7 @@
 
 ## Overview
 
-This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and service‑desk data while leveraging AI models like text embeddings, language models and generative AI. The lab will cover customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging and ServiceNow ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
+This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and service‑desk data while leveraging AI models like text embeddings, language models and generative AI. The lab will cover customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging and Zendesk ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
 
 ## Objective
 
@@ -14,7 +14,7 @@ Learn to build and automate a smart store‑operations agent using Microsoft Cop
 
 - **Create Store‑Operations Agent in Copilot Studio:** Get insights on spinning up a new Copilot Studio agent, assigning it a name and description, and connecting initial knowledge sources (product catalog, policy docs, website content).
 
-- **Build Advanced AI Workflows for Orders & Tickets:** Understand how to extend your agent with retrieval‑augmented prompts, configure actions to record orders in Dataverse, and integrate ServiceNow to auto‑create support tickets.
+- **Build Advanced AI Workflows for Orders & Tickets:** Understand how to extend your agent with retrieval‑augmented prompts, configure actions to record orders in Dataverse, and integrate Zendesk to auto‑create support tickets.
 
 - **Deploy & Publish Your Agent to Microsoft Teams:** Get insights on packaging and publishing your completed agent into a Teams channel, then validating end‑to‑end functionality—product lookup, order placement, and ticket creation—directly within Teams.
 
@@ -28,11 +28,11 @@ Participants should have the following prerequisites:
 
 ## Architecture
 
-The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as Knowldege source. Workflow actions—such as placing orders in Dataverse and opening tickets in ServiceNow are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel  delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
+The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as Knowldege source. Workflow actions—such as placing orders in Dataverse and opening tickets in Zendesk are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel  delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
 
 ## Architecture Diagram
 
-![](./media/arch-v2.png)
+![](./media/archv2.png)
 
 ## Explanation of Components
 
@@ -40,7 +40,7 @@ The architecture for this lab involves several key components:
 
 - **Copilot Studio:** Facilitates user interaction by connecting to Azure AI Search for Q&A and other workflows. It provides an intuitive interface for leveraging indexed data and AI capabilities in real-time.
 
-- **ServiceNow:** Manages support and exception workflows by exposing ticket‑creation and incident‑management APIs. The Copilot Studio agent invokes ServiceNow actions to automatically open, update, and track service tickets based on user requests or operational alerts.
+- **Zendesk:** Manages support and exception workflows by exposing ticket‑creation and incident‑management APIs. The Copilot Studio agent invokes Zendesk actions to automatically open, update, and track service tickets based on user requests or operational alerts.
 
 - **Dataverse:** Acts as the centralized, low‑code data backend for transactional records. It stores order entries, inventory updates, and other structured data; the Copilot Studio agent uses Dataverse actions to create, read, update, and delete records as part of automated store‑operations workflows.
 
