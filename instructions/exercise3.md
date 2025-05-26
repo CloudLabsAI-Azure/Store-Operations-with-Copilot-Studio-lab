@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will enhance your StoreOps Assistant by building advanced AI workflows that go beyond static knowledge responses. You will create dynamic topics that allow users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and ServiceNow. These enhancements will enable your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you will enhance your StoreOps Assistant by building advanced AI workflows that go beyond static knowledge responses. You will create dynamic topics that allow users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and zendesk. These enhancements will enable your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
 
 ## Objectives
 
@@ -12,7 +12,7 @@ You will be able to complete the following tasks:
 
 - Task 1: Create a topic to record orders in Dataverse
 
-- Task 2: Create a “Support Ticket” topic and integrate with ServiceNow
+- Task 2: Create a “Support Ticket” topic and integrate with zendesk
 
 ## Task 1: Create a topic to record orders in Dataverse
 
@@ -350,7 +350,7 @@ In this task, you will create an action that inserts the collected order details
 
 1. once you are in Power apps portal, select **Tables (1)** from left menu and from the list click on **Order Record (2)** table.
 
-     ![](./media/ex3img67.png)
+   ![](./media/ex3img67.png)
 
 1. Now, you can able to a record is added with the details that you have provided.
 
@@ -358,12 +358,210 @@ In this task, you will create an action that inserts the collected order details
 
 1. You have successfully created a flow with an Action to manage order placements.
 
-## Task 2: Create a “Support Ticket” topic and integrate with ServiceNow
+## Task 2: Create a “Support Ticket” topic and integrate with zendesk
 
-In this task, you will build a topic that enables users to request support by creating a service ticket. The topic will gather information like the issue description, urgency level, and user contact details. Once the data is collected, the agent will connect to ServiceNow and automatically generate a corresponding incident ticket. This integration ensures quick and efficient resolution of customer issues without manual ticket creation.
+In this task, you will build a topic that enables users to request support by creating a service ticket. The topic will gather information like the issue description, urgency level, and user contact details. Once the data is collected, the agent will connect to zendesk and automatically generate a corresponding incident ticket. This integration ensures quick and efficient resolution of customer issues without manual ticket creation.
+
+1. As you have started a free trial for zendesk. You will be creating a topic that integrating with zendesk.
+
+1. In copilot Studio portal, select **Topics (1)** tab from top menu, click on **+ Add a topic (2)** and select **From blank**.
+
+   ![](./media/ex3img1.png)
+
+1. Once you are in the designer, on the **Trigger** node, add the description as `This topic helps user to create tickets and raise their queries`.
+
+   ![](./media/ex5img1.png)
+
+1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question** as the agent should ask a question to user related to the product they want to buy.
+
+   ![](./media/ex3img3.png)
+
+1. In the text area of the node, add the question as `Kindly provide the subject for the ticket`.
+
+   ![](./media/ex5img2.png)
+
+1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Click on **> (1)** as shown and select **User's entire response (2)**.
+
+   ![](./media/ex5img3.png)
+
+1. Now, click on **Var1** as we have to change the variable name.
+
+   ![](./media/ex3img6.png)
+
+1. Change the name to **Subject** under Variable name.
+
+   ![](./media/ex5img28.png)
+
+1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question** as the agent should ask a question to user related to the product they want to buy.
+
+   ![](./media/ex3img3.png)
+
+1. In the text area of the node, add the question as `Please provide a detailed description on the ticket`.
+
+   ![](./media/ex5img30.png)
+
+1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Click on **> (1)** as shown and select **User's entire response (2)**.
+
+   ![](./media/ex5img3.png)
+
+1. Now, click on **Var1** as we have to change the variable name.
+
+   ![](./media/ex3img6.png)
+
+1. Change the name to **Description** under Variable name.
+
+   ![](./media/ex5img29.png)
+
+1. Once done, please use the **Save** option from the top menu to save the flow.
+
+   ![](./media/ex3img27.png)
+
+1. In the pop up, under **Name your topic** provide name as `Place Orders` **(1)** and click on **Save (2)**.
+
+   ![](./media/ex5img4.png)
+
+1. Once the flow is saved, click on **+** to add the new node under the previous node. Select **Add an action (1)** option from the list and click on **New Agent flow (2)** to create a new flow.
+
+   ![](./media/ex3imgup2.png)
+
+1. You will be navigated to a new designer experience, click on **When an agent calls the flow** node.
+
+   ![](./media/ex3img30.png)
+
+1. A new pane will be opened from the left, click on **Add an input** as we have to pass the user inputs such as `Subject` and `Description`.
+
+   ![](./media/ex3img31.png)
+
+   >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
+
+1. Select **Text** as te datatype for the variable.
+
+   ![](./media/ex3img32.png)
+
+1. Provide **Subject** as the Input name.
+
+   ![](./media/ex5img26.png)
+
+1. Repeat the same steps to add `Description` variable.
+
+   ![](./media/ex5img27.png)
+
+1. Now, click on **+** to add the **Dataverse** connector.
+
+   ![](./media/ex3img39.png)
+
+1. From the list, search for **Zendesk** and select **Create item**.
+
+   ![](./media/ex5img15.png)
+
+1. In the create connection pane, add the company name which is the first part of zendesk URL, which starts with contoso.
+
+   ![](./media/ex5img16.png)
+
+1. In the pop up window, provide these sign in credentials:
+
+   - Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+   - Password: <inject key="AzureAdUserPassword"></inject>
+
+   ![](./media/ex5img17.png)
+
+1. In the next pane, Select **Allow**.
+
+   ![](./media/ex5img18.png)
+
+1. Once done, in the next pane, click on **Allow access** Option to grant the agent access to zendesk.
+
+   ![](./media/ex5img19.png)
+
+1. Once done, for **Table name**, from the list select **Tickets**.
+
+   ![](./media/ex5img20.png)
+
+1. For **Advanced parameters**, Click on **V (1)** and select **Subject** and **Description (2)**.
+
+   ![](./media/ex5img21.png)
+
+
+1. For **Subject** parameter, click on **Dynamic content Symbol** as shown.
+
+   ![](./media/ex5img22.png)
+
+1. From the variable list, select **Subject**.
+
+   ![](./media/ex5img23.png)
+
+1. For **Description** parameter, click on **Dynamic content Symbol** as shown and select **Description** from list.
+
+   ![](./media/ex5img24.png)
+
+1. Once configured, the connector will look like this.
+
+   ![](./media/ex5img25.png)
+
+1. Now, you have successfully set up your agent flow, click on **Publish** from the top right corner to save the flow.
+
+   ![](./media/ex3img53.png)
+
+1. Once published, a pop up will be opened, click on **Go back to agent** to navigate back to your topic.
+
+   ![](./media/ex3img54.png)
+
+1. Now, you can see an action will be populated in your topic.
+
+   ![](./media/ex5img5.png)
+
+1. In **Action** node, click **>** under description and select **Description**.
+
+   ![](./media/ex5img6.png)
+
+1. Please repeat the same steps to configure the variable for **Subject** parameter.
+
+1. Once done, the action will look similar to this.
+
+   ![](./media/ex5img7.png)
+
+1. Now, add a new node by clicking on **+** and select **Send a message** option from list.
+
+   ![](./media/ex3img58.png)
+
+1. In the text area, add the message as `Thank you, your ticket has been successfully submitted`.
+
+   ![](./media/ex5img8.png)
+
+1. Once done, please use the **Save** option from the top menu to save the flow.
+
+   ![](./media/ex3img27.png)
+
+1. Now use the **Test** area in the right to validate the working of the flow.
+
+1. In the chat area, add prompt as `I want to create a ticket` and send it.
+
+   ![](./media/ex5img10.png)
+
+1. Now, the agent will ask a question get subject for ticket. Add the subject as `Refund Not Received`.
+
+   ![](./media/ex5img11.png)
+
+1. Again the agent will ask a question to get a description on the ticket. Provide the below description:
+
+   ```
+   I returned an order and requested for a refund . However, I have not yet received the refunded amount.
+   The expected refund timeline has passed, and I would appreciate it if you could look into this matter. Please let me know if any additional information is required from my side.
+   ```
+
+   ![](./media/ex5img12.png)
+
+1. You will now see a confirmation from the agent indicating that the ticket has been successfully created.
+
+   ![](./media/ex5img13.png)
+
+1. Navigate back to **Zendesk** portal, you can see that the ticket with a subject **Refund Not Received** is created.
+
+   ![](./media/ex5img14.png)
 
 ## Summary
 
-In this exercise, you enhanced your StoreOps Assistant by building advanced AI workflows that extended beyond static knowledge responses. You created dynamic topics that allowed users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and ServiceNow. These enhancements enabled your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you enhanced your StoreOps Assistant by building advanced AI workflows that extended beyond static knowledge responses. You created dynamic topics that allowed users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and zendesk. These enhancements enabled your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
 
 ### You have successfully completed this exercise, please continue to next one >>
