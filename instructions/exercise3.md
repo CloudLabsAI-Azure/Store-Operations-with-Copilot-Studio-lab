@@ -160,6 +160,8 @@ In this task, you will create an action that inserts the collected order details
 
    ![](./media/ex3imgup2.png)
 
+   >**Note:** You may see **Add a Tool** instead of **Add an Action**, please select **Add a Tool** option as they both work exactly same.
+
 1. You will be navigated to a new designer experience, click on **When an agent calls the flow** node.
 
    ![](./media/ex3img30.png)
@@ -232,6 +234,8 @@ In this task, you will create an action that inserts the collected order details
 
    ![](./media/ex3img43.png)
 
+   >**Note:** If you are not able to see **OderID** parameter showing up by default, it means the parameter is not set as Primary index. You can select this parameter from advanced parameters below and configure it with **guid()** function.
+
 1. In the text area, add `guid()` **(1)** - This will generate a Globally Unique Id. Click on **Add (2)**.
 
    ![](./media/ex3img60.png)
@@ -274,11 +278,13 @@ In this task, you will create an action that inserts the collected order details
 
 1. Once navigated to Actions, select **Topics (1)** from the top menu and click on **Place Order (2)** topic.
 
-   ![](./media/ex3imgup7.png)
+   ![](./media/ex3imgup7n.png)
 
 1. Once you are inside the topic, click on **+** and, click on **Add an action (1)** and select **Untitled (2)**.
 
    ![](./media/ex3imgup8.png)
+
+   >**Note:** You may see **Add a Tool** instead of **Add an Action**, please select **Add a Tool** option as they both work exactly same.
 
 1. In the **Action** node, under Username parameter click on **... (1)** and select **UserName (2)** variable.
 
@@ -416,7 +422,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/ex3img27.png)
 
-1. In the pop up, under **Name your topic** provide name as `Place Orders` **(1)** and click on **Save (2)**.
+1. In the pop up, under **Name your topic** provide name as `Ticket Creation` **(1)** and click on **Save (2)**.
 
    ![](./media/ex5img4.png)
 

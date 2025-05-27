@@ -38,15 +38,19 @@ In this task, you will configure and publish your StoreOps Assistant to Microsof
 
    ![](./media/ex3imgup13.png)
 
-1. Now, you will be navigated to a new browser tab, Click on **Use the webapp instead**.
+1. Now, you will be navigated to a new browser tab, Click on **Use the web app instead**.
 
    ![](./media/ex3imgup14.png)
+
+1. Once you are in Teams web app, click on add to add the agent to the chat.
+
+   ![](./media/ex5img32.png)
 
 1. In the next pane, Click on **Open** to open the **StoreOps Assistant** in Teams.
 
    ![](./media/ex3imgup15.png)
 
-1. Now the **StoreOps Assistant** will be opened in teams, you can tryout some prompts to validate it.
+1. Now the **StoreOps Assistant** will be opened in teams, you can tryout some prompts for `Placing Orders`, `Creating Tickets` and validate it.
 
    ![](./media/ex3imgup16.png)
 
@@ -57,6 +61,12 @@ In this task, you will configure and publish your StoreOps Assistant to Microsof
 1. In the next pane, Click on **Add** to add the StoreOps Assistant to Microsoft 365 copilot.
 
    ![](./media/ex3imgup18.png)
+
+   >**Note:** If you are not navigated to copilot chat, please wait for sometime and publish the agent again from copilot studio and try accessing it again.
+
+1. Once added, you will be navigated to **Copilot Chat** pane, where the **StoreOps Assistant** is opened. You can tryout some prompts for `Placing Orders`, `Creating Tickets` and validate it.
+
+   ![](./media/ex5img31.png)
 
 ## Summary
 

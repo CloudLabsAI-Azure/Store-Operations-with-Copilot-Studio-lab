@@ -24,7 +24,7 @@ You will be able to complete the following tasks:
 
 1. In the new pane for creating New Database, click on **Create my Database**.
 
-   ![](./media/ex3img72.png)
+   ![](./media/ex3img72up.png)
 
 1. Once done, click on **Create with Excel or .CSV file**.
 
@@ -39,7 +39,7 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
 
    ![](./media/ex2img11.png)
 
@@ -53,7 +53,7 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\Datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
 
    ![](./media/ex2img11.png)
 

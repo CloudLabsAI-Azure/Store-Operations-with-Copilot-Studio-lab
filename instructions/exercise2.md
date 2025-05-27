@@ -34,6 +34,17 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
     ![](./media/ex2img12.png)
 
+    >**Note:** Sometimes you may see a diffrent UI, if you are seeing a UI diffrent than this, then follow this below steps:
+
+    - Click on **Skip to configure**, to get the configuration pane.
+
+      ![](./media/ex5img34.png)
+   
+    - In the next pane, provide the same details given above and click on **Create**.
+
+      ![](./media/ex5img33.png)
+
+
 1. Once after adding the details, click on **Continue** to create the agent.
 
 1. You have successfully created the StoreOps Assistant. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
@@ -64,7 +75,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/ex2img14.png)
 
-1. From the list, search and select **Order Record** and **Product Record** tables. Click on **Next**.
+1. From the list, search and select **Order Record** and **Product** tables. Click on **Next**.
 
    ![](./media/ex2img21.png)
 
