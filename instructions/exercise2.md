@@ -59,7 +59,7 @@ In this task, you will connect knowledge sources, such as the product catalog, p
 
    ![](./media/ex2img4.png)
 
-1. In the next pane, click the **Select to browse** option as shown. In the popup window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
+1. In the next pane, click the **Select to browse** option as shown. In the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
 
    ![](./media/ex2img5.png)
 
