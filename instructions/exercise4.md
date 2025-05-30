@@ -30,7 +30,7 @@ In this task, you will configure and publish your StoreOps Assistant to Microsof
 
    ![](./media/ex3imgup11.png)
 
-1. Click on **Publish** in the popup window to publish your agent to the selected channel.
+1. Click on **Publish** in the pop-up window to publish your agent to the selected channel.
 
    ![](./media/ex3imgup12.png)
 
