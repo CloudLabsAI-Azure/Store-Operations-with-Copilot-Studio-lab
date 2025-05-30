@@ -92,11 +92,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
      >**Note:** If you see the Action Required dialog box, then select the **Ask Later** option.
      
-1. If you see the popup **Stay Signed in?**, click **No**.
+1. If you see the pop-up **Stay Signed in?**, click **No**.
 
-1. If you see the popup, **"You have free Azure Advisor recommendations!"**, close the window to continue the lab.
+1. If you see the pop-up, **"You have free Azure Advisor recommendations!"**, close the window to continue the lab.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
 ## Support Contact
 
