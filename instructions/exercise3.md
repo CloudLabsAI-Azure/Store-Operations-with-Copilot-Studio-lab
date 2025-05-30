@@ -214,7 +214,7 @@ In this task, you will create an action that inserts the collected order details
 
    ![](./media/ex3imgup3.png)
 
-1. Once done, a popup window will be opened to pick an account for authentication. Select the user account that you are using for this lab.
+1. Once done, a pop-up window will be opened to pick an account for authentication. Select the user account that you are using for this lab.
 
    ![](./media/ex3imgup5.png)
 
