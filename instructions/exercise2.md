@@ -40,7 +40,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
       ![](./media/ex5img34.png)
    
-    - In the next pane, provide the same details given above and click on **Create**.
+    - In the next pane, provide the same details shared above and click on **Create**.
 
       ![](./media/ex5img33.png)
 
@@ -59,11 +59,11 @@ In this task, you will connect knowledge sources, such as the product catalog, p
 
    ![](./media/ex2img4.png)
 
-1. In the next pane, click the **Select to browse** options as shown. In the popup window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
+1. In the next pane, click the **Select to browse** option as shown. In the popup window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
 
    ![](./media/ex2img5.png)
 
-1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add (2)**.
+1. In the next pane, review if the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add (2)**.
 
    ![](./media/ex2img6up.png)
 
