@@ -4,21 +4,21 @@
 
 ## Overview
 
-This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and service‑desk data while leveraging AI models like text embeddings, language models and generative AI. The lab will cover customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging and Zendesk ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
+This hands‑on lab guides participants through building and automating a smart store operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content, and service desk data while leveraging AI models such as text embeddings, language models, and generative AI. The lab will cover customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging, and Zendesk ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
 
 ## Objective
 
-Learn to build and automate a smart store‑operations agent using Microsoft Copilot Studio, leveraging AI models like text embeddings, language models, and generative AI. By the end of this lab, you will:
+Learn to build and automate a smart store operations agent using Microsoft Copilot Studio, leveraging AI models like text embeddings, language models, and generative AI. By the end of this lab, you will:
 
-- **Setting up Pre-Requisites for Store operations Agent:** Understand how to set up your Power Platform tenant, enable the Copilot Studio free trial, and configure Azure AI and Dataverse permissions.
+- **Setting up Prerequisites for Store Operations Agent:** Understand how to set up your Power Platform tenant, enable the Copilot Studio free trial, and configure Azure AI and Dataverse permissions.
 
-- **Create Store‑Operations Agent in Copilot Studio:** Get insights on spinning up a new Copilot Studio agent, assigning it a name and description, and connecting initial knowledge sources (product catalog, policy docs, website content).
+- **Create Store Operations Agent in Copilot Studio:** Get insights on spinning up a new Copilot Studio agent, assigning it a name and description, and connecting initial knowledge sources (product catalog, policy docs, website content).
 
-- **Build Advanced AI Workflows for Orders & Tickets:** Understand how to extend your agent with retrieval‑augmented prompts, configure actions to record orders in Dataverse, and integrate Zendesk to auto‑create support tickets.
+- **Build Advanced AI Workflows for Orders & Tickets:** Understand how to extend your agent with retrieval-augmented prompts, configure actions to record orders in Dataverse, and integrate Zendesk to automatically create support tickets.
 
-- **Deploy & Publish Your Agent to Microsoft Teams:** Get insights on packaging and publishing your completed agent into a Teams channel, then validating end‑to‑end functionality—product lookup, order placement, and ticket creation—directly within Teams.
+- **Deploy & Publish Your Agent to Microsoft Teams:** Get insights on packaging and publishing your completed agent into a Teams channel, then validate end‑to‑end functionality—product lookup, order placement, and ticket creation—directly within Teams.
 
-## Pre-requisites
+## Prerequisites
 
 Participants should have the following prerequisites:
 
@@ -28,7 +28,7 @@ Participants should have the following prerequisites:
 
 ## Architecture
 
-The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as Knowldege source. Workflow actions—such as placing orders in Dataverse and opening tickets in Zendesk are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel  delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
+The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as knowledge sources. Workflow actions such as placing orders in Dataverse and opening tickets in Zendesk are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel, delivering intuitive, conversational store operations support directly where your staff already collaborate.
 
 ## Architecture Diagram
 
@@ -40,29 +40,29 @@ The architecture for this lab involves several key components:
 
 - **Copilot Studio:** Facilitates user interaction by connecting to Azure AI Search for Q&A and other workflows. It provides an intuitive interface for leveraging indexed data and AI capabilities in real-time.
 
-- **Zendesk:** Manages support and exception workflows by exposing ticket‑creation and incident‑management APIs. The Copilot Studio agent invokes Zendesk actions to automatically open, update, and track service tickets based on user requests or operational alerts.
+- **Zendesk:** Manages support and exception workflows by exposing ticket creation and incident management APIs. The Copilot Studio agent invokes Zendesk actions to automatically open, update, and track service tickets based on user requests or operational alerts.
 
-- **Dataverse:** Acts as the centralized, low‑code data backend for transactional records. It stores order entries, inventory updates, and other structured data; the Copilot Studio agent uses Dataverse actions to create, read, update, and delete records as part of automated store‑operations workflows.
+- **Dataverse:** Acts as the centralized, low‑code data backend for transactional records. It stores order entries, inventory updates, and other structured data; the Copilot Studio agent uses Dataverse actions to create, read, update, and delete records as part of automated store operations workflows.
 
 ## Getting Started with Lab
 
-Welcome to Store Operations with Microsoft Copilot Studio Hands-On-Lab! , We've prepared a seamless environment for you to explore and learn. Let's begin by making the most of this experience.
+Welcome to Store Operations with Microsoft Copilot Studio Hands-On Lab! We've prepared a seamless environment for you to explore and learn. Let's begin by making the most of this experience.
 
 ### Accessing Your Lab Environment
 
-Once you're ready to dive in, your virtual machine and Lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
 ![](./media/gs1.png)
 
 ### Exploring Your Lab Resources
 
-To get a better understanding of your Lab resources and credentials, navigate to the Environment tab.
+To get a better understanding of your lab resources and credentials, navigate to the Environment tab.
 
 ![](./media/gs2.png)
 
 ### Utilizing the Split Window Feature
 
-For convenience, you can open the Lab guide in a separate window by selecting the Split Window button from the Top right corner
+For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the top right corner.
 
 ![](./media/gs3.png)
 
@@ -74,7 +74,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
 ## Let's Get Started with Azure Portal
 
-1. In the JumpVM, click on **Azure portal** shortcut of Microsoft Edge browser which is created on desktop.
+1. In the JumpVM, click on the **Azure portal** shortcut, available on the desktop.
 
    ![](./media/gs-8.png)
 
@@ -90,22 +90,22 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
      ![](./media/gs-7.png)
 
-     >**Note:** If you see the Action Required dialog box, then select Ask Later option.
+     >**Note:** If you see the Action Required dialog box, then select the **Ask Later** option.
      
-1. If you see the pop-up **Stay Signed in?**, click No.
+1. If you see the popup **Stay Signed in?**, click **No**.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the Lab.
+1. If you see the popup, **"You have free Azure Advisor recommendations!"**, close the window to continue the lab.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
 
 ## Support Contact
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.Learner Support Contacts:
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed. Learner Support Contacts:
 
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on the **Next** from lower right corner to move on next page.
+Now, click on the **Next** button in the lower right corner to move on to the next page.
 
 ![](./media/gs-5.png)
 
