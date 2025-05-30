@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will provision a Power Platform environment—enabling Dataverse, Azure AI services, and the Copilot Studio trial. You will also set up and configure zendesk to handle incident management. Together, these foundational steps establish the infrastructure needed to build and deploy your RAG‑driven store operations agent.
+In this exercise, you will provision a Power Platform environment—enabling Dataverse, Azure AI services, and the Copilot Studio trial. You will also set up and configure Freshworks to handle incident management. Together, these foundational steps establish the infrastructure needed to build and deploy your RAG‑driven store operations agent.
 
 ## Objectives
 
@@ -12,11 +12,9 @@ You will be able to complete the following tasks:
 
 - Task 1 : Provisioning power platform environmnet
 
-- Task 2 : Setting up zendesk for incident management
+- Task 2 : Setting up Freshworks for incident management
 
 ## Task 1 : Provisioning power platform environmnet
-
-1. Navigate to [Power Apps](https://make.powerapps.com/) using a new tab in the browser.
 
 1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
 
@@ -85,88 +83,77 @@ You will be able to complete the following tasks:
 
    ![](./media/pp-11.png)
 
-## Task 2 : Setting up zendesk for incident management
+## Task 2 : Setting up Freshworks for incident management
 
-In this task, you will set up and configure zendesk to enable automated incident management for your store operations agent.
+In this task, you will set up and configure Freshworks to enable automated incident management for your store operations agent.
 
-**Zendesk** is a cloud-based customer service and engagement platform designed to improve customer support operations and enhance user satisfaction. It offers a suite of tools for ticket management, live chat, help center creation, and customer self-service. Zendesk supports omnichannel communication, enabling businesses to manage customer interactions across email, chat, phone, and social media from a centralized interface. Its automation features help streamline workflows, assign tickets, and provide analytics for performance tracking. Now you will set up the Zendesk account.
+**Freshworks** is a cloud-based customer service and engagement platform designed to improve customer support operations and enhance user satisfaction. It offers a suite of tools for ticket management, live chat, help center creation, and customer self-service. Freshworks supports omnichannel communication, enabling businesses to manage customer interactions across email, chat, phone, and social media from a centralized interface. Its automation features help streamline workflows, assign tickets, and provide analytics for performance tracking. Now you will set up the Freshworks account.
 
-1. Navigate to [Zendesk Portal](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChsSEwjbjIaHh8GNAxUfi7kFHWltF80YACICCAEQARoCdG0&co=1&gclid=EAIaIQobChMI24yGh4fBjQMVH4u5BR1pbRfNEAAYAiAAEgI3qvD_BwE&ohost=www.google.com&cid=CAASJeRozdrFK5n5mqcvpdaujD2HlLH524rvNzYIn6bFLaPbbXX2vcQ&sig=AOD64_2ES2d8GYvQCxT77uWXGF2XHo1E-g&q&adurl&ved=2ahUKEwjQnoGHh8GNAxWUoq8BHcQ6KTUQ0Qx6BAggEAE) using a new tab in your browser.
+1. Navigate to [Freshworks Portal](https://www.freshworks.com/freshdesk/lp/home/?tactic_id=3387224&utm_source=google-adwords&utm_medium=FD-Search-Brand-India&utm_campaign=FD-Search-Brand-India&utm_term=freshdesk&device=c&matchtype=e&network=g&gclid=EAIaIQobChMIuOK90qvLjQMV_dQWBR3JAi9VEAAYASAAEgK87_D_BwE&audience=kwd-30002131023&ad_id=282519464145&gad_source=1&gad_campaignid=671502402) using a new tab in your browser.
 
-1. Once you are in the portal, under **Work email** add the value as **<inject key="AzureAdUserEmail"></inject>** and click on **Start your free trail**.
+1. In the portal, select **Start free trial** to start the free trial.
 
-   ![](./media/ex4img1.png)
+   ![](./media/fw1.png)
 
-1. In the next pane, provide the first name as **ODL** and clik on next.
+1. In the next pane, provide these details and click on **Try it free (5)**:
 
-   ![](./media/ex4img2.png)
+   - **First name:** `ODL` **(1)**
+   - **Last name:** `User` **(2)**
+   - **Work email:** **<inject key="AzureAdUserEmail"></inject>** **(3)**
+   - **Company name:** `Contoso` **(4)**
 
-1. Next, provide last name as **User** and click on Next.
+   ![](./media/fw2.png)
 
-   ![](./media/ex4img3.png)
+1. In the next pane, provide these details and click on **Next (4)**:
 
-1. For **Phone number**, you can provide any 10 digit number as shown below and click on **Next**.
+   - **What industry are you from ?:** from the list, select **Software and internet (1)**
+   - **How many employees are there in your company?:** select **1-10 (2)**
+   - select **I'm trying customer service software for the first time (3)**
 
-   ![](./media/ex4img4.png)
+   ![](./media/fw3.png)
 
-1. Provide company name as **Contoso** and click on **Next**.
+1. Once done, navigate to [Outlook](https://go.microsoft.com/fwlink/p/?LinkID=2125442&clcid=0x409&culture=en-us&country=us).
 
-   ![](./media/ex4img5.png)
+1. In the pick an account pane, select the account which you are assigned for this lab.
 
-1. In the next pane, provide job title as **Cloud Engineer** or you can provide any job title here.
+   ![](./media/fw4.png)
 
-   ![](./media/ex4img6.png)
+1. In the freshworks verification email, open and click on **Activate Account**.
 
-1. Next, select **1-9** from the drop down for the size of the company and click on **Next**.
+   ![](./media/fw5.png)
 
-   ![](./media/ex4img7.png)
+1. In the next pane, provide **<inject key="AzureAdUserPassword"></inject>** as **Enter password (1)** and provide the same password for **Confirm password (2)**. Click on **Activate your account (3)**.
 
-1. For **Language**, select **English** and click on Next.
+   ![](./media/fw6.png)
 
-   ![](./media/ex4img8.png)
+1. Once you are in the portal, click on the **Profile (1)** icon from top right corner and select **Profile settings (2)**.
 
-1. In the last pane, provide password as **<inject key="AzureAdUserPassword"></inject>** and click on **Complete trial signup**.
+   ![](./media/fw7.png)
 
-   ![](./media/ex4img9.png)
+1. In the profile page, click on **View API Key** to get the API Keys.
 
-1. To verify the account, select **Open Outlook** option from the pop up.
+   ![](./media/fw8.png)
 
-   ![](./media/ex4img10.png)
+1. In the next pane, complete the **CAPTCHA**.
 
-1. Once selected, you will be navigated to Outlook, complete the sign in and open the verification mail from ZenDesk. Click on **Verify your account**.
+   ![](./media/fw9.png)
 
-   ![](./media/ex4img11.png)
+1. Please copy the API Key to a notepad, you will be using this further.
 
-1. Again, you will be navigated to Zendesk portal. On **Welcome to your free trial** page, click on **Let's go ->**.
+   ![](./media/fw10.png)
 
-   ![](./media/ex4img12.png)
+1. From the browser tab, please copy the **Account URL** as shown and copy the value to notepad. You will be using this further.
 
-1. In the next pane, click on **Next**.
+   ![](./media/fw13.png)
 
-   ![](./media/ex4img13.png)
+1. From the left, click on **Tickets** icon from left menu, you can see some default tickets which are present.
 
-1. To skip auto-response setup, select **I don't want an auto-response** option.
+   ![](./media/fw11.png)
 
-   ![](./media/ex4img14.png)
-
-1. Next, click on **Skip** to skip the team invitation.
-
-   ![](./media/ex4img15.png)
-
-1. In the next pane to configure connector, click on **Skip**.
-
-   ![](./media/ex4img16.png)
-
-1. Next, click on **Solve a test ticket**. You will be navigated to a test ticket.
-
-   ![](./media/ex4img17.png)
-
-1. Once you are in the tickets portal, click on the **Home icon** from the left menu as shown. You will initially see sample test tickets displayed on this page. Once you configure the agent, any tickets generated by the agent will also appear here.
-
-   ![](./media/ex4img18.png)
+1. Now you have successfully setup the freshworks for ticket management.
 
 ## Summary
 
-In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured zendesk to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
+In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured Freshworks to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
 
 ### You have successfully completed this exercise, please continue to next one >>

@@ -29,8 +29,8 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
     | Key                     | Value                               |
     |-------------------------------|--------------------------------------------|
     | Name | `StoreOps Assistant` |
-    | Description | StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets—all through conversational AI. Integrated with Dataverse, Zendesk, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy. |
-    | Instruction | You are an AI-powered assistant designed to support store operations staff. Your tasks include: <br> - Helping users search for products from the catalog using natural language. <br> - Providing accurate answers using connected knowledge sources like store policies and website content. <br> - Assisting in placing orders and logging them in Dataverse. <br> - Creating and tracking support tickets in Zendesk when issues arise. <br> Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If you’re unsure about a request, ask clarifying questions before proceeding. |
+    | Description | StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets—all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy. |
+    | Instruction | You are an AI-powered assistant designed to support store operations staff. Your tasks include: <br> - Helping users search for products from the catalog using natural language. <br> - Providing accurate answers using connected knowledge sources like store policies and website content. <br> - Assisting in placing orders and logging them in Dataverse. <br> - Creating and tracking support tickets in Freshworks when issues arise. <br> Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If you’re unsure about a request, ask clarifying questions before proceeding. |
 
     ![](./media/ex2img12.png)
 
@@ -43,7 +43,6 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
     - In the next pane, provide the same details given above and click on **Create**.
 
       ![](./media/ex5img33.png)
-
 
 1. Once after adding the details, click on **Continue** to create the agent.
 
@@ -109,9 +108,9 @@ In this task, you will connect knowledge sources such as the product catalog, po
    - `What will the refund policy?`
    - `List out all the previous orders with the product name?`
 
-   ![](./media/ex2img22.png)
+     ![](./media/ex2img22.png)
 
-   ![](./media/ex2img23.png)
+     ![](./media/ex2img23.png)
 
 ## Summary
 

@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will enhance your StoreOps Assistant by building advanced AI workflows that go beyond static knowledge responses. You will create dynamic topics that allow users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and zendesk. These enhancements will enable your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you will enhance your StoreOps Assistant by building advanced AI workflows that go beyond static knowledge responses. You will create dynamic topics that allow users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and Freshworks. These enhancements will enable your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
 
 ## Objectives
 
@@ -12,7 +12,7 @@ You will be able to complete the following tasks:
 
 - Task 1: Create a topic to record orders in Dataverse
 
-- Task 2: Create a “Support Ticket” topic and integrate with zendesk
+- Task 2: Create a “Support Ticket” topic and integrate with Freshworks
 
 ## Task 1: Create a topic to record orders in Dataverse
 
@@ -248,7 +248,7 @@ In this task, you will create an action that inserts the collected order details
    - **Quantity**
    - **Status**
 
-   ![](./media/ex3img45.png)
+     ![](./media/ex3img45.png)
 
 1. Once added, under **CustomerName** click on the shown symbol to add the **Dynamic content** as the value.
 
@@ -364,11 +364,11 @@ In this task, you will create an action that inserts the collected order details
 
 1. You have successfully created a flow with an Action to manage order placements.
 
-## Task 2: Create a “Support Ticket” topic and integrate with zendesk
+## Task 2: Create a “Support Ticket” topic and integrate with Freshworks
 
-In this task, you will build a topic that enables users to request support by creating a service ticket. The topic will gather information like the issue description, urgency level, and user contact details. Once the data is collected, the agent will connect to zendesk and automatically generate a corresponding incident ticket. This integration ensures quick and efficient resolution of customer issues without manual ticket creation.
+In this task, you will build a topic that enables users to request support by creating a service ticket. The topic will gather information like the issue description, urgency level, and user contact details. Once the data is collected, the agent will connect to Freshworks and automatically generate a corresponding incident ticket. This integration ensures quick and efficient resolution of customer issues without manual ticket creation.
 
-1. As you have started a free trial for zendesk. You will be creating a topic that integrating with zendesk.
+1. As you have started a free trial for Freshworks. You will be creating a topic that integrating with Freshworks.
 
 1. In copilot Studio portal, select **Topics (1)** tab from top menu, click on **+ Add a topic (2)** and select **From blank**.
 
@@ -456,54 +456,36 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/ex3img39.png)
 
-1. From the list, search for **Zendesk** and select **Create item**.
+1. From the list, search for **Freshdesk (1)** and select **Create a ticket (2)**.
 
-   ![](./media/ex5img15.png)
+   ![](./media/fw12.png)
 
-1. In the create connection pane, add the company name which is the first part of zendesk URL, which starts with contoso.
+1. In the **Create a ticket** pane, provide the following details and click on **Create new**:
 
-   ![](./media/ex5img16.png)
+   - **Connection name:** `helpdesk` **(1)**
+   - **Account URL:** add the **Account URL (2)**, which you have copied in the first exercise
+   - **Email or API key:** Please add the **API KEY (3)**, which you copied in first exercise
+   - **Password:** As you have provided API Keys, password is not important here but as it is a required parameter just provide a random value.
 
-1. In the pop up window, provide these sign in credentials:
+     ![](./media/fw14.png)
 
-   - Email/Username: <inject key="AzureAdUserEmail"></inject>
+1. Once done, for parameter **Subject**, click on **Dynamic Content** coption as shown.
 
-   - Password: <inject key="AzureAdUserPassword"></inject>
-
-   ![](./media/ex5img17.png)
-
-1. In the next pane, Select **Allow**.
-
-   ![](./media/ex5img18.png)
-
-1. Once done, in the next pane, click on **Allow access** Option to grant the agent access to zendesk.
-
-   ![](./media/ex5img19.png)
-
-1. Once done, for **Table name**, from the list select **Tickets**.
-
-   ![](./media/ex5img20.png)
-
-1. For **Advanced parameters**, Click on **V (1)** and select **Subject** and **Description (2)**.
-
-   ![](./media/ex5img21.png)
-
-
-1. For **Subject** parameter, click on **Dynamic content Symbol** as shown.
-
-   ![](./media/ex5img22.png)
+   ![](./media/fw16.png)
 
 1. From the variable list, select **Subject**.
 
    ![](./media/ex5img23.png)
 
-1. For **Description** parameter, click on **Dynamic content Symbol** as shown and select **Description** from list.
+1. Repeat the same for **Description** and select **Description** from variable.
 
-   ![](./media/ex5img24.png)
+1. Once done, for **Email**, select **Enter custom value** from the list.
 
-1. Once configured, the connector will look like this.
+   ![](./media/fw15.png)
 
-   ![](./media/ex5img25.png)
+1. Now, provide the **Email** as `john@contoso.com` **(1)**, select **Priority** as `Medium` **(2)** and select **Status** as `Open` **(3)**.
+
+   ![](./media/fw18.png)
 
 1. Now, you have successfully set up your agent flow, click on **Publish** from the top right corner to save the flow.
 
@@ -562,12 +544,12 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/ex5img13.png)
 
-1. Navigate back to **Zendesk** portal, you can see that the ticket with a subject **Refund Not Received** is created.
+1. Navigate back to **Freshworks** portal, you can see that the ticket with a subject **Refund Not Received** is created.
 
-   ![](./media/ex5img14.png)
+   ![](./media/fw19.png)
 
 ## Summary
 
-In this exercise, you enhanced your StoreOps Assistant by building advanced AI workflows that extended beyond static knowledge responses. You created dynamic topics that allowed users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and zendesk. These enhancements enabled your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you enhanced your StoreOps Assistant by building advanced AI workflows that extended beyond static knowledge responses. You created dynamic topics that allowed users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and Freshworks. These enhancements enabled your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
 
 ### You have successfully completed this exercise, please continue to next one >>

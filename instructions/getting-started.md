@@ -4,7 +4,7 @@
 
 ## Overview
 
-This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and service‑desk data while leveraging AI models like text embeddings, language models and generative AI. The lab will cover customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging and Zendesk ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
+This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and service‑desk data while leveraging AI models like text embeddings, language models and generative AI. The lab will cover customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging and Freshworks ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
 
 ## Objective
 
@@ -14,7 +14,7 @@ Learn to build and automate a smart store‑operations agent using Microsoft Cop
 
 - **Create Store‑Operations Agent in Copilot Studio:** Get insights on spinning up a new Copilot Studio agent, assigning it a name and description, and connecting initial knowledge sources (product catalog, policy docs, website content).
 
-- **Build Advanced AI Workflows for Orders & Tickets:** Understand how to extend your agent with retrieval‑augmented prompts, configure actions to record orders in Dataverse, and integrate Zendesk to auto‑create support tickets.
+- **Build Advanced AI Workflows for Orders & Tickets:** Understand how to extend your agent with retrieval‑augmented prompts, configure actions to record orders in Dataverse, and integrate Freshworks to auto‑create support tickets.
 
 - **Deploy & Publish Your Agent to Microsoft Teams:** Get insights on packaging and publishing your completed agent into a Teams channel, then validating end‑to‑end functionality—product lookup, order placement, and ticket creation—directly within Teams.
 
@@ -28,11 +28,11 @@ Participants should have the following prerequisites:
 
 ## Architecture
 
-The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as Knowldege source. Workflow actions—such as placing orders in Dataverse and opening tickets in Zendesk are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel  delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
+The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as Knowldege source. Workflow actions—such as placing orders in Dataverse and opening tickets in Freshworks are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel  delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
 
 ## Architecture Diagram
 
-![](./media/archv2.png)
+![](./media/archv3.png)
 
 ## Explanation of Components
 
@@ -40,7 +40,7 @@ The architecture for this lab involves several key components:
 
 - **Copilot Studio:** Facilitates user interaction by connecting to Azure AI Search for Q&A and other workflows. It provides an intuitive interface for leveraging indexed data and AI capabilities in real-time.
 
-- **Zendesk:** Manages support and exception workflows by exposing ticket‑creation and incident‑management APIs. The Copilot Studio agent invokes Zendesk actions to automatically open, update, and track service tickets based on user requests or operational alerts.
+- **Freshworks:** Manages support and exception workflows by exposing ticket‑creation and incident‑management APIs. The Copilot Studio agent invokes Freshworks actions to automatically open, update, and track service tickets based on user requests or operational alerts.
 
 - **Dataverse:** Acts as the centralized, low‑code data backend for transactional records. It stores order entries, inventory updates, and other structured data; the Copilot Studio agent uses Dataverse actions to create, read, update, and delete records as part of automated store‑operations workflows.
 
@@ -76,27 +76,29 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
 1. In the JumpVM, click on **Azure portal** shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![](./media/gs-8.png)
+   ![](./media/gs-1.png)
 
-1. On the **Sign into Microsoft Azure** tab, you will see the login screen. Enter the provided email or username, and click **Next** to proceed.
+1. On the **Sign into Microsoft** tab, you will see the login screen. Enter the provided email or username, and click **Next** to proceed.
 
    - Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-     ![](./media/gs-6.png)
+     ![](./media/gs-2.png)
 
 1. Now, enter the following password and click on **Sign in**.
 
    - Password: <inject key="AzureAdUserPassword"></inject>
 
-     ![](./media/gs-7.png)
+     ![](./media/gs-3.png)
 
      >**Note:** If you see the Action Required dialog box, then select Ask Later option.
      
 1. If you see the pop-up **Stay Signed in?**, click No.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the Lab.
+   ![](./media/gs-4.png)
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+1. You have now successfully logged in to the Power Apps portal. Keep the portal open, as you will be using it later in the lab.
+
+   ![](./media/gs-5.png)
 
 ## Support Contact
 
@@ -106,7 +108,5 @@ The CloudLabs support team is available 24/7, 365 days a year, via email and liv
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on the **Next** from lower right corner to move on next page.
-
-![](./media/gs-5.png)
 
 ## Happy Learning!!
