@@ -30,7 +30,7 @@ You will be able to complete the following tasks:
 
    ![](./media/ex3img73.png)
 
-1. In the popup window to create an environment, click **Create**. This will create a new power platform developer environment.
+1. In the pop-up window to create an environment, click **Create**. This will create a new power platform developer environment.
 
    ![](./media/ex3img74.png)
    >Note: If you are directly navigated to the **Import an Excel or .CSV file pane**, please cancel the process.
@@ -39,11 +39,11 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device,** and in the popup window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
+1. In the next pane, click on **Select from device,** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
 
    ![](./media/ex2img11.png)
 
-1. Once selected, click on **Save and exit,** and in the popup window, click on **Save and exit**.
+1. Once selected, click on **Save and exit,** and in the pop-up window, click on **Save and exit**.
 
    ![](./media/ex2img19.png)
 
@@ -53,11 +53,11 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click **Select from device,** and in the popup window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, and select **Sample_orders.csv**.
+1. In the next pane, click **Select from device,** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, and select **Sample_orders.csv**.
 
    ![](./media/ex2img11.png)
 
-1. Once selected, click on **Save and exit,** and in the popup window, click on **Save and exit**.
+1. Once selected, click on **Save and exit,** and in the pop-up window, click on **Save and exit**.
 
    ![](./media/ex2img19.png)
 
@@ -67,7 +67,7 @@ You will be able to complete the following tasks:
 
 1. As you have now created a new environment and completed Dataverse set up, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
    
-1. In the popup window that appears, click on **Start Free Trial.**
+1. In the pop-up window that appears, click on **Start Free Trial.**
 
    ![](./media/gt12.png)
 
@@ -129,7 +129,7 @@ In this task, you will set up and configure Zendesk to enable automated incident
 
    ![](./media/ex4img9.png)
 
-1. To verify the account, select the **Open Outlook** option from the popup.
+1. To verify the account, select the **Open Outlook** option from the pop-up.
 
    ![](./media/ex4img10.png)
 
