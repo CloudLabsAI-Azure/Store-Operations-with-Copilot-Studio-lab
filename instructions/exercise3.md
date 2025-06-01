@@ -452,7 +452,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/ex5img27.png)
 
-1. Now, click on **+** to add the **Dataverse** connector.
+1. Now, click on **+** to add the **Freshdesk** connector.
 
    ![](./media/ex3img39.png)
 
