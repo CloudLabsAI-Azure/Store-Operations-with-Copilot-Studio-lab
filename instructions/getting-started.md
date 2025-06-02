@@ -78,6 +78,8 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
    ![](./media/gs-1.png)
 
+1. Open a new browser tab and navigate to [Power Apps](https://make.powerapps.com/) portal.
+
 1. On the **Sign into Microsoft** tab, you will see the login screen. Enter the provided email or username, and click **Next** to proceed.
 
    - Email/Username: <inject key="AzureAdUserEmail"></inject>
