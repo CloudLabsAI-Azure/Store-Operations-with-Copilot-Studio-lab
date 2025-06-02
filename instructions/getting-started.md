@@ -72,9 +72,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
 ![](./media/gs4.png)
 
-## Let's Get Started with Azure Portal
+## Let's Get Started with Power Apps Portal
 
-1. In the JumpVM, click on **Azure portal** shortcut of Microsoft Edge browser which is created on desktop.
+1. In the JumpVM, click on **Microsoft Edge** shortcut of Microsoft Edge browser which is created on desktop.
 
    ![](./media/gs-1.png)
 
