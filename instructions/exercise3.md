@@ -22,6 +22,8 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/ex3img1.png)
 
+   >**Note:** If the **Add Topic** button is greyed out, please refresh the browser once and try it again.
+
 1. Once you are in the designer, on the **Trigger** node, add the description as `This topic helps user to place orders or buy products`.
 
    ![](./media/ex3img2.png)
