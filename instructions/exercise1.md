@@ -69,6 +69,8 @@ You will be able to complete the following tasks:
 
    ![](./media/gt12.png)
 
+   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. This issue has been observed recently and may be due to factors such as high server load or browser-related caching problems.
+
 1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
 
 1. Once you are inside **Copilot Studio** you will be in the home page. 
@@ -121,6 +123,8 @@ In this task, you will set up and configure Freshworks to enable automated incid
 1. In the freshworks verification email, open and click on **Activate Account**.
 
    ![](./media/fw5.png)
+
+   >**Note:** If you're unable to locate the activation email from Freshworks, please wait a few minutes, as there might be a delay in email delivery. If the email doesn't arrive after some time, consider reinitiating the steps to activate your free trial. Additionally, check your spam or junk folder, as the email might have been filtered there.
 
 1. In the next pane, provide **<inject key="AzureAdUserPassword"></inject>** as **Enter password (1)** and provide the same password for **Confirm password (2)**. Click on **Activate your account (3)**.
 
