@@ -104,7 +104,7 @@ In this task, you will create a topic that allows users to place product orders 
 
 1. Now, click on **Var1** as we have to change the variable name.
 
-   ![](./media/ex3img6.png)
+   ![](./media/cpnew1.png)
 
 1. Change the variable name to **Quantity**.
 

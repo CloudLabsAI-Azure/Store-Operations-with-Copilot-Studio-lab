@@ -10,11 +10,11 @@ In this exercise, you will provision a Power Platform environment—enabling D
 
 You will be able to complete the following tasks:
 
-- Task 1 : Provisioning power platform environmnet
+- Task 1 : Provisioning power platform environment
 
 - Task 2 : Setting up Freshworks for incident management
 
-## Task 1 : Provisioning power platform environmnet
+## Task 1 : Provisioning power platform environment
 
 1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
 
@@ -69,7 +69,15 @@ You will be able to complete the following tasks:
 
    ![](./media/gt12.png)
 
-   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. This issue has been observed recently and may be due to factors such as high server load or browser-related caching problems.
+   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If still the issue persists,followthe below instructions to resolve this:
+
+   > Navigate back to Power Apps Portal, and copy the environment ID as shown.
+
+   ![](./media/cpnew2.png)
+
+   > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID to the ID that you copied.
+
+   ![](./media/cpnew3.png)
 
 1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
 
@@ -124,7 +132,7 @@ In this task, you will set up and configure Freshworks to enable automated incid
 
    ![](./media/fw5.png)
 
-   >**Note:** If you're unable to locate the activation email from Freshworks, please wait a few minutes, as there might be a delay in email delivery. If the email doesn't arrive after some time, consider reinitiating the steps to activate your free trial. Additionally, check your spam or junk folder, as the email might have been filtered there.
+   >**Note:** If you're unable to locate the activation email from Freshworks, please wait a few minutes, as there might be a delay in email delivery. If the email doesn't arrive after some time, consider reinitiating the steps to activate your free trial in a new private/incognito window. Additionally, check your spam or junk folder, as the email might have been filtered there.
 
 1. In the next pane, provide **<inject key="AzureAdUserPassword"></inject>** as **Enter password (1)** and provide the same password for **Confirm password (2)**. Click on **Activate your account (3)**.
 
