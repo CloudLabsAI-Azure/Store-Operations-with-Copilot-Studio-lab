@@ -56,7 +56,7 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**. Incase you don't have access to Virtual Machine, download the datasets from here, extract it and use it - [Datasets](https://github.com/CloudLabsAI-Azure/Store-Operations-with-Copilot-Studio-lab/archive/refs/heads/datasets.zip).
 
    ![](./media/ex2img11.png)
 
