@@ -20,6 +20,8 @@ You will be able to complete the following tasks:
 
    ![](./media/ex3img71.png)
 
+   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 3**.
+
 1. In the new pane for creating New Database, click on **Create my Database**.
 
    ![](./media/ex3img72up.png)
@@ -46,6 +48,9 @@ You will be able to complete the following tasks:
    ![](./media/ex2img19.png)
 
    ![](./media/ex2img20.png)
+
+   >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
+   >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
 
 1. Again, select **Tabes (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
@@ -93,7 +98,7 @@ You will be able to complete the following tasks:
 
    ![](./media/pp-11.png)
 
-## Task 2 : Setting up Freshworks for incident management
+## Task 2: Setting up Freshworks for incident management
 
 In this task, you will set up and configure Freshworks to enable automated incident management for your store operations agent.
 
@@ -145,6 +150,8 @@ In this task, you will set up and configure Freshworks to enable automated incid
 1. In the profile page, click on **View API Key** to get the API Keys.
 
    ![](./media/fw8.png)
+
+   >**Note:** If you are not able to find this option, please minimize the screensize using **CTRL + -**.
 
 1. In the next pane, complete the **CAPTCHA**.
 
