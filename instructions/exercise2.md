@@ -78,6 +78,8 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/ex2img21.png)
 
+   >**Note:** If you are seeing **Product** table, instead of **Product Recrd**, please proceed with the **Product** Table.
+
 1. Once done, again click on **+ Add knowledge**.
 
    ![](./media/ex2img8.png)
