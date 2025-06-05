@@ -68,7 +68,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 1. Once done, again click on **+ Add knowledge**.
 
-   ![](./media/ex2img8.png)
+   ![](./media/ex2img8new.png)
 
 1. In the next pane, select **Dataverse** as knowledge source.
 
