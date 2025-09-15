@@ -70,9 +70,9 @@ You will be able to complete the following tasks:
 
 1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
    
-1. In the pop-up window that appears click on **Start Free Trial**
+1. In the pop-up window that appears click on **Get Started**
 
-   ![](./media/gt12.png)
+   ![](./media/pp-13.png)
 
    >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If still the issue persists,followthe below instructions to resolve this:
 
