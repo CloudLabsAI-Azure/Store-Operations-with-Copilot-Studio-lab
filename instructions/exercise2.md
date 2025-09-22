@@ -46,6 +46,10 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 1. Once after adding the details, click on **Continue** to create the agent.
 
+1. In the next pane, provide the same details given above and click on **Create**.
+
+   ![](./media/copil-g-9.png)
+
 1. You have successfully created the StoreOps Assistant. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
    ![](./media/ex2img25.png)
@@ -62,9 +66,9 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/ex2img5.png)
 
-1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add (2)**.
+1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add to agent (2)**.
 
-   ![](./media/ex2img6up.png)
+   ![](./media/copil-g-10.png)
 
 1. Once done, again click on **+ Add knowledge**.
 
@@ -74,11 +78,13 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/ex2img14.png)
 
-1. From the list, search and select **Order Record** and **Product** tables. Click on **Next**.
+1. From the list, search and select **Order** and **Product** tables. Click on **Add to agent**.
 
-   ![](./media/ex2img21.png)
+   ![](./media/copil-g-11.png)
 
-   >**Note:** If you are seeing **Product** table, instead of **Product Record**, please proceed with the **Product** Table.
+   >**Note:** If you are seeing **Product Record** table, instead of **Product **, please proceed with the **Product Record** Table.
+
+   >**Note:** If you are seeing **Order Record** table, instead of **Order**, please proceed with the **Order Record** Table.
 
 1. Once done, again click on **+ Add knowledge**.
 
@@ -94,9 +100,9 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    >Note: This is a sample E-Commerce website from Microsoft.
 
-1. Once done, click on **Add** in the next pane.
+1. Once done, click on **Add to agent** in the next pane.
 
-   ![](./media/ex2img18.png)
+   ![](./media/copil-g-12.png)
 
 1. You have now successfully added all the necessary data as a knowledge source for this agent.
 

@@ -33,13 +33,19 @@ You will be able to complete the following tasks:
 1. In the pop up window to create a environment, Click on **Create**. This will create a new power platform developer environment.
 
    ![](./media/ex3img74.png)
+   
    >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
 
 1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Product_catalogue.csv**.
+1. In the next pane, click on **Select from device**.
+
+   ![](./media/ex2img11.png)
+
+1. On the **Open** window, navigate to the folder `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets` **(1)**.  
+Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
 
    ![](./media/ex2img11.png)
 
