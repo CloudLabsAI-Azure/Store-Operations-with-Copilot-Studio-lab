@@ -56,7 +56,7 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img10.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**. Incase you don't have access to Virtual Machine, download the datasets from here, extract it and use it - [Datasets](https://github.com/CloudLabsAI-Azure/Store-Operations-with-Copilot-Studio-lab/archive/refs/heads/datasets.zip).
+1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
 
    ![](./media/ex2img11.png)
 
@@ -69,6 +69,8 @@ You will be able to complete the following tasks:
    ![](./media/ex3img71.png)
 
 1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
+
+   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
    
 1. In the pop-up window that appears click on **Get Started**
 
@@ -105,6 +107,8 @@ In this task, you will set up and configure Freshworks to enable automated incid
 **Freshworks** is a cloud-based customer service and engagement platform designed to improve customer support operations and enhance user satisfaction. It offers a suite of tools for ticket management, live chat, help center creation, and customer self-service. Freshworks supports omnichannel communication, enabling businesses to manage customer interactions across email, chat, phone, and social media from a centralized interface. Its automation features help streamline workflows, assign tickets, and provide analytics for performance tracking. Now you will set up the Freshworks account.
 
 1. Navigate to [Freshworks Portal](https://www.freshworks.com/freshdesk/lp/home/?tactic_id=3387224&utm_source=google-adwords&utm_medium=FD-Search-Brand-India&utm_campaign=FD-Search-Brand-India&utm_term=freshdesk&device=c&matchtype=e&network=g&gclid=EAIaIQobChMIuOK90qvLjQMV_dQWBR3JAi9VEAAYASAAEgK87_D_BwE&audience=kwd-30002131023&ad_id=282519464145&gad_source=1&gad_campaignid=671502402) using a new tab in your browser.
+
+   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
 
 1. In the portal, select **Start free trial** to start the free trial.
 
@@ -183,3 +187,4 @@ In this task, you will set up and configure Freshworks to enable automated incid
 In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured Freshworks to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
 
 ### You have successfully completed this exercise, please continue to next one >>
+
