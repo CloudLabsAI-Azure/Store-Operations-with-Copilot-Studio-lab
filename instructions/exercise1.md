@@ -43,7 +43,9 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img11.png)
 
-1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
+1. Once selected please click on **Import**.
+
+1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
 
    ![](./media/ex2img19.png)
 
@@ -60,7 +62,9 @@ You will be able to complete the following tasks:
 
    ![](./media/ex2img11.png)
 
-1. Once selected, click on **Save and exit** and in the pop up window, click on **Save and exit**.
+1. Once selected please click on **Import**.
+
+1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
 
    ![](./media/ex2img19.png)
 
@@ -187,4 +191,5 @@ In this task, you will set up and configure Freshworks to enable automated incid
 In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured Freshworks to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
 
 ### You have successfully completed this exercise, please continue to next one >>
+
 
