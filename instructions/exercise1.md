@@ -47,7 +47,7 @@ You will be able to complete the following tasks:
 1. On the **Open** window, navigate to the folder `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets` **(1)**.  
 Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
 
-   ![](./media/ex2img11.png)
+   ![](./media/copil-g-1.png)
 
 1. Once selected please click on **Import**.
 
