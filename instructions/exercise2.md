@@ -166,15 +166,9 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/st-store-ex2-g26.png)
 
-1. Review the response returned by the agent showing the **Previous Orders with Product Names**.
+1. Verify that the agent returns the **Previous Orders with Product Names** using the connected knowledge sources.
 
    ![](./media/st-store-ex2-g27.png)
-
-   - `List out all the previous orders with the product name?`
-
-     ![](./media/ex2img22.png)
-
-     ![](./media/ex2img23.png)
 
 <validation step="a705bde5-f070-4276-959d-11df80a6d264" />
  
