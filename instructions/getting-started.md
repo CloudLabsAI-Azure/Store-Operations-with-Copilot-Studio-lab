@@ -4,7 +4,7 @@
 
 ## Overview
 
-This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and servicedesk data. The lab will cover customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging and Freshworks ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
+This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and servicedesk data. The lab covers customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging, and Freshworks ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
 
 ## Objective
 
@@ -28,7 +28,7 @@ Participants should have the following prerequisites:
 
 ## Architecture
 
-The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as Knowldege source. Workflow actions—such as placing orders in Dataverse and opening tickets in Freshworks are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel  delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
+The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as knowledge sources. Workflow actions—such as placing orders in Dataverse and opening tickets in Freshworks—are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel, delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
 
 ## Architecture Diagram
 
@@ -46,7 +46,7 @@ The architecture for this lab involves several key components:
 
 ## Getting Started with Lab
 
-Welcome to Store Operations with Microsoft Copilot Studio Hands-On-Lab! , We've prepared a seamless environment for you to explore and learn. Let's begin by making the most of this experience.
+Welcome to Store Operations with Microsoft Copilot Studio Hands-On-Lab! We've prepared a seamless environment for you to explore and learn. Let's begin by making the most of this experience.
 
 ### Accessing Your Lab Environment
 
@@ -62,7 +62,7 @@ To get a better understanding of your Lab resources and credentials, navigate to
 
 ### Utilizing the Split Window Feature
 
-For convenience, you can open the Lab guide in a separate window by selecting the Split Window button from the Top right corner
+For convenience, you can open the Lab guide in a separate window by selecting the **Split Window** button from the top-right corner.
 
 ![](./media/gs3.png)
 
@@ -74,7 +74,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
 ## Let's Get Started with Power Apps Portal
 
-1. In the JumpVM, click on the **Microsoft Edge** browser shortcut on the desktop.
+1. In the JumpVM, select the **Microsoft Edge** browser shortcut on the desktop.
 
    ![](./media/zgr-gt.png)
 
@@ -84,23 +84,23 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
    https://make.powerapps.com/
    ```
 
-1. On the **Sign into Microsoft** tab, enter the following email **(1)** in the email field, and then click **Next (2)** to proceed.
+1. On the **Sign into Microsoft** tab, enter the following email **(1)** in the email field, and then select **Next (2)** to proceed.
 
    - Email: **<inject key="AzureAdUserEmail"></inject>**
 
      ![](./media/gs-lab3-g2.png)
 
-1. On the **Enter Temporary Access Pass** screen, enter the following **Temporary Access Pass**, and then click **Sign in (2)**.
+1. On the **Enter Temporary Access Pass** screen, enter the following **Temporary Access Pass**, and then select **Sign in (2)**.
 
    - Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>**
 
      ![](./media/gs-lab3-g3.png)
      
-1. If you see the pop-up **Stay Signed in?**, click **No**.
+1. If you see the pop-up **Stay Signed in?**, select **No**.
 
    ![](./media/gs-4.png)
 
-1. If the **Welcome to Power Apps** pop-up appears, leave the default country/region selection and click **Get started**.
+1. If the **Welcome to Power Apps** pop-up appears, leave the default country/region selection and select **Get started**.
 
    ![](./media/gs-travel-g1.png)
 
@@ -120,7 +120,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
    ![](./media/nd-d2-cor-g-1.png)
 
-1. In the Power Platform admin center, select **Environments (1)** from the left navigation pane, and then choose **New (2)** to create a new environment.
+1. In the Power Platform admin center, select **Environments (1)** from the left navigation pane, and then select **New (2)** to create a new environment.
 
    ![](./media/d2-coor-gs-g2.png)
 
@@ -135,29 +135,29 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
    ![](./media/d2-coor-gs-g4.png)
 
-   > **Environment Foundation:** This step creates the foundational environment that will support your agents with company-specific data and knowledge sources.
+   > **Environment foundation:** This step creates the foundational environment that will support your agents with company-specific data and knowledge sources.
 
    > **Note:** Environment provisioning may take 10-15 minutes to complete. Wait until the status shows as ready before proceeding.
 
    > **Note:** If you see an error stating that the environment list cannot be displayed, this is expected while the environment is being created in the background. After 10-15 minutes, refresh the browser and the environment should appear.
 
-1. In the **Power Platform admin center**, select **Manage (1)**, choose **Environments (2)**, and then click **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (3)**.
+1. In the **Power Platform admin center**, select **Manage (1)**, choose **Environments (2)**, and then select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (3)**.
 
    ![](./media/uppowadminimg1.png)
 
-1. In the environment page, click on **See all** under **S2S apps**.
+1. On the environment page, select **See all** under **S2S apps**.
 
    ![](./media/pro-activ-gg-g3.png)
 
-1. In the next pane, click on **+ New app user**.
+1. In the next pane, select **+ New app user**.
 
    ![](./media/uppowadminimg3.png)
 
-1. In the create a new app user pane, under **App**, click on **+ Add an app**.
+1. In the **Create a new app user** pane, under **App**, select **+ Add an app**.
 
    ![](./media/pro-activ-gg-g4.png)
 
-1. In the **Add an app from Microsoft Entra ID** pane, enter the URL provided below in the search box **(1)**, select the app from the results **(2)**, and then click **Add (3)**.
+1. In the **Add an app from Microsoft Entra ID** pane, enter the URL provided below in the search box **(1)**, select the app from the results **(2)**, and then select **Add (3)**.
 
    ```
    https://cloudlabssandbox.onmicrosoft.com/cloudlabs.ai/
@@ -169,30 +169,30 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
    ![](./media/pro-activ-gg-g6.png)
 
-1. Beside **Security roles** click on **Edit** icon.
+1. Next to **Security roles**, select the **Edit** icon.
 
    ![](./media/pro-activ-gg-g7.png)
 
-1. In the **Sync Permissions** pane, select **System Administrator (1)**, and then click **Save (2)**.
+1. In the **Sync Permissions** pane, select **System Administrator (1)**, and then select **Save (2)**.
 
    ![](./media/pro-activ-gg-g8.png)
 
-1. In the pop-up window, select **save**.
+1. In the pop-up window, select **Save**.
 
    ![](./media/pro-activ-gg-g9.png)
 
-1. Review all the details and click on **Create**.
+1. Review all the details and select **Create**.
 
    ![](./media/pro-activ-gg-g10.png)
 
 ## Support Contact
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.Learner Support Contacts:
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed. Learner Support Contacts:
 
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on the **Next** from lower right corner to move on next page.
+Now, select **Next** in the lower-right corner to move to the next page.
 
 ## Happy Learning!!
 

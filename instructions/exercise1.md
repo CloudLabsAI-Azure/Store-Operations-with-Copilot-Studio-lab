@@ -18,103 +18,99 @@ You will be able to complete the following tasks:
 
 In this task, you will ingest the datasets to dataverse, which will be created in new power platform environment.
 
-1. Navigate back to Power Apps portal, please switch to the environment to the environmnet that you created earlier.
+1. Navigate back to Power Apps portal, please switch to the environment that you created earlier.
 
-    ![](./media/papps1.png)
+    ![](./media/st-store-ex1-g1.png)
 
-1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
+1. In the Power Apps portal, select **Tables (1)** from the left menu and select **Create a database (2)**.
 
    ![](./media/ex3img71.png)
 
-   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 3**.
+   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 4**.
 
-1. In the new pane for creating New Database, click on **Create my Database**.
+1. In the new pane for creating a new database, select **Create my Database**.
 
    ![](./media/ex3img72up.png)
 
-1. Once done, click on **Create with Excel or .CSV file**.
+1. Once done, select **Create with Excel or .CSV file**.
 
-   ![](./media/ex3img73.png)
+   ![](./media/st-store-ex1-g2.png)
 
-1. In the pop up window to create a environment, Click on **Create**. This will create a new power platform developer environment.
+1. In the pop-up window to create an environment, select **Create**. This will create a new Power Platform developer environment.
 
    ![](./media/ex3img74.png)
    
    >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
 
-1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
+1. In the next pane, select **Select from device**.
 
-   ![](./media/ex2img10.png)
-
-1. In the next pane, click on **Select from device**.
-
-   ![](./media/ex2img11.png)
+   ![](./media/st-store-ex1-g4.png)
 
 1. On the **Open** window, navigate to the folder `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets` **(1)**.  
-Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
+Select the file **product_catalog.csv (2)** and select **Open (3)**.
 
    ![](./media/copil-g-1.png)
 
-1. Once selected please click on **Import**.
+1. Once selected, select **Import**.
 
-1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
+   ![](./media/st-store-ex1-g5.png)
 
-   ![](./media/ex2img19.png)
+1. Select **Save and exit**, and in the pop-up window, select **Save and exit**.
 
-   ![](./media/ex2img20.png)
+   ![](./media/st-store-ex1-g6.png)
+
+   ![](./media/st-store-ex1-g7.png)
 
    >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
    >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
 
-1. Again, select **Tabes (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
+1. Again, select **Tables (1)** from the left menu and select **Create with Excel or .CSV file (2)**.
 
-   ![](./media/ex2img10.png)
+   ![](./media/st-store-ex1-g2.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
+1. In the next pane, select **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
 
-   ![](./media/ex2img11.png)
+   ![](./media/st-store-ex1-g4.png)
 
-1. Once selected please click on **Import**.
+1. Once selected, select **Import**.
 
-1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
+   ![](./media/st-store-ex1-g8.png)
 
-   ![](./media/ex2img19.png)
+1. Select **Save and exit**, and in the pop-up window, select **Save and exit**.
 
-   ![](./media/ex2img20.png)
+   ![](./media/st-store-ex1-g9.png)
 
-   ![](./media/ex3img71.png)
+   ![](./media/st-store-ex1-g7.png)
 
-1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
+1. Navigate to **Microsoft Copilot Studio** by opening a new browser tab and entering the following URL:
 
-   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
-   
-1. In the pop-up window that appears click on **Get Started**
+   ```
+   https://copilotstudio.microsoft.com
+   ```
 
-   ![](./media/pp-13.png)
+1. On the **Welcome to Microsoft Copilot Studio** screen, keep the default **country/region** selection and select **Get Started** to continue.
 
-   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If still the issue persists,followthe below instructions to resolve this:
+   ![](./media/pro-activ-gg-g11.png)
 
-   > Navigate back to Power Apps Portal, and copy the environment ID as shown.
+1. If the **Welcome to Copilot Studio!** pop-up appears, select **Skip** to continue to the main dashboard.
 
-   ![](./media/cpnew2.png)
+   ![](./media/gs-travel-g3.png)
 
-   > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID to the ID that you copied.
+1. If the **We've updated you to the latest version of Microsoft Copilot Studio** pop-up appears, select **Got it!**.
 
-   ![](./media/cpnew3.png)
+   ![](./media/pro-activ-gg-g12.png)
 
-1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
+1. If the **What's new in Copilot Studio** pop-up appears, select the **Close (X)** icon to dismiss it.
 
-1. Once you are inside **Copilot Studio** you will be in the home page. 
+   ![](./media/pro-activ-gg-g13.png)
 
-   ![](./media/ex1img3.png)
+1. In Copilot Studio, open the environment picker **(1)**, expand **Supported environments (2)**, and select **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment (3)** to switch.
 
-1. In the home page, select the environment option as shown.
+   ![](./media/ex1-travel-g6.png)
 
-   ![](./media/pp-10.png)
+1. Once you are in **Copilot Studio**, you will be on the home page.
 
-1. Change the environment to the new environment that you have created earlier. Keep the tab open as you will be using this in further exercises.
-
-   ![](./media/pp-11.png)
+   ![](./media/st-store-ex1-g10.png)
 
 ## Task 2: Setting up Freshworks for incident management
 
@@ -122,74 +118,101 @@ In this task, you will set up and configure Freshworks to enable automated incid
 
 **Freshworks** is a cloud-based customer service and engagement platform designed to improve customer support operations and enhance user satisfaction. It offers a suite of tools for ticket management, live chat, help center creation, and customer self-service. Freshworks supports omnichannel communication, enabling businesses to manage customer interactions across email, chat, phone, and social media from a centralized interface. Its automation features help streamline workflows, assign tickets, and provide analytics for performance tracking. Now you will set up the Freshworks account.
 
-1. Navigate to [Freshworks Portal](https://www.freshworks.com/freshdesk/lp/home/?tactic_id=3387224&utm_source=google-adwords&utm_medium=FD-Search-Brand-India&utm_campaign=FD-Search-Brand-India&utm_term=freshdesk&device=c&matchtype=e&network=g&gclid=EAIaIQobChMIuOK90qvLjQMV_dQWBR3JAi9VEAAYASAAEgK87_D_BwE&audience=kwd-30002131023&ad_id=282519464145&gad_source=1&gad_campaignid=671502402) using a new tab in your browser.
+1. Open a new browser tab and navigate to:
 
-   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
+   ```
+   https://www.freshworks.com/freshdesk/
+   ```
 
-1. In the portal, select **Start free trial** to start the free trial.
+1. On the Freshdesk homepage, select **Try it free** to start creating your trial account.
 
-   ![](./media/fw1.png)
+   ![](./media/m36-copg-ex9-i-g1.png)
 
-1. In the next pane, provide these details and click on **Try it free (5)**:
+1. Fill in the registration form with the following details, accept the **Terms & Conditions**, and then select **Try it free**.
 
-   - **First name:** `ODL` **(1)**
-   - **Last name:** `User` **(2)**
-   - **Work email:** **<inject key="AzureAdUserEmail"></inject>** **(3)**
-   - **Company name:** `Contoso` **(4)**
+   | Field | Value |
+   |-------|-------|
+   | First name | **ODL User** |
+   | Last name | **<inject key="DeploymentID"></inject>** |
+   | Work email | **<inject key="AzureAdUserEmail" enableCopy="false"/>** |
+   | Company name | **Contoso** |
+   | Organization size | **11-50** |
+   | Terms & Conditions | **Checked** |
 
-   ![](./media/fw2.png)
+   ![](./media/m36-copg-ex9-i-g2.png)
 
-1. In the next pane, provide these details and click on **Next (4)**:
+1. In your inbox, look for the **Freshworks verification email**.
 
-   - **What industry are you from ?:** from the list, select **Software and internet (1)**
-   - **How many employees are there in your company?:** select **1-10 (2)**
-   - select **I'm trying customer service software for the first time (3)**
+   - Open a new tab and navigate to: `https://outlook.office.com`
+   - Look for an email from Freshdesk with a subject like "Activate your account"
 
-   ![](./media/fw3.png)
+      ![](./media/m36-copg-ex9-i-g3.png)
 
-1. Once done, navigate to [Outlook](https://go.microsoft.com/fwlink/p/?LinkID=2125442&clcid=0x409&culture=en-us&country=us).
+   > **Note:** If you are unable to locate the email from Freshworks, wait a few minutes as there might be a delay in email delivery. Also check your spam or junk folder.
 
-1. In the pick an account pane, select the account which you are assigned for this lab.
+1. Open the email. Depending on the email you received, follow **one** of the paths below:
 
-   ![](./media/fw4.png)
+   **Path A – Verification Code (most common):**
 
-1. In the freshworks verification email, open and click on **Activate Account**.
+   1. Copy the **six-digit verification code** from the email.
 
-   ![](./media/fw5.png)
+      ![](./media/m36-copg-ex9-i-g4.png)
 
-   >**Note:** If you're unable to locate the activation email from Freshworks, please wait a few minutes, as there might be a delay in email delivery. If the email doesn't arrive after some time, consider reinitiating the steps to activate your free trial in a new private/incognito window. Additionally, check your spam or junk folder, as the email might have been filtered there.
+   1. Go back to the Freshworks sign-up tab and enter the code in the **Enter your verification code** fields.
 
-1. In the next pane, provide **<inject key="AzureAdUserPassword"></inject>** as **Enter password (1)** and provide the same password for **Confirm password (2)**. Click on **Activate your account (3)**.
+      ![](./media/m36-copg-ex9-i-g5.png)
 
-   ![](./media/fw6.png)
+   1. If prompted with a CAPTCHA challenge, complete the verification by selecting the required images, and then select **VERIFY**.
 
-1. Once you are in the portal, click on the **Profile (1)** icon from top right corner and select **Profile settings (2)**.
+   1. Enter the password **<inject key="AzureAdUserPassword"></inject>** in the **Password** field, and then select **Start my trial**.
 
-   ![](./media/fw7.png)
+      ![](./media/m36-copg-ex9-i-g6.png)
 
-1. In the profile page, click on **View API Key** to get the API Keys.
+   **Path B – Activation Link:**
 
-   ![](./media/fw8.png)
+   > **Note:** If you received an activation link instead of a verification code, follow these steps.
 
-   >**Note:** If you are not able to find this option, please minimize the screensize using **CTRL + -**.
+   1. In the email, select **Activate Account**.
 
-1. In the next pane, complete the **CAPTCHA**.
+      ![](./media/d3-cor3-g3-g11.png)
 
-   ![](./media/fw9.png)
+   1. On the activation page, enter **<inject key="AzureAdUserPassword"></inject>** in both the **Enter password** and **Confirm password** fields, and then select **Activate your account**.
 
-1. Please copy the API Key to a notepad, you will be using this further.
+      ![](./media/d3-cor3-g3-g12.png)
 
-   ![](./media/fw10.png)
+1. On the personalization page, confirm **Software and Internet (1)** as the industry, select **I’m trying customer service software for the first time (2)**, and then select **Next (3)**.
 
-1. From the browser tab, please copy the **Account URL** as shown and copy the value to notepad. You will be using this further.
+   ![](./media/m36-copg-ex9-i-g8.png)
 
-   ![](./media/fw13.png)
+1. Wait for the Freshdesk portal to load. You should now be logged in to your Freshdesk dashboard.
 
-1. From the left, click on **Tickets** icon from left menu, you can see some default tickets which are present.
+1. From the left menu, select the **Tickets** icon. You can see some default tickets that are present.
 
    ![](./media/fw11.png)
 
-1. Now you have successfully setup the freshworks for ticket management.
+1. In the top-right corner, select your **profile icon (1)**, and then choose **Profile settings (2)** from the menu.
+
+   ![](./media/m36-copg-ex9-i-g9.png)
+
+1. In **Profile settings**, select **View API Key** to display your API key.
+
+   ![](./media/m36-copg-ex9-i-g10.png)
+
+1. Under **Your API Key**, copy the displayed API key and save it securely for later use.
+
+   ![](./media/m36-copg-ex9-i-g12.png)
+
+1. From the browser address bar, copy the **Account URL** (for example, `https://your-company-name.freshdesk.com`) and save it for use in the next task.
+
+   ![](./media/m36-copg-ex9-i-g13.png)
+
+   >This is your **Account URL** which you will need in the later task.
+
+1. You should now have two values saved:
+   - **Account URL:** `https://your-company-name.freshdesk.com`
+   - **API Key:** Your copied API key
+
+1. Now you have successfully set up Freshworks for ticket management.
 
 <validation step="9ec40b7e-aa69-4359-a1f4-833d8ca8d8b4" />
  

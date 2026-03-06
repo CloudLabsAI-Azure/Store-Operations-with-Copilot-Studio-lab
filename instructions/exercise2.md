@@ -18,107 +18,155 @@ You will be able to complete the following tasks:
 
 In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for enabling intelligent store operations.
 
-1. Navigate back to Copilot Studio page from the browser.
+1. In the Copilot Studio home page, from the left navigation pane, select **Agents (1)** and then select **Create blank agent (2)**.
 
-1. From the home page, select **Create (1)** from left menu and click on **+ New agent (2)** to create an agent.
+   ![](./media/st-store-ex2-g1.png)
 
-   ![](./media/ex2img1.png)
+1. Wait until the **Getting things ready...** process completes and the agent configuration page loads.
 
-1. In the next pane, select **configure (1)** and provide the following details.
+   ![](./media/st-store-ex2-g2.png)
 
-    | Key                     | Value                               |
-    |-------------------------------|--------------------------------------------|
-    | Name | `StoreOps Assistant` |
-    | Description | StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets—all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy. |
-    | Instruction | You are an AI-powered assistant designed to support store operations staff. Your tasks include: <br> - Helping users search for products from the catalog using natural language. <br> - Providing accurate answers using connected knowledge sources like store policies and website content. <br> - Assisting in placing orders and logging them in Dataverse. <br> - Creating and tracking support tickets in Freshworks when issues arise. <br> Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If you’re unsure about a request, ask clarifying questions before proceeding. |
+1. Wait until the message **Your agent has been provisioned.** appears on the **Overview** page.
 
-    ![](./media/ex2img12.png)
+   ![](./media/st-store-ex2-g3.png)
 
-    >**Note:** Sometimes you may see a diffrent UI, if you are seeing a UI diffrent than this, then follow this below steps:
+1. On the **Overview** page, select **Edit**.
 
-    - Click on **Skip to configure**, to get the configuration pane.
+   ![](./media/st-store-ex2-g4.png)
 
-      ![](./media/ex5img34.png)
-   
-    - In the next pane, provide the same details given above and click on **Create**.
+1. Enter the agent name in the **Name (1)** field, add the description in the **Description (2)** box, and then select **Save (3)** to apply the changes.
 
-      ![](./media/ex5img33.png)
+   | Field | Value |
+   |-------|-------|
+   | Name | `StoreOps Assistant` |
+   | Description | `StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets, all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy.` |
 
-1. Once after adding the details, click on **Continue** to create the agent.
+   ![](./media/st-store-ex2-g5.png)
 
-1. In the next pane, provide the same details given above and click on **Create**.
+1. Select **Edit** to update the agent instructions.
 
-   ![](./media/copil-g-9.png)
+   ![](./media/st-store-ex2-g6.png)
+
+1. Enter the agent instructions in the **Instructions (1)** box, and then select **Save (2)** to apply the changes.
+
+   ```
+   You are an AI-powered assistant designed to support store operations staff. Help staff with:
+   - Searching for products from the catalog using natural language
+   - Providing accurate answers using connected knowledge sources such as store policies and website content
+   - Assisting in placing orders and logging them in Dataverse
+   - Creating and tracking support tickets in Freshworks when issues arise
+   - Answering general store operations questions
+
+   Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If a request is unclear, ask clarifying questions before proceeding.
+   ```
+
+   ![](./media/st-store-ex2-g7.png)
 
 1. You have successfully created the StoreOps Assistant. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
-
-   ![](./media/ex2img25.png)
 
 ## Task 2: Adding knowledge sources to the agent
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
-1. Navigate to Copilot Studio tab, and select **Knowledge (1)** tab from top menu and click on **+ Add knowledge (2)**.
+1. Select **+ Add knowledge** to add data and resources to the agent.
 
-   ![](./media/ex2img4.png)
+   ![](./media/st-store-ex2-g8.png)
 
-1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
+1. In the next pane, select **select to browse** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
 
-   ![](./media/ex2img5.png)
+   ![](./media/st-store-ex2-g9.png)
 
-1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add to agent (2)**.
+1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and select **Add to agent (2)**.
 
-   ![](./media/copil-g-10.png)
+   ![](./media/st-store-ex2-g10.png)
 
-1. Once done, again click on **+ Add knowledge**.
+1. Once done, again select **+ Add knowledge**.
 
-   ![](./media/ex2img8new.png)
+   ![](./media/st-store-ex2-g11.png)
 
-1. In the next pane, select **Dataverse** as knowledge source.
+1. In the next pane, select **Dataverse** as the knowledge source.
 
-   ![](./media/ex2img14.png)
+   ![](./media/st-store-ex2-g12.png)
 
-1. From the list, search and select **Order** and **Product** tables. Click on **Add to agent**.
+1. In the **Dataverse knowledge source** pane, search for **Order (1)** and select the **Order (2)** table.
 
-   ![](./media/copil-g-11.png)
-
-   >**Note:** If you are seeing **Product Record** table, instead of **Product **, please proceed with the **Product Record** Table.
+   ![](./media/st-store-ex2-g13.png)
 
    >**Note:** If you are seeing **Order Record** table, instead of **Order**, please proceed with the **Order Record** Table.
 
-1. Once done, again click on **+ Add knowledge**.
+1. In the **Dataverse knowledge source** pane, search for **Product (1)** and select the **Product (2)** table.
 
-   ![](./media/ex2img8new.png)
+   ![](./media/st-store-ex2-g14.png)
 
-1. In the next pane, select **Public Websites** as knowledge source.
+   >**Note:** If you are seeing **Product Record** table, instead of **Product**, please proceed with the **Product Record** table.
 
-   ![](./media/ex2img17.png)
+1. Select **Selected (2) (1)** to review the selected tables, and then select **Add to agent (2)**.
 
-1. For **Public website link** add `https://prod.fabrikam.com` and click on **Add**.
+   ![](./media/st-store-ex2-g15.png)
 
-   ![](./media/ex2img24.png)
+1. Once done, again select **+ Add knowledge**.
+
+   ![](./media/st-store-ex2-g16.png)
+
+   > **Note:** If the **Product** or **Order** status appears as **Unknown**, do not worry. It may take **10–15 minutes** to change to **Ready**, and this will not affect the lab progress.
+
+1. In the next pane, select **Public Websites** as the knowledge source.
+
+   ![](./media/st-store-ex2-g17.png)
+
+1. For **Public website link**, add the following URL **(1)** and select **Add (2)**.
+
+   ```
+   https://prod.fabrikam.com
+   ```
+
+   ![](./media/st-store-ex2-g18.png)
 
    >Note: This is a sample E-Commerce website from Microsoft.
 
-1. Once done, click on **Add to agent** in the next pane.
+1. Once done, select **Add to agent** in the next pane.
 
-   ![](./media/copil-g-12.png)
+   ![](./media/st-store-ex2-g19.png)
 
 1. You have now successfully added all the necessary data as a knowledge source for this agent.
 
-1. Select **Overview (1)** tab from top menu, scroll down to **Knowledge** and make **Allow the AI to use its own general knowledge** option as **Disabled (2)**.
+1. In the **Overview** tab, under **Web Search**, ensure the toggle is set to **Disabled**.
 
-   ![](./media/ex2img26.png)
+   ![](./media/st-store-ex2-g20.png)
 
-1. To test if the agent is ingested with knowledge or not, use the right message box to test the agent with some sample prompts given below:
+   > **Note:** If the **Product** or **Order** status appears as **Unknown**, do not worry. It may take **10–15 minutes** to change to **Ready**, and this will not affect the lab progress.
 
-   - `what all products are available in inventory?`
-   - `What will the refund policy?`
-   - `List out all the previous orders with the product name?`
+1. From the top-right corner, select **Test** to test the agent.
 
-     ![](./media/ex2img22.png)
+   ![](./media/st-store-ex2-g21.png)
 
-     ![](./media/ex2img23.png)
+1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and select **Send (2)**.
+
+   ```
+   what all products are available in inventory?
+   ```
+
+   ![](./media/st-store-ex2-g22.png)
+
+1. Verify that the agent searches through the connected knowledge sources such as **https://prod.fabrikam.com**, **Fabrikam Returns Policy for Customers.docx**, and **Product, Order**.
+
+   ![](./media/st-store-ex2-g23.png)
+
+1. Review the response returned by the agent showing the **Available Products in Inventory**.
+
+   ![](./media/st-store-ex2-g24.png)
+
+1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and select **Send (2)**.
+
+   ```
+   List out all the previous orders with the product name?
+   ```
+
+   ![](./media/st-store-ex2-g26.png)
+
+1. Verify that the agent returns the **Previous Orders with Product Names** using the connected knowledge sources.
+
+   ![](./media/st-store-ex2-g27.png)
 
 <validation step="a705bde5-f070-4276-959d-11df80a6d264" />
  
