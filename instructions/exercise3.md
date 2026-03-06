@@ -48,7 +48,6 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g5.png)
 
-
 1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Click on **> (1)** as shown and select **User's entire response (2)**.
 
    ![](./media/st-store-ex3-g6.png)
@@ -219,41 +218,59 @@ In this task, you will create a topic that allows users to place product orders 
 
 ## Task 2: Define an Agent Flow to Insert Order Details into Dataverse
 
-In this task, you will create an action that inserts the collected order details—such as customer name, product name, and delivery address—into a Dataverse table. This Agent Flow will be triggered by the topic you created earlier and will handle the data insertion into the appropriate table within Microsoft Dataverse.
+In this task, you will create an action that inserts the collected order details, such as customer name, product name, and delivery address into a Dataverse table. This Agent Flow will be triggered by the topic you created earlier and will handle the data insertion into the appropriate table within Microsoft Dataverse.
 
-1. Once the flow is saved, click on **+** to add the new node under the previous node. Select **Add an action (1)** option from the list and click on **New Agent flow (2)** to create a new flow.
+1. From the left navigation pane, select **Flows (1)** and then choose **New agent flow (2)** to create a flow that will store order details in Dataverse.
 
-   ![](./media/ex3imgup2.png)
+   ![](./media/st-store-ex3-g40.png)
 
-   >**Note:** You may see **Add a Tool** instead of **Add an Action**, please select **Add a Tool** option as they both work exactly same.
+1. In the **Add a trigger** pane, search for **when an agent calls the flow (1)** and select **When an agent calls the flow (2)**.
 
-1. You will be navigated to a new designer experience, click on **When an agent calls the flow** node.
+   ![](./media/st-store-ex3-g41.png)
 
-   ![](./media/ex3img30.png)
+   > **Note:** After searching, you may need to scroll down to locate the **When an agent calls the flow** option in the results.
 
-1. A new pane will be opened from the left, click on **Add an input** as we have to pass the user inputs such as `UserName`, `ProductName`, `DeliveryAddress` and `Quantity`.
+1. In the **When an agent calls the flow** node, select **Add an input** to add input parameters.
 
-   ![](./media/ex3img31.png)
+   ![](./media/st-store-ex3-g42.png)
+
+1. Under **Choose the type of user input**, select **Text**.
+
+   ![](./media/st-store-ex3-g43.png)
+
+1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **Add an input (2)**.
+
+   ```
+   UserName
+   ```
+
+   ![](./media/st-store-ex3-g44.png)
+
+1. Under **Choose the type of user input**, select **Text**.
+
+   ![](./media/st-store-ex3-g45.png)
+
+1. In the **When an agent calls the flow** node, add the following input names so the flow can receive the values collected from the topic.
+
+   ```
+   ProductName
+   ```
+
+   ```
+   DeliveryAddress
+   ```
+
+   ![](./media/st-store-ex3-g46.png)
 
    >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
 
-1. Select **Text** as te datatype for the variable.
+1. In the **When an agent calls the flow** node, select **Add an input** to add another parameter.
 
-   ![](./media/ex3img32.png)
+   ![](./media/st-store-ex3-g47.png)
 
-1. Provide **UserName** as the Input name.
+1. Under **Choose the type of user input**, select **Number**.
 
-   ![](./media/ex3img33.png)
-
-1. Please repeat the same steps for `ProductName` and `DeliveryAddress`.
-
-   ![](./media/ex3img34.png)
-
-   ![](./media/ex3img35.png)
-
-1. Again click on **Add an input** option, select **Number** as datatype for `Quantity`.
-
-   ![](./media/ex3img36.png)
+   ![](./media/st-store-ex3-g48.png)
 
 1. Provide **Quantity** as the Input name.
 
@@ -261,51 +278,61 @@ In this task, you will create an action that inserts the collected order details
 
 1. Once completed, the variables will look like this.
 
-   ![](./media/ex3img38.png)
+   ![](./media/st-store-ex3-g49.png)
 
-1. Now, click on **+** to add the **Dataverse** connector.
+1. Select **+** to add the next action to the flow, where you will configure the **Dataverse** operation.
 
-   ![](./media/ex3img39.png)
+   ![](./media/st-store-ex3-g50.png)
 
-1. From the list, scroll down to **By connector** catagory and select **Microsft Dataverse**.
+1. In the **Add an action** pane, search for **Microsoft Dataverse (1)** and then select **See more (2)**.
 
-   ![](./media/ex3img40.png)
+   ![](./media/st-store-ex3-g51.png)
 
-1. In the next pane to Add an action, select **Add a new row** option.
+1. From the **Microsoft Dataverse** actions list, select **Add a new row**.
 
-   ![](./media/ex3img41.png)
+   ![](./media/st-store-ex3-g52.png)
 
-1. In the **Create connection** pane, click n **Sign in**.
+1. In the **Create a new connection** pane, enter the following value for **Connection name (1)**, ensure **Oauth (2)** is selected under **Authentication Type**, and then select **Sign in (3)**.
 
-   ![](./media/ex3imgup3.png)
+   ```
+   Microsoft Dataverse
+   ```
 
-1. Once done, a pop up window will be opened to pick an account for authentication. Select the user account which you are using for this lab.
+   ![](./media/st-store-ex3-g53.png)
 
-   ![](./media/ex3imgup5.png)
+   > **Note:** If the sign-in pop-up does not appear, check your browser address bar and allow pop-ups for **copilotstudio.microsoft.com**, then select **Done** and try signing in again.
 
-   >**Note:** If you're unable to see a pop-up window or are encountering an error, it's likely that pop-ups are blocked in your browser. Please click the pop-up icon in your browser's address bar and allow pop-ups for this site.
+1. In the **Pick an account** window, select the lab user account to sign in.
 
-   ![](./media/ex3imgup4.png)
+   ![](./media/st-store-ex3-g55.png)
 
-1. Once done, in the next pane, click on **Allow access** Option to grant the agent access to update the Dataverse table.
+1. In the **Confirmation required** page, select **Allow access** to grant permissions for the **Microsoft Dataverse** connection.
 
-   ![](./media/ex3imgup6.png)
+   ![](./media/st-store-ex3-g56.png)
 
-1. In the configuration page, please select **Order Record** from the list under **Table name**.
+1. In the **Add a new row** action, select **Order** in the **Table name** field.
 
-   ![](./media/ex3img42.png)
+   ![](./media/st-store-ex3-g57.png)
 
-1. For **OrderID**, you will add a function to generate globally unique ID to each orders. Click on **fx** option to add the function.
+1. In the **Add a new row** action, expand **Advanced parameters (1)** and select **OrderID (2)** to add the field to the action.
 
-   ![](./media/ex3img43.png)
+   ![](./media/st-store-ex3-g58.png)
 
-   >**Note:** If you are not able to see **OderID** parameter showing up by default, it means the parameter is not set as Primary index. You can select this parameter from advanced parameters below and configure it with **guid()** function.
+   > **Note:** If **OrderID** already appears by default in the action, you can directly configure it without selecting it from **Advanced parameters**.
 
-1. In the text area, add `guid()` **(1)** - This will generate a Globally Unique Id. Click on **Add (2)**.
+1. In the **OrderID (1)** field, select **fx (2)** to add an expression for generating a unique order identifier.
 
-   ![](./media/ex3img60.png)
+   ![](./media/st-store-ex3-g59.png)
 
-1. In the Advanced Parameters, click on **V** and select these parameters:
+1. In the expression editor, enter the following expression **(1)** to generate a **Globally Unique Identifier (GUID)** for the order, and then select **Add (2)**.
+
+   ```
+   guid()
+   ```
+
+   ![](./media/st-store-ex3-g60.png)
+
+1. In **Advanced parameters (1)**, expand the list and select
 
    - **CustomerName**
    - **DeliveryAddress**
@@ -313,67 +340,87 @@ In this task, you will create an action that inserts the collected order details
    - **Quantity**
    - **Status**
 
-     ![](./media/ex3img45.png)
+      ![](./media/st-store-ex3-g61.png)
 
-1. Once added, under **CustomerName** click on the shown symbol to add the **Dynamic content** as the value.
+1. In the **CustomerName (1)** field, select the **dynamic content icon (2)** to insert the value from the flow inputs.
 
-   ![](./media/ex3img46.png)
+   ![](./media/st-store-ex3-g62.png)
 
-1. From the list values, select **UserName**.
+1. From the **Dynamic content** pane, select **UserName** to populate the **CustomerName** field.
 
-   ![](./media/ex3img47.png)
+   ![](./media/st-store-ex3-g63.png)
 
-1. Repeat the same steps for other parameters.
+1. Repeat the same steps for other parameters **(1)** and select **Pending (2)** as the value for the **Status** field.
 
-1. For **Status** parameter, select **Pending** as value from list.
+   ![](./media/st-store-ex3-g64.png)
 
-   ![](./media/ex3img48.png)
+1. From the top right corner, select **Publish** to save the agent flow.
 
-1. Once after configuration, the parameters will look like this.
+   ![](./media/st-store-ex3-g65.png)
 
-   ![](./media/ex3img49.png)
+1. On the **Overview (1)** tab, select **Edit (2)** to modify the agent flow details.
 
-1. Now, you have successfully set up your agent flow, click on **Publish** from the top right corner to save the flow.
+   ![](./media/st-store-ex3-g69.png)
 
-   ![](./media/ex3img53.png)
+1. In the **Details** pane, enter the following text in the **Flow name (1)** field, and then select **Save (2)**.
 
-1. Once published, a pop up will be opened, click on **Go back to agent** to navigate back to your topic.
+   ```
+   Dataverse
+   ```
 
-   ![](./media/ex3img54.png)
+   ![](./media/st-store-ex3-g70.png)
 
-1. Once navigated to Actions, select **Topics (1)** from the top menu and click on **Place Order (2)** topic.
+1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
-   ![](./media/ex3imgup7n.png)
+   ![](./media/st-store-ex3-g66.png)
 
-1. Once you are inside the topic, click on **+** and, click on **Add an action (1)** and select **Untitled (2)**.
+1. Select the **Topics (1)** tab from the top menu, and then select the **Place Orders (2)** topic.
 
-   ![](./media/ex3imgup8.png)
+   ![](./media/st-store-ex3-g67.png)
 
-   >**Note:** You may see **Add a Tool** instead of **Add an Action**, please select **Add a Tool** option as they both work exactly same.
+1. Select **+** to add a new node below the **Question** node.
 
-1. In the **Action** node, under Username parameter click on **... (1)** and select **UserName (2)** variable.
+   ![](./media/st-store-ex3-g68.png)
 
-   ![](./media/ex3img55.png)
+1. From the node options, select **Add a tool (1)** and then choose **Dataverse (2)** to integrate the agent flow into your topic.
 
-1. Please repeat the same steps to add variables for all the Parameters.
+   ![](./media/st-store-ex3-g71.png)
 
-1. Once done, the Action configuration will look like this.
+1. In the **Action** node, select the **... (1)** icon for the **UserName** parameter and choose the **UserName (2)** variable from the list.
 
-   ![](./media/ex3img69.png)
+   ![](./media/st-store-ex3-g72.png)
 
-1. Now, add a new node by clicking on **+** and select **Send a message** option from list.
+1. Repeat the same process for the **ProductName (1)** parameter and select the **ProductName (2)** variable.
 
-   ![](./media/ex3img58.png)
+   ![](./media/st-store-ex3-g73.png)
 
-1. In the text area, add the message as `Your order has been placed!`.
+1. Repeat the same process for the **DeliveryAddress (1)** parameter and select the **DeliveryAddress (2)** variable.
 
-   ![](./media/ex3img59.png)
+   ![](./media/st-store-ex3-g74.png)
 
-   >**Note:** This will be shown to the users, once the record is added to Dataverse table, you can be creative here by adding variable such as **UserName** and **ProductName** for a dynamic message.
+1. Repeat the same process for the **Quantity (1)** parameter and select the **Quantity (2)** variable.
 
-1. Once done, please use the **Save** option from the top menu to save the flow.
+   ![](./media/st-store-ex3-g75.png)
 
-   ![](./media/ex3img27.png)
+1. Select **+** to add a new node below the **Action** node.
+
+   ![](./media/st-store-ex3-g76.png)
+
+1. From the node options, select **Send a message**.
+
+   ![](./media/st-store-ex3-g77.png)
+
+1. In the **Message** node, enter the following text.
+
+   ```
+   Your order has been placed!
+   ```
+
+   ![](./media/st-store-ex3-g78.png)
+
+1. From the top menu, select **Save** to save the topic.
+
+   ![](./media/st-store-ex3-g79.png)
 
 1. Now use the **Test** area in the right to validate the working of the flow.
 
@@ -383,49 +430,53 @@ In this task, you will create an action that inserts the collected order details
      I want to place an order
      ```
 
-     ![](./media/ex3img61.png)
+     ![](./media/st-store-ex3-g80.png)
      
      >The agent will reply with a question to get the product details.
 
    - ```
      Galaxy Fitness Tracker
      ```
-     ![](./media/ex3img62.png)
+
+     ![](./media/st-store-ex3-g81.png)
 
      >The agent will ask a question to get the quantity of the order.
    
    - ```
      1
      ```
-     ![](./media/ex3img63.png)
+
+     ![](./media/st-store-ex3-g82.png)
 
      >The agent will ask to provide UserName
 
    - ```
      John
      ```
-     ![](./media/ex3img64.png)
+
+     ![](./media/st-store-ex3-g83.png)
 
      >Next, the agent will ask for delivery address.
 
    - ```
      1st Street, California
      ```
-     ![](./media/ex3img65.png)
+     
+     ![](./media/st-store-ex3-g84.png)
 
      >Now the Action will run. It may take few seconds once done, you will get the acknowledgement.
 
-     ![](./media/ex3img66.png)
+     ![](./media/st-store-ex3-g85.png)
 
 1. Now, to verify the creation of record inside the dataverse table, navigate back to power apps portal.
 
-1. once you are in Power apps portal, select **Tables (1)** from left menu and from the list click on **Order Record (2)** table.
+1. once you are in Power apps portal, select **Tables (1)** from left menu and from the list click on **Order (2)** table.
 
-   ![](./media/ex3img67.png)
+   ![](./media/st-store-ex3-g86.png)
 
 1. Now, you can able to a record is added with the details that you have provided.
 
-   ![](./media/ex3img68.png)
+   ![](./media/st-store-ex3-g87.png)
 
 1. You have successfully created a flow with an Action to manage order placements.
 
@@ -435,95 +486,109 @@ In this task, you will build a topic that enables users to request support by cr
 
 1. As you have started a free trial for Freshworks. You will be creating a topic that integrating with Freshworks.
 
+1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
+
+   ![](./media/st-store-ex3-g66.png)
+
 1. In copilot Studio portal, select **Topics (1)** tab from top menu, click on **+ Add a topic (2)** and select **From blank**.
 
-   ![](./media/ex3img1.png)
+   ![](./media/st-store-ex3-g1.png)
 
-1. Once you are in the designer, on the **Trigger** node, add the description as `This topic helps user to create tickets and raise their queries`.
+1. On the **Trigger** node, enter the following text in the **Describe what the topic does** field.
 
-   ![](./media/ex5img1.png)
+   ```
+   This topic helps user to create tickets and raise their queries
+   ```
 
-1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question** as the agent should ask a question to user related to the product they want to buy.
+   ![](./media/st-store-ex3-g88.png)
 
-   ![](./media/ex3img3.png)
+1. Select **+** below the **Trigger** node to add a new node.
 
-1. In the text area of the node, add the question as `Kindly provide the subject for the ticket`.
+   ![](./media/st-store-ex3-g89.png)
 
-   ![](./media/ex5img2.png)
+1. From the node options, select **Ask a question**.
 
-1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Click on **> (1)** as shown and select **User's entire response (2)**.
+   ![](./media/st-store-ex3-g90.png)
 
-   ![](./media/ex5img3.png)
+1. In the **Question** node, enter the following text in the message box.
 
-1. Now, click on **Var1** as we have to change the variable name.
+   ```
+   Kindly provide the subject for the ticket
+   ```
 
-   ![](./media/ex3img6.png)
+   ![](./media/st-store-ex3-g91.png)
 
-1. Change the name to **Subject** under Variable name.
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
 
-   ![](./media/ex5img28.png)
+   ![](./media/st-store-ex3-g92.png)
 
-1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question** as the agent should ask a question to user related to the product they want to buy.
+1. Under **Save user response as**, select **Var1 (1)**, enter **Subject (2)** under **Variable name**, and then select **Close (3)**.
 
-   ![](./media/ex3img3.png)
+   ![](./media/st-store-ex3-g93.png)
 
-1. In the text area of the node, add the question as `Please provide a detailed description on the ticket`.
+1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question (2)** as the agent should ask a question to user related to the product they want to buy.
 
-   ![](./media/ex5img30.png)
+   ![](./media/st-store-ex3-g94.png)
 
-1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Click on **> (1)** as shown and select **User's entire response (2)**.
+1. In the **Question** node, enter the following text in the message box.
 
-   ![](./media/ex5img3.png)
+   ```
+   Please provide a detailed description on the ticket
+   ```
 
-1. Now, click on **Var1** as we have to change the variable name.
+   ![](./media/st-store-ex3-g95.png)
 
-   ![](./media/ex3img6.png)
+1. From the top menu, select **Save** to save the topic.
 
-1. Change the name to **Description** under Variable name.
+   ![](./media/st-store-ex3-g96.png)
 
-   ![](./media/ex5img29.png)
+1. In the **Save your topic** dialog, enter the following name in the **Name your topic (1)** field, and then select **Save (2)**.
 
-1. Once done, please use the **Save** option from the top menu to save the flow.
+   ```
+   Ticket Creation
+   ```
 
-   ![](./media/ex3img27.png)
+   ![](./media/st-store-ex3-g97.png)
 
-1. In the pop up, under **Name your topic** provide name as `Ticket Creation` **(1)** and click on **Save (2)**.
+1. From the left navigation pane, select **Flows (1)** and then choose **+ New agent flow (2)**.
 
-   ![](./media/ex5img4.png)
+   ![](./media/st-store-ex3-g98.png)
 
-1. Once the flow is saved, click on **+** to add the new node under the previous node. Select **Add an action (1)** option from the list and click on **New Agent flow (2)** to create a new flow.
+1. In the **Add a trigger** pane, search for **when an agent calls the flow (1)** and select **When an agent calls the flow (2)**.
 
-   ![](./media/ex3imgup2.png)
+   ![](./media/st-store-ex3-g41.png)
 
-1. You will be navigated to a new designer experience, click on **When an agent calls the flow** node.
+   > **Note:** After searching, you may need to scroll down to locate the **When an agent calls the flow** option in the results.
 
-   ![](./media/ex3img30.png)
+1. In the **When an agent calls the flow** node, select **Add an input** to add input parameters.
 
-1. A new pane will be opened from the left, click on **Add an input** as we have to pass the user inputs such as `Subject` and `Description`.
+   ![](./media/st-store-ex3-g42.png)
 
-   ![](./media/ex3img31.png)
+1. Under **Choose the type of user input**, select **Text**.
+
+   ![](./media/st-store-ex3-g43.png)
+
+1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **Add an input (2)**.
+
+   ```
+   Subject
+   ```
+
+   ![](./media/st-store-ex3-g99.png)
+
+1. Under **Choose the type of user input**, select **Text**.
+
+   ![](./media/st-store-ex3-g100.png)
+
+1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ (2)**.
+
+   ```
+   Description
+   ```
+
+   ![](./media/st-store-ex3-g101.png)
 
    >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
-
-1. Select **Text** as te datatype for the variable.
-
-   ![](./media/ex3img32.png)
-
-1. Provide **Subject** as the Input name.
-
-   ![](./media/ex5img26.png)
-
-1. Repeat the same steps to add `Description` variable.
-
-   ![](./media/ex5img27.png)
-
-1. Now, click on **+** to add the **Freshdesk** connector.
-
-   ![](./media/ex3img39.png)
-
-1. From the list, search for **Freshdesk (1)** and select **Create a ticket (2)**.
-
-   ![](./media/fw12.png)
 
 1. In the **Create a ticket** pane, provide the following details and click on **Create new**:
 
@@ -532,7 +597,7 @@ In this task, you will build a topic that enables users to request support by cr
    - **Email or API key:** Please add the **API KEY (3)**, which you copied in first exercise
    - **Password:** As you have provided API Keys, password is not important here but as it is a required parameter just provide a random value.
 
-     ![](./media/fw14.png)
+     ![](./media/st-store-ex3-g103.png)
 
 1. Once done, for parameter **Subject**, click on **Dynamic Content** coption as shown.
 
@@ -550,51 +615,81 @@ In this task, you will build a topic that enables users to request support by cr
 
 1. Now, provide the **Email** as `john@contoso.com` **(1)**, select **Priority** as `Medium` **(2)** and select **Status** as `Open` **(3)**.
 
-   ![](./media/fw18.png)
+   ![](./media/st-store-ex3-g104.png)
 
 1. Now, you have successfully set up your agent flow, click on **Publish** from the top right corner to save the flow.
 
-   ![](./media/ex3img53.png)
+   ![](./media/st-store-ex3-g105.png)
 
-1. Once published, a pop up will be opened, click on **Go back to agent** to navigate back to your topic.
+1. On the **Untitled** flow page, ensure you are on the **Overview (1)** tab and select **Edit (2)** from the **Details** section.
 
-   ![](./media/ex3img54.png)
+   ![](./media/st-store-ex3-g106.png)
 
-1. Now, you can see an action will be populated in your topic.
+1. In the **Details** pane, enter the following name in the **Flow name (1)** field and then select **Save (2)**.
 
-   ![](./media/ex5img5.png)
+   ```
+   Freshdesk
+   ```
 
-1. In **Action** node, click **>** under description and select **Description**.
+   ![](./media/st-store-ex3-g107.png)
 
-   ![](./media/ex5img6.png)
+1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
-1. Please repeat the same steps to configure the variable for **Subject** parameter.
+   ![](./media/st-store-ex3-g66.png)
 
-1. Once done, the action will look similar to this.
+1. From the top navigation menu, select **Topics (1)** and then choose the **Ticket Creation (2)** topic from the list.
 
-   ![](./media/ex5img7.png)
+   ![](./media/st-store-ex3-g108.png)
 
-1. Now, add a new node by clicking on **+** and select **Send a message** option from list.
+1. In **Action** node, select **+** below the **Description** question node to add a new node.
 
-   ![](./media/ex3img58.png)
+   ![](./media/st-store-ex3-g109.png)
 
-1. In the text area, add the message as `Thank you, your ticket has been successfully submitted`.
+1. From the node options, select **Add a tool (1)** and then choose **Freshdesk (2)** to integrate the ticket creation flow.
 
-   ![](./media/ex5img8.png)
+   ![](./media/st-store-ex3-g110.png)
 
-1. Once done, please use the **Save** option from the top menu to save the flow.
+1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Subject (String)** field and choose the **Subject (2)** variable from the list.
 
-   ![](./media/ex3img27.png)
+   ![](./media/st-store-ex3-g111.png)
+
+1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Description (String)** field and choose the **Description (2)** variable from the list.
+
+   ![](./media/st-store-ex3-g112.png)
+
+1. Select **+ (1)** below the Freshdesk action node and choose **Send a message (2)**.
+
+   ![](./media/st-store-ex3-g113.png)
+
+1. In the **Message** node, enter the following text in the message box.
+
+   ```
+   Thank you, your ticket has been successfully submitted.
+   ```
+
+   ![](./media/st-store-ex3-g114.png)
+
+1. From the top menu, select **Save** to finalize the changes to your topic.
+
+   ![](./media/st-store-ex3-g115.png)
 
 1. Now use the **Test** area in the right to validate the working of the flow.
 
-1. In the chat area, add prompt as `I want to create a ticket` and send it.
+1. In the **Test your agent** pane, enter the following message in the chat box **(1)** and select the **Send** icon **(2)**.
 
-   ![](./media/ex5img10.png)
+   ```
+   I want to create a ticket
+   ```
 
-1. Now, the agent will ask a question get subject for ticket. Add the subject as `Refund Not Received`.
+   ![](./media/st-store-ex3-g116.png)
 
-   ![](./media/ex5img11.png)
+1. The agent will prompt you to provide a subject for the ticket. Enter the following text into the chat box **(1)** and select the **Send** icon **(2)**.
+
+   ```
+   Refund Not Received
+   ```
+
+   ![](./media/st-store-ex3-g117.png)
 
 1. Again the agent will ask a question to get a description on the ticket. Provide the below description:
 
@@ -603,15 +698,33 @@ In this task, you will build a topic that enables users to request support by cr
    The expected refund timeline has passed, and I would appreciate it if you could look into this matter. Please let me know if any additional information is required from my side.
    ```
 
-   ![](./media/ex5img12.png)
+   ![](./media/st-store-ex3-g118.png)
 
-1. You will now see a confirmation from the agent indicating that the ticket has been successfully created.
+1. In the chat window, select **Open connection manager** to verify and configure your credentials for the integration.
 
-   ![](./media/ex5img13.png)
+   ![](./media/st-store-ex3-g119.png)
+
+1. On the **Manage your connections** page, locate the **Freshdesk** connection and select **Connect**.
+
+   ![](./media/st-store-ex3-g120.png)
+
+1. On the **Create or pick connections** page, confirm that the **Freshdesk** connection is selected and then click on **Submit**.
+
+   ![](./media/st-store-ex3-g121.png)
+
+1. Verify that the **Status** now shows as **Connected**.
+
+   ![](./media/st-store-ex3-g122.png)
+
+1. Return to the chat window and click on **Retry (1)** to trigger the ticket creation again. You will see a confirmation message stating that your ticket has been successfully submitted **(2)**.
+
+   ![](./media/st-store-ex3-g123.png)
 
 1. Navigate back to **Freshworks** portal, you can see that the ticket with a subject **Refund Not Received** is created.
 
-   ![](./media/fw19.png)
+   ![](./media/st-store-ex3-g124.png)
+
+   ![](./media/st-store-ex3-g125.png)
 
 <validation step="09f5e08a-c2db-4bd9-add0-435e23d74659" />
  
