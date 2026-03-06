@@ -18,11 +18,7 @@ You will be able to complete the following tasks:
 
 In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for enabling intelligent store operations.
 
-1. Navigate back to Copilot Studio page from the browser.
-
-1. From **Environment (1)**, expand **Supported environments (2)** and select **ODL_User <inject key="Deployment ID"/>'s Environment (3)** to ensure you are in the ODL environment.
-
-   ![](./media/st-store-gs-g2.png)
+1. In the Copilot Studio home page.
 
 1. From the left navigation pane, select **Agents (1)** and then choose **Create blank agent (2)**.
 
@@ -80,55 +76,100 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
 
-   ![](./media/ex2img5.png)
+   ![](./media/st-store-ex2-g9.png)
 
 1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add to agent (2)**.
 
-   ![](./media/copil-g-10.png)
+   ![](./media/st-store-ex2-g10.png)
 
 1. Once done, again click on **+ Add knowledge**.
 
-   ![](./media/ex2img8new.png)
+   ![](./media/st-store-ex2-g11.png)
 
 1. In the next pane, select **Dataverse** as knowledge source.
 
-   ![](./media/ex2img14.png)
+   ![](./media/st-store-ex2-g12.png)
 
-1. From the list, search and select **Order** and **Product** tables. Click on **Add to agent**.
+1. In the **Dataverse knowledge source** pane, search for **Order (1)** and select the **Order (2)** table.
 
-   ![](./media/copil-g-11.png)
-
-   >**Note:** If you are seeing **Product Record** table, instead of **Product **, please proceed with the **Product Record** Table.
+   ![](./media/st-store-ex2-g13.png)
 
    >**Note:** If you are seeing **Order Record** table, instead of **Order**, please proceed with the **Order Record** Table.
 
+1. In the **Dataverse knowledge source** pane, search for **Product (1)** and select the **Product (2)** table.
+
+   ![](./media/st-store-ex2-g14.png)
+
+   >**Note:** If you are seeing **Product Record** table, instead of **Product **, please proceed with the **Product Record** Table.
+
+1. Select **Selected (2) (1)** to review the selected tables, and then choose **Add to agent (2)**.
+
+   ![](./media/st-store-ex2-g15.png)
+
 1. Once done, again click on **+ Add knowledge**.
 
-   ![](./media/ex2img8new.png)
+   ![](./media/st-store-ex2-g16.png)
+
+   > **Note:** If the **Product** or **Order** status appears as **Unknown**, do not worry. It may take **10–15 minutes** to change to **Ready**, and this will not affect the lab progress.
 
 1. In the next pane, select **Public Websites** as knowledge source.
 
-   ![](./media/ex2img17.png)
+   ![](./media/st-store-ex2-g17.png)
 
-1. For **Public website link** add `https://prod.fabrikam.com` and click on **Add**.
+1. For **Public website link** add the below **url (1)** and click on **Add (2)**.
 
-   ![](./media/ex2img24.png)
+   ```
+   https://prod.fabrikam.com
+   ```
+
+   ![](./media/st-store-ex2-g18.png)
 
    >Note: This is a sample E-Commerce website from Microsoft.
 
 1. Once done, click on **Add to agent** in the next pane.
 
-   ![](./media/copil-g-12.png)
+   ![](./media/st-store-ex2-g19.png)
 
 1. You have now successfully added all the necessary data as a knowledge source for this agent.
 
-1. Select **Overview (1)** tab from top menu, scroll down to **Knowledge** and make **Allow the AI to use its own general knowledge** option as **Disabled (2)**.
+1. In the **Overview** tab, under **Web Search**, ensure the toggle is set to **Disabled**.
 
-   ![](./media/ex2img26.png)
+   ![](./media/st-store-ex2-g20.png)
 
-1. To test if the agent is ingested with knowledge or not, use the right message box to test the agent with some sample prompts given below:
+   > **Note:** If the **Product** or **Order** status appears as **Unknown**, do not worry. It may take **10–15 minutes** to change to **Ready**, and this will not affect the lab progress.
 
-   - `what all products are available in inventory?`
+1. From the top-right corner, select **Test** to test the agent.
+
+   ![](./media/st-store-ex2-g21.png)
+
+1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and click on **Send (2)**.
+
+   ```
+   what all products are available in inventory?
+   ```
+
+   ![](./media/st-store-ex2-g22.png)
+
+1. Verify that the agent searches through the connected knowledge sources such as **https://prod.fabrikam.com**, **Fabrikam Returns Policy for Customers.docx**, and **Product, Order**.
+
+   ![](./media/st-store-ex2-g23.png)
+
+1. Review the response returned by the agent showing the **Available Products in Inventory**.
+
+   ![](./media/st-store-ex2-g24.png)
+
+1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and click on **Send (2)**.
+
+   ```
+   List out all the previous orders with the product name?
+   ```
+
+   ![](./media/st-store-ex2-g26.png)
+
+1. Review the response returned by the agent showing the **Previous Orders with Product Names**.
+
+   ![](./media/st-store-ex2-g27.png)
+
    - `List out all the previous orders with the product name?`
 
      ![](./media/ex2img22.png)
