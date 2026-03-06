@@ -726,6 +726,14 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g125.png)
 
+1. To finalize all changes and make the agent live, navigate back to **copilot Studio** portal and select **Publish** from the top right corner of the page.
+
+   ![](./media/st-store-ex3-g126.png)
+
+1. On the **Publish this agent** dialog box, review the information and then select **Publish** to make your agent and its recent changes available to users.
+
+   ![](./media/st-store-ex3-g127.png)
+
 <validation step="09f5e08a-c2db-4bd9-add0-435e23d74659" />
  
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
