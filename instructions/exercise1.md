@@ -20,13 +20,13 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 
 1. Navigate back to Power Apps portal, please switch to the environment to the environmnet that you created earlier.
 
-    ![](./media/papps1.png)
+    ![](./media/st-store-ex1-g1.png)
 
 1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
 
    ![](./media/ex3img71.png)
 
-   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 3**.
+   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 4**.
 
 1. In the new pane for creating New Database, click on **Create my Database**.
 
@@ -34,7 +34,7 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 
 1. Once done, click on **Create with Excel or .CSV file**.
 
-   ![](./media/ex3img73.png)
+   ![](./media/st-store-ex1-g2.png)
 
 1. In the pop up window to create a environment, Click on **Create**. This will create a new power platform developer environment.
 
@@ -42,13 +42,9 @@ In this task, you will ingest the datasets to dataverse, which will be created i
    
    >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
 
-1. Once done, select **Tables (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
-
-   ![](./media/ex2img10.png)
-
 1. In the next pane, click on **Select from device**.
 
-   ![](./media/ex2img11.png)
+   ![](./media/st-store-ex1-g4.png)
 
 1. On the **Open** window, navigate to the folder `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets` **(1)**.  
 Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
@@ -57,64 +53,64 @@ Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
 
 1. Once selected please click on **Import**.
 
+   ![](./media/st-store-ex1-g5.png)
+
 1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
 
-   ![](./media/ex2img19.png)
+   ![](./media/st-store-ex1-g6.png)
 
-   ![](./media/ex2img20.png)
+   ![](./media/st-store-ex1-g7.png)
 
    >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
    >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
 
 1. Again, select **Tabes (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
 
-   ![](./media/ex2img10.png)
+   ![](./media/st-store-ex1-g2.png)
 
 1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
 
-   ![](./media/ex2img11.png)
+   ![](./media/st-store-ex1-g4.png)
 
 1. Once selected please click on **Import**.
 
+   ![](./media/st-store-ex1-g8.png)
+
 1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
 
-   ![](./media/ex2img19.png)
+   ![](./media/st-store-ex1-g9.png)
 
-   ![](./media/ex2img20.png)
+   ![](./media/st-store-ex1-g7.png)
 
-   ![](./media/ex3img71.png)
+1. Navigate to **Microsoft Copilot Studio** by opening a new browser tab and entering the following URL:
 
-1. As you have now created a new environment and set up Dataverse, navigate to **Copilot Studio**  in a new tab using this link: [copilot studio](https://go.microsoft.com/fwlink/p/?linkid=2252408&clcid=0x409&culture=en-us&country=us)
+   ```
+   https://copilotstudio.microsoft.com
+   ```
 
-   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
-   
-1. In the pop-up window that appears click on **Get Started**
+1. On the **Welcome to Microsoft Copilot Studio** screen, keep the default **country/region** selection and click **Get Started** to continue.
 
-   ![](./media/pp-13.png)
+   ![](./media/pro-activ-gg-g11.png)
 
-   >**Note:** If the Copilot Studio portal is taking longer than usual to load, please wait a few minutes. Alternatively, try closing your browser and reopening the portal in a private/incognito window. If still the issue persists,followthe below instructions to resolve this:
+1. If the **Welcome to Copilot Studio!** pop-up appears, click **Skip** to continue to the main dashboard.
 
-   > Navigate back to Power Apps Portal, and copy the environment ID as shown.
+   ![](./media/gs-travel-g3.png)
 
-   ![](./media/cpnew2.png)
+1. If the **We've updated you to the latest version of Microsoft Copilot Studio** pop-up appears, click **Got it!**.
 
-   > Once copied, navigate back to Copilot Studio, from the URL, replace the **Default** environment ID to the ID that you copied.
+   ![](./media/pro-activ-gg-g12.png)
 
-   ![](./media/cpnew3.png)
+1. If the **What's new in Copilot Studio** pop-up appears, click the **Close (X)** icon to dismiss it.
 
-1. If the **Welcome to Copilot Studio** prompt appears, click **Skip**.
+   ![](./media/pro-activ-gg-g13.png)
+
+1. In Copilot Studio, open the environment picker **(1)**, expand **Supported environments (2)**, and select **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment (3)** to switch.
+
+   ![](./media/ex1-travel-g6.png)
 
 1. Once you are inside **Copilot Studio** you will be in the home page. 
 
-   ![](./media/ex1img3.png)
-
-1. In the home page, select the environment option as shown.
-
-   ![](./media/pp-10.png)
-
-1. Change the environment to the new environment that you have created earlier. Keep the tab open as you will be using this in further exercises.
-
-   ![](./media/pp-11.png)
+   ![](./media/st-store-ex1-g10.png)
 
 ## Task 2: Setting up Freshworks for incident management
 

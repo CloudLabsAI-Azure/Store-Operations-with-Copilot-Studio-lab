@@ -20,25 +20,53 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 1. Navigate back to Copilot Studio page from the browser.
 
-1. From the home page, select **Create (1)** from left menu and click on **+ New agent (2)** to create an agent.
+1. From **Environment (1)**, expand **Supported environments (2)** and select **ODL_User <inject key="Deployment ID"/>'s Environment (3)** to ensure you are in the ODL environment.
 
-   ![](./media/ex2img1.png)
+   ![](./media/st-store-gs-g2.png)
 
-1. In the next pane, select **configure (1)** and provide the following details.
+1. From the left navigation pane, select **Agents (1)** and then choose **Create blank agent (2)**.
 
-    | Key                     | Value                               |
-    |-------------------------------|--------------------------------------------|
-    | Name | `StoreOps Assistant` |
-    | Description | StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets, all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy. |
-    | Instruction | You are an AI-powered assistant designed to support store operations staff. Your tasks include: <br> - Helping users search for products from the catalog using natural language. <br> - Providing accurate answers using connected knowledge sources like store policies and website content. <br> - Assisting in placing orders and logging them in Dataverse. <br> - Creating and tracking support tickets in Freshworks when issues arise. <br> Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If you’re unsure about a request, ask clarifying questions before proceeding. |
+   ![](./media/st-store-ex2-g1.png)
 
-    ![](./media/ex2img12.png)
+1. Wait until the **Getting things ready...** process completes and the agent configuration page loads.
 
-1. Once after adding the details, click on **Continue** to create the agent.
+   ![](./media/st-store-ex2-g2.png)
 
-1. In the next pane, provide the same details given above and click on **Create**.
+1. Wait until the message **Your agent has been provisioned.** appears on the **Overview** page.
 
-   ![](./media/copil-g-9.png)
+   ![](./media/st-store-ex2-g3.png)
+
+1. On the **Overview** page, select **Edit**.
+
+   ![](./media/st-store-ex2-g4.png)
+
+1. Enter the agent name in the **Name (1)** field, add the description in the **Description (2)** box, then click **Save (3)** to apply the changes.
+
+   | Field | Value |
+   |-------|-------|
+   | Name | `StoreOps Assistant` |
+   | Description | `StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets, all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy.` |
+
+   ![](./media/st-store-ex2-g5.png)
+
+1. Click **Edit** to update the agent instructions.
+
+   ![](./media/st-store-ex2-g6.png)
+
+1. Enter the agent instructions in the **Instructions (1)** box, then click **Save (2)** to apply the changes.
+
+   ```
+   You are an AI-powered assistant designed to support store operations staff. Help staff with:
+   - Searching for products from the catalog using natural language
+   - Providing accurate answers using connected knowledge sources such as store policies and website content
+   - Assisting in placing orders and logging them in Dataverse
+   - Creating and tracking support tickets in Freshworks when issues arise
+   - Answering general store operations questions
+
+   Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If a request is unclear, ask clarifying questions before proceeding.
+   ```
+
+   ![](./media/st-store-ex2-g7.png)
 
 1. You have successfully created the StoreOps Assistant. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
@@ -46,9 +74,9 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
-1. Navigate to Copilot Studio tab, and select **Knowledge (1)** tab from top menu and click on **+ Add knowledge (2)**.
+1. Click **+ Add knowledge** to add data and resources to the agent.
 
-   ![](./media/ex2img4.png)
+   ![](./media/st-store-ex2-g8.png)
 
 1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
 
