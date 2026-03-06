@@ -20,137 +20,200 @@ In this task, you will create a topic that allows users to place product orders 
 
 1. In copilot Studio portal, select **Topics (1)** tab from top menu, click on **+ Add a topic (2)** and select **From blank**.
 
-   ![](./media/ex3img1.png)
+   ![](./media/st-store-ex3-g1.png)
 
-   >**Note:** If the **Add Topic** button is greyed out, please refresh the browser once and try it again.
+1. Once you are in the designer, on the **Trigger** node, add the below description.
 
-1. Once you are in the designer, on the **Trigger** node, add the description as `This topic helps user to place orders or buy products`.
+   ```
+   This topic helps user to place orders or buy products
+   ```
 
-   ![](./media/ex3img2.png)
+   ![](./media/st-store-ex3-g2.png)
 
-1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question** as the agent should ask a question to user related to the product they want to buy.
+1. Select **+** to add a new node.
 
-   ![](./media/ex3img3.png)
+   ![](./media/st-store-ex3-g2.png)
+
+1. From the node options, select **Ask a question**.
+
+   ![](./media/st-store-ex3-g4.png)
    
    >**Note:** In Microsoft Copilot Studio, the "Ask a question" node is used to collect specific information from the user during a conversation. It prompts the user with a question and captures their response, which is then stored in a variable for later use in the flow.
 
-1. In the text area of the node, add the question as `Which product would you like to order?`.
+1. In the **Question** node, enter the following text in the message box.
 
-   ![](./media/ex3img4.png)
+   ```
+   Which product would you like to order?
+   ```
+
+   ![](./media/st-store-ex3-g5.png)
+
 
 1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Click on **> (1)** as shown and select **User's entire response (2)**.
 
-   ![](./media/ex3img5.png)
+   ![](./media/st-store-ex3-g6.png)
 
 1. Now, click on **Var1** as we have to change the variable name.
 
-   ![](./media/ex3img6.png)
+   ![](./media/st-store-ex3-g7.png)
 
-1. Change the name to **ProductName** under Variable name.
+1. In the **Variable properties** pane, enter **ProductName (1)** under **Variable name**, and then select **Close (2)**.
 
-   ![](./media/ex3img7.png)
+   ![](./media/st-store-ex3-g8.png)
 
-1. Once done, again click on **+** to add a new node, select **Add a condition** as the next node.
+1. Select **+** to add a new node below the **Question** node.
 
-   ![](./media/ex3img8.png)
+   ![](./media/st-store-ex3-g9.png)
+
+1. From the node options, select **Add a condition**.
+
+   ![](./media/st-store-ex3-g10.png)
 
 1. For condition the agent will check the product that user shared is present in the list or catalogue or not, for now you will be adding a sample list directly as condition.
 
-1. In the condition node, click on **>** to select the **ProductName** variable.
+1. In the **Condition** node, select **Select a variable (1)** and choose **ProductName (2)**.
 
-   ![](./media/ex3img9.png)
+   ![](./media/st-store-ex3-g11.png)
 
-1. Once done, change the condition parameter using **V (1)** to **in (2)**.
+1. In the **Condition** node, select the dropdown **(1)** and choose **in (2)**.
 
-   ![](./media/ex3img10.png)
+   ![](./media/st-store-ex3-g12.png)
 
-1. In the value area, add the following list of products `Tailwind Sneakers, Performance Hoodie, All-Weather Jacket, Pro-Grip Running Shorts, Trailblazer Backpack, Hydration Water Bottle, Endurance Sports Socks, Reflective Safety Vest, Galaxy Fitness Tracker, UltraLight Yoga Mat`. The condition will check that, the product name provided by user is present here or not.
+1. In the **Condition** node, enter the following list of products in the value field.
 
-   ![](./media/ex3img11.png)
+   ```
+   Tailwind Sneakers, Performance Hoodie, All-Weather Jacket, Pro-Grip Running Shorts, Trailblazer Backpack, Hydration Water Bottle, Endurance Sports Socks, Reflective Safety Vest, Galaxy Fitness Tracker, UltraLight Yoga Mat
+   ```
 
-1. Now, you have to add fallback if the condition fails, click on **+** to add a node under **All other conditions** node and select **Send a message**.
+   ![](./media/st-store-ex3-g13.png)
 
-   ![](./media/ex3img12.png)
+1. Under **All other conditions**, select **+** to add a new node.
 
-1. In the text area, add the message as `The product is not avaiable, please look for other products we have!`.
+   ![](./media/st-store-ex3-g14.png)
 
-   ![](./media/ex3imgup1.png)
+1. From the node options, select **Send a message**.
+
+   ![](./media/st-store-ex3-g15.png)
+
+1. In the **Message** node, enter the following text.
+
+   ```
+   The product is not avaiable, please look for other products we have!
+   ```
+
+   ![](./media/st-store-ex3-g16.png)
+
+1. Below the **Message** node, select **+** to add a new node.
+
+   ![](./media/st-store-ex3-g17.png)
 
 1. Once done, add one more node below that, now from list, select **Topic management (1)** and click on **Go to step (2)**.
 
-   ![](./media/ex3img14.png)
+   ![](./media/st-store-ex3-g18.png)
 
 1. Once after selecting that option, you have to select a node, so that it will be navigated to that particular step directly.
 
 1. Select the first **Question** node to select product as the Go to Step node.
 
-   ![](./media/ex3img15.png)
+   ![](./media/st-store-ex3-g19.png)
 
 1. Once done the flow look like this.
 
-   ![](./media/ex3img16.png)
+   ![](./media/st-store-ex3-g20.png)
 
 1. As the Other conditions are configured, now you have to continue building the flow further.
 
-1. Now, under the condition node, add **Ask a question** node using **+** option as before.
+1. Under the **Condition** node, select **+** to add a new node.
 
-   ![](./media/ex3img17.png)
+   ![](./media/st-store-ex3-g21.png)
 
-1. In this node, add the question `Please specify the quantity you require` in the text area to get the quantity of the order.
+1. From the node options, select **Ask a question**.
 
-   ![](./media/ex3img18.png)
+   ![](./media/st-store-ex3-g22.png)
 
-1. Again change the identify to **Number**.
+1. In the **Question** node, enter the following text.
 
-   ![](./media/ex3img57.png)
+   ```
+   Please specify the quantity you require
+   ```
+
+   ![](./media/st-store-ex3-g23.png)
+
+1. Under **Identify**, select **Multiple choice options (1)** and choose **Number (2)**.
+
+   ![](./media/st-store-ex3-g24.png)
 
 1. Now, click on **Var1** as we have to change the variable name.
 
-   ![](./media/cpnew1.png)
+   ![](./media/st-store-ex3-g25.png)
 
-1. Change the variable name to **Quantity**.
+1. In the **Variable properties** pane, enter **Quantity (1)** under **Variable name**, and then select **Close (2)**.
 
-   ![](./media/ex3img20.png)
+   ![](./media/st-store-ex3-g26.png)
 
-1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question**.
+1. Select **+** to add a new node.
 
-   ![](./media/ex3img3.png)
+   ![](./media/st-store-ex3-g27.png)
 
-1. In the question area, add the question as `Please provide your name`.
+1. From the node options, select **Ask a question**.
 
-   ![](./media/ex3img21.png)
+   ![](./media/st-store-ex3-g28.png)
 
-1. Change the indentify value to **User's entire response**.
+1. In the **Question** node, enter the following text.
 
-   ![](./media/ex3img22.png)
+   ```
+   Please provide your name
+   ```
 
-1. Change the variable name to **UserName**.
+   ![](./media/st-store-ex3-g29.png)
 
-   ![](./media/ex3img23.png)
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
 
-1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question**. 
+   ![](./media/st-store-ex3-g30.png)
 
-   ![](./media/ex3img3.png)
+1. Under **Save user response as**, select **Var1** to rename the variable so the user's name can be stored for later use in the flow.
 
-1. In the question area, add the question as `Please provide your delivery address`.
+   ![](./media/st-store-ex3-g31.png)
 
-   ![](./media/ex3img24.png)
+1. In the **Variable properties** pane, enter **UserName (1)** under **Variable name**, and then select **Close (2)**
 
-1. Change the indentify value to **User's entire response**.
+   ![](./media/st-store-ex3-g32.png)
 
-   ![](./media/ex3img25.png)
+1. Select **+** to add a new node.
 
-1. Change the variable name to **DeliveryAddress**.
+   ![](./media/st-store-ex3-g33.png)
 
-   ![](./media/ex3img26.png)
+1. From the node options, select **Ask a question**.
 
-1. Once done, please use the **Save** option from the top menu to save the flow.
+   ![](./media/st-store-ex3-g34.png)
 
-   ![](./media/ex3img27.png)
+1. In the **Question** node, enter the following text to collect the delivery details.
 
-1. In the pop up, under **Name your topic** provide name as `Place Orders` **(1)** and click on **Save (2)**.
+   ```
+   Please provide your delivery address
+   ```
 
-   ![](./media/ex3img28.png)
+   ![](./media/st-store-ex3-g35.png)
+
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
+
+   ![](./media/st-store-ex3-g36.png)
+
+1. Under **Save user response as**, select **DeliveryAddress (1)**, enter **DeliveryAddress (2)** under **Variable name**, and then select **Close (3)**.
+
+   ![](./media/st-store-ex3-g37.png)
+
+1. From the top menu, select **Save** to save the topic.
+
+   ![](./media/st-store-ex3-g38.png)
+
+1. In the **Save your topic** dialog, enter the following name for the topic, and then select **Save (2)**.
+
+   ```
+   Place Orders
+   ```
+
+   ![](./media/st-store-ex3-g39.png)
 
 1. Now that you have successfully created the flow to collect the order details, you need to create an Agent Flow (formerly known as Action) to add these order details to the Dataverse table.
 
