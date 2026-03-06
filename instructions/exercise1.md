@@ -122,72 +122,99 @@ In this task, you will set up and configure Freshworks to enable automated incid
 
 **Freshworks** is a cloud-based customer service and engagement platform designed to improve customer support operations and enhance user satisfaction. It offers a suite of tools for ticket management, live chat, help center creation, and customer self-service. Freshworks supports omnichannel communication, enabling businesses to manage customer interactions across email, chat, phone, and social media from a centralized interface. Its automation features help streamline workflows, assign tickets, and provide analytics for performance tracking. Now you will set up the Freshworks account.
 
-1. Navigate to [Freshworks Portal](https://www.freshworks.com/freshdesk/lp/home/?tactic_id=3387224&utm_source=google-adwords&utm_medium=FD-Search-Brand-India&utm_campaign=FD-Search-Brand-India&utm_term=freshdesk&device=c&matchtype=e&network=g&gclid=EAIaIQobChMIuOK90qvLjQMV_dQWBR3JAi9VEAAYASAAEgK87_D_BwE&audience=kwd-30002131023&ad_id=282519464145&gad_source=1&gad_campaignid=671502402) using a new tab in your browser.
+1. Open a new browser tab and navigate to:
 
-   >Note: Since you are working within a VM, please copy the above link and open it in the browser inside the VM.
+   ```
+   https://www.freshworks.com/freshdesk/
+   ```
 
-1. In the portal, select **Start free trial** to start the free trial.
+1. On the Freshdesk homepage, select **Try it free** to start creating your trial account.
 
-   ![](./media/fw1.png)
+   ![](./media/m36-copg-ex9-i-g1.png)
 
-1. In the next pane, provide these details and click on **Try it free (5)**:
+1. Fill in the registration form with the following details, accept the **Terms & Conditions**, and then select **Try it free**.
 
-   - **First name:** `ODL` **(1)**
-   - **Last name:** `User` **(2)**
-   - **Work email:** **<inject key="AzureAdUserEmail"></inject>** **(3)**
-   - **Company name:** `Contoso` **(4)**
+   | Field | Value |
+   |-------|-------|
+   | First name | **ODL User** |
+   | Last name | **<inject key="DeploymentID"></inject>** |
+   | Work email | **<inject key="AzureAdUserEmail" enableCopy="false"/>** |
+   | Company name | **Contoso** |
+   | Organization size | **11-50** |
+   | Terms & Conditions | **Checked** |
 
-   ![](./media/fw2.png)
+   ![](./media/m36-copg-ex9-i-g2.png)
 
-1. In the next pane, provide these details and click on **Next (4)**:
+1. In your inbox, look for the **Freshworks verification email**.
 
-   - **What industry are you from ?:** from the list, select **Software and internet (1)**
-   - **How many employees are there in your company?:** select **1-10 (2)**
-   - select **I'm trying customer service software for the first time (3)**
+   - Open a new tab and navigate to: `https://outlook.office.com`
+   - Look for an email from Freshdesk with a subject like "Activate your account"
 
-   ![](./media/fw3.png)
+      ![](./media/m36-copg-ex9-i-g3.png)
 
-1. Once done, navigate to [Outlook](https://go.microsoft.com/fwlink/p/?LinkID=2125442&clcid=0x409&culture=en-us&country=us).
+   > **Note:** If you are unable to locate the email from Freshworks, wait a few minutes as there might be a delay in email delivery. Also check your spam or junk folder.
 
-1. In the pick an account pane, select the account which you are assigned for this lab.
+1. Open the email. Depending on the email you received, follow **one** of the paths below:
 
-   ![](./media/fw4.png)
+   **Path A – Verification Code (most common):**
 
-1. In the freshworks verification email, open and click on **Activate Account**.
+   1. Copy the **six-digit verification code** from the email.
 
-   ![](./media/fw5.png)
+      ![](./media/m36-copg-ex9-i-g4.png)
 
-   >**Note:** If you're unable to locate the activation email from Freshworks, please wait a few minutes, as there might be a delay in email delivery. If the email doesn't arrive after some time, consider reinitiating the steps to activate your free trial in a new private/incognito window. Additionally, check your spam or junk folder, as the email might have been filtered there.
+   1. Go back to the Freshworks sign-up tab and enter the code in the **Enter your verification code** fields.
 
-1. In the next pane, provide **<inject key="AzureAdUserPassword"></inject>** as **Enter password (1)** and provide the same password for **Confirm password (2)**. Click on **Activate your account (3)**.
+      ![](./media/m36-copg-ex9-i-g5.png)
 
-   ![](./media/fw6.png)
+   1. If prompted with a CAPTCHA challenge, complete the verification by selecting the required images, and then click **VERIFY**.
 
-1. Once you are in the portal, click on the **Profile (1)** icon from top right corner and select **Profile settings (2)**.
+   1. Enter the password **<inject key="AzureAdUserPassword"></inject>** in the **Password** field, and then click **Start my trial**.
 
-   ![](./media/fw7.png)
+      ![](./media/m36-copg-ex9-i-g6.png)
 
-1. In the profile page, click on **View API Key** to get the API Keys.
+   **Path B – Activation Link:**
 
-   ![](./media/fw8.png)
+   > **Note:** If you received an activation link instead of a verification code, follow these steps.
 
-   >**Note:** If you are not able to find this option, please minimize the screensize using **CTRL + -**.
+   1. In the email, click **Activate Account**.
 
-1. In the next pane, complete the **CAPTCHA**.
+      ![](./media/d3-cor3-g3-g11.png)
 
-   ![](./media/fw9.png)
+   1. On the activation page, enter **<inject key="AzureAdUserPassword"></inject>** in both the **Enter password** and **Confirm password** fields, and then click **Activate your account**.
 
-1. Please copy the API Key to a notepad, you will be using this further.
+      ![](./media/d3-cor3-g3-g12.png)
 
-   ![](./media/fw10.png)
+1. On the personalization page, confirm **Software and Internet (1)** as the industry, select **I’m trying customer service software for the first time (2)**, and then click **Next (3)**.
 
-1. From the browser tab, please copy the **Account URL** as shown and copy the value to notepad. You will be using this further.
+   ![](./media/m36-copg-ex9-i-g8.png)
 
-   ![](./media/fw13.png)
+1. Wait for the Freshdesk portal to load. You should now be logged in to your Freshdesk dashboard.
 
 1. From the left, click on **Tickets** icon from left menu, you can see some default tickets which are present.
 
    ![](./media/fw11.png)
+
+1. In the top-right corner, select your **profile icon (1)**, and then choose **Profile settings (2)** from the menu.
+
+   ![](./media/m36-copg-ex9-i-g9.png)
+
+1. In **Profile settings**, select **View API Key** to display your API key.
+
+   ![](./media/m36-copg-ex9-i-g10.png)
+
+1. Under **Your API Key**, copy the displayed API key and save it securely for later use.
+
+   ![](./media/m36-copg-ex9-i-g12.png)
+
+1. From the browser address bar, copy the **Account URL** (for example, `https://your-company-name.freshdesk.com`) and save it for use in the next task.
+
+   ![](./media/m36-copg-ex9-i-g13.png)
+
+   >This is your **Account URL** which you will need in the later task.
+
+1. You should now have two values saved:
+   - **Account URL:** `https://your-company-name.freshdesk.com`
+   - **API Key:** Your copied API key
 
 1. Now you have successfully setup the freshworks for ticket management.
 
