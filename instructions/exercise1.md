@@ -18,44 +18,44 @@ You will be able to complete the following tasks:
 
 In this task, you will ingest the datasets to dataverse, which will be created in new power platform environment.
 
-1. Navigate back to Power Apps portal, please switch to the environment to the environmnet that you created earlier.
+1. Navigate back to Power Apps portal, please switch to the environment that you created earlier.
 
     ![](./media/st-store-ex1-g1.png)
 
-1. Inside power apps portal, select **Tables (1)** from the left menu and click on **Create a database (2)**.
+1. In the Power Apps portal, select **Tables (1)** from the left menu and select **Create a database (2)**.
 
    ![](./media/ex3img71.png)
 
    >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 4**.
 
-1. In the new pane for creating New Database, click on **Create my Database**.
+1. In the new pane for creating a new database, select **Create my Database**.
 
    ![](./media/ex3img72up.png)
 
-1. Once done, click on **Create with Excel or .CSV file**.
+1. Once done, select **Create with Excel or .CSV file**.
 
    ![](./media/st-store-ex1-g2.png)
 
-1. In the pop up window to create a environment, Click on **Create**. This will create a new power platform developer environment.
+1. In the pop-up window to create an environment, select **Create**. This will create a new Power Platform developer environment.
 
    ![](./media/ex3img74.png)
    
    >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
 
-1. In the next pane, click on **Select from device**.
+1. In the next pane, select **Select from device**.
 
    ![](./media/st-store-ex1-g4.png)
 
 1. On the **Open** window, navigate to the folder `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets` **(1)**.  
-Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
+Select the file **product_catalog.csv (2)** and select **Open (3)**.
 
    ![](./media/copil-g-1.png)
 
-1. Once selected please click on **Import**.
+1. Once selected, select **Import**.
 
    ![](./media/st-store-ex1-g5.png)
 
-1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
+1. Select **Save and exit**, and in the pop-up window, select **Save and exit**.
 
    ![](./media/st-store-ex1-g6.png)
 
@@ -64,19 +64,19 @@ Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
    >**Note:** If you are not able to find **Save and exit** button, minimize the screen using **CTRL + -**.
    >**Note:** If you are seeing **Create** option instead of **Save and Exit**, please go with the Create option.
 
-1. Again, select **Tabes (1)** from the left menu and click on **Create with Excel or .CSV file (2)**.
+1. Again, select **Tables (1)** from the left menu and select **Create with Excel or .CSV file (2)**.
 
    ![](./media/st-store-ex1-g2.png)
 
-1. In the next pane, click on **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
+1. In the next pane, select **Select from device** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets`, select **Sample_orders.csv**.
 
    ![](./media/st-store-ex1-g4.png)
 
-1. Once selected please click on **Import**.
+1. Once selected, select **Import**.
 
    ![](./media/st-store-ex1-g8.png)
 
-1. Click on **Save and exit** and in the pop up window, click on **Save and exit**.
+1. Select **Save and exit**, and in the pop-up window, select **Save and exit**.
 
    ![](./media/st-store-ex1-g9.png)
 
@@ -88,19 +88,19 @@ Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
    https://copilotstudio.microsoft.com
    ```
 
-1. On the **Welcome to Microsoft Copilot Studio** screen, keep the default **country/region** selection and click **Get Started** to continue.
+1. On the **Welcome to Microsoft Copilot Studio** screen, keep the default **country/region** selection and select **Get Started** to continue.
 
    ![](./media/pro-activ-gg-g11.png)
 
-1. If the **Welcome to Copilot Studio!** pop-up appears, click **Skip** to continue to the main dashboard.
+1. If the **Welcome to Copilot Studio!** pop-up appears, select **Skip** to continue to the main dashboard.
 
    ![](./media/gs-travel-g3.png)
 
-1. If the **We've updated you to the latest version of Microsoft Copilot Studio** pop-up appears, click **Got it!**.
+1. If the **We've updated you to the latest version of Microsoft Copilot Studio** pop-up appears, select **Got it!**.
 
    ![](./media/pro-activ-gg-g12.png)
 
-1. If the **What's new in Copilot Studio** pop-up appears, click the **Close (X)** icon to dismiss it.
+1. If the **What's new in Copilot Studio** pop-up appears, select the **Close (X)** icon to dismiss it.
 
    ![](./media/pro-activ-gg-g13.png)
 
@@ -108,7 +108,7 @@ Select the file **product_catalog.csv (2)** and click the **Open (3)** button.
 
    ![](./media/ex1-travel-g6.png)
 
-1. Once you are inside **Copilot Studio** you will be in the home page. 
+1. Once you are in **Copilot Studio**, you will be on the home page.
 
    ![](./media/st-store-ex1-g10.png)
 
@@ -162,9 +162,9 @@ In this task, you will set up and configure Freshworks to enable automated incid
 
       ![](./media/m36-copg-ex9-i-g5.png)
 
-   1. If prompted with a CAPTCHA challenge, complete the verification by selecting the required images, and then click **VERIFY**.
+   1. If prompted with a CAPTCHA challenge, complete the verification by selecting the required images, and then select **VERIFY**.
 
-   1. Enter the password **<inject key="AzureAdUserPassword"></inject>** in the **Password** field, and then click **Start my trial**.
+   1. Enter the password **<inject key="AzureAdUserPassword"></inject>** in the **Password** field, and then select **Start my trial**.
 
       ![](./media/m36-copg-ex9-i-g6.png)
 
@@ -172,21 +172,21 @@ In this task, you will set up and configure Freshworks to enable automated incid
 
    > **Note:** If you received an activation link instead of a verification code, follow these steps.
 
-   1. In the email, click **Activate Account**.
+   1. In the email, select **Activate Account**.
 
       ![](./media/d3-cor3-g3-g11.png)
 
-   1. On the activation page, enter **<inject key="AzureAdUserPassword"></inject>** in both the **Enter password** and **Confirm password** fields, and then click **Activate your account**.
+   1. On the activation page, enter **<inject key="AzureAdUserPassword"></inject>** in both the **Enter password** and **Confirm password** fields, and then select **Activate your account**.
 
       ![](./media/d3-cor3-g3-g12.png)
 
-1. On the personalization page, confirm **Software and Internet (1)** as the industry, select **I’m trying customer service software for the first time (2)**, and then click **Next (3)**.
+1. On the personalization page, confirm **Software and Internet (1)** as the industry, select **I’m trying customer service software for the first time (2)**, and then select **Next (3)**.
 
    ![](./media/m36-copg-ex9-i-g8.png)
 
 1. Wait for the Freshdesk portal to load. You should now be logged in to your Freshdesk dashboard.
 
-1. From the left, click on **Tickets** icon from left menu, you can see some default tickets which are present.
+1. From the left menu, select the **Tickets** icon. You can see some default tickets that are present.
 
    ![](./media/fw11.png)
 
@@ -212,7 +212,7 @@ In this task, you will set up and configure Freshworks to enable automated incid
    - **Account URL:** `https://your-company-name.freshdesk.com`
    - **API Key:** Your copied API key
 
-1. Now you have successfully setup the freshworks for ticket management.
+1. Now you have successfully set up Freshworks for ticket management.
 
 <validation step="9ec40b7e-aa69-4359-a1f4-833d8ca8d8b4" />
  

@@ -18,7 +18,7 @@ In this task, you will configure and publish your StoreOps Assistant to Microsof
 
 1. Now that you've configured the agent, it's time to publish it so it can be used across different platforms.
 
-1. From the top menu, click on **Channels (2)** option, if you can't see it directly click on **+1 (1)** so that you can see it.
+1. From the top menu, select **Channels (2)**. If you can't see it directly, select **+1 (1)** to expand the menu.
 
    ![](./media/st-store-ex3-g128.png)
 
@@ -34,21 +34,21 @@ In this task, you will configure and publish your StoreOps Assistant to Microsof
 
    ![](./media/st-store-ex3-g131.png)
 
-1. Now, you will be navigated to a new browser tab, Click on **Use the web app instead**.
+1. You will be navigated to a new browser tab. Select **Use the web app instead**.
 
    ![](./media/st-store-ex3-g132.png)
 
-1. Once you are in Teams web app, click on **Add** to add the agent to the chat.
+1. Once you are in the Teams web app, select **Add** to add the agent to the chat.
 
    ![](./media/st-store-ex3-g133.png)
 
    > **Note:** In case you do not see the **Add** option, please retry the process starting from **Step 5**.
 
-1. In the next pane, Click on **Open** to open the **StoreOps Assistant** in Teams.
+1. In the next pane, select **Open** to open the **StoreOps Assistant** in Teams.
 
    ![](./media/st-store-ex3-g134.png)
 
-1. Now the **StoreOps Assistant** will be opened in teams, you can tryout some prompts for `Placing Orders`, `Creating Tickets` and validate it.
+1. The **StoreOps Assistant** will open in Teams. You can try out some prompts for `Placing Orders`, `Creating Tickets` and validate it.
 
    ![](./media/st-store-ex3-g135.png)
 

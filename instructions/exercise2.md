@@ -18,9 +18,7 @@ You will be able to complete the following tasks:
 
 In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for enabling intelligent store operations.
 
-1. In the Copilot Studio home page.
-
-1. From the left navigation pane, select **Agents (1)** and then choose **Create blank agent (2)**.
+1. In the Copilot Studio home page, from the left navigation pane, select **Agents (1)** and then select **Create blank agent (2)**.
 
    ![](./media/st-store-ex2-g1.png)
 
@@ -36,7 +34,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
    ![](./media/st-store-ex2-g4.png)
 
-1. Enter the agent name in the **Name (1)** field, add the description in the **Description (2)** box, then click **Save (3)** to apply the changes.
+1. Enter the agent name in the **Name (1)** field, add the description in the **Description (2)** box, and then select **Save (3)** to apply the changes.
 
    | Field | Value |
    |-------|-------|
@@ -45,11 +43,11 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
    ![](./media/st-store-ex2-g5.png)
 
-1. Click **Edit** to update the agent instructions.
+1. Select **Edit** to update the agent instructions.
 
    ![](./media/st-store-ex2-g6.png)
 
-1. Enter the agent instructions in the **Instructions (1)** box, then click **Save (2)** to apply the changes.
+1. Enter the agent instructions in the **Instructions (1)** box, and then select **Save (2)** to apply the changes.
 
    ```
    You are an AI-powered assistant designed to support store operations staff. Help staff with:
@@ -70,23 +68,23 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
 
-1. Click **+ Add knowledge** to add data and resources to the agent.
+1. Select **+ Add knowledge** to add data and resources to the agent.
 
    ![](./media/st-store-ex2-g8.png)
 
-1. In the next pane, click on **select to browse** option as shown and in the pop up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
+1. In the next pane, select **select to browse** and in the pop-up window to select files, navigate to `C:\datasets\Store-Operations-with-Copilot-Studio-lab-datasets\Fabrikam Returns Policy for Customers` file.
 
    ![](./media/st-store-ex2-g9.png)
 
-1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and click on **Add to agent (2)**.
+1. In the next pane, review that the **Fabrikam Returns Policy for Customers (1)** file is selected and select **Add to agent (2)**.
 
    ![](./media/st-store-ex2-g10.png)
 
-1. Once done, again click on **+ Add knowledge**.
+1. Once done, again select **+ Add knowledge**.
 
    ![](./media/st-store-ex2-g11.png)
 
-1. In the next pane, select **Dataverse** as knowledge source.
+1. In the next pane, select **Dataverse** as the knowledge source.
 
    ![](./media/st-store-ex2-g12.png)
 
@@ -100,23 +98,23 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/st-store-ex2-g14.png)
 
-   >**Note:** If you are seeing **Product Record** table, instead of **Product **, please proceed with the **Product Record** Table.
+   >**Note:** If you are seeing **Product Record** table, instead of **Product**, please proceed with the **Product Record** table.
 
-1. Select **Selected (2) (1)** to review the selected tables, and then choose **Add to agent (2)**.
+1. Select **Selected (2) (1)** to review the selected tables, and then select **Add to agent (2)**.
 
    ![](./media/st-store-ex2-g15.png)
 
-1. Once done, again click on **+ Add knowledge**.
+1. Once done, again select **+ Add knowledge**.
 
    ![](./media/st-store-ex2-g16.png)
 
    > **Note:** If the **Product** or **Order** status appears as **Unknown**, do not worry. It may take **10–15 minutes** to change to **Ready**, and this will not affect the lab progress.
 
-1. In the next pane, select **Public Websites** as knowledge source.
+1. In the next pane, select **Public Websites** as the knowledge source.
 
    ![](./media/st-store-ex2-g17.png)
 
-1. For **Public website link** add the below **url (1)** and click on **Add (2)**.
+1. For **Public website link**, add the following URL **(1)** and select **Add (2)**.
 
    ```
    https://prod.fabrikam.com
@@ -126,7 +124,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    >Note: This is a sample E-Commerce website from Microsoft.
 
-1. Once done, click on **Add to agent** in the next pane.
+1. Once done, select **Add to agent** in the next pane.
 
    ![](./media/st-store-ex2-g19.png)
 
@@ -142,7 +140,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/st-store-ex2-g21.png)
 
-1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and click on **Send (2)**.
+1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and select **Send (2)**.
 
    ```
    what all products are available in inventory?
@@ -158,7 +156,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/st-store-ex2-g24.png)
 
-1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and click on **Send (2)**.
+1. In the **Test your agent** pane, enter the following prompt in the message box **(1)** and select **Send (2)**.
 
    ```
    List out all the previous orders with the product name?

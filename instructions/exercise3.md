@@ -18,11 +18,11 @@ You will be able to complete the following tasks:
 
 In this task, you will create a topic that allows users to place product orders using the StoreOps Assistant. The topic will collect essential details such as the product name, quantity, and delivery preferences. Once the user confirms the order, the assistant will trigger an action to store the order details in a Microsoft Dataverse table. This enables seamless tracking and management of customer orders within your store’s database.
 
-1. In copilot Studio portal, select **Topics (1)** tab from top menu, click on **+ Add a topic (2)** and select **From blank**.
+1. In Copilot Studio, select the **Topics (1)** tab from the top menu, select **+ Add a topic (2)**, and then select **From blank**.
 
    ![](./media/st-store-ex3-g1.png)
 
-1. Once you are in the designer, on the **Trigger** node, add the below description.
+1. Once you are in the designer, on the **Trigger** node, add the description below.
 
    ```
    This topic helps user to place orders or buy products
@@ -48,11 +48,11 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g5.png)
 
-1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Click on **> (1)** as shown and select **User's entire response (2)**.
+1. Once done, change the identifier from **Multiple choice Options** to **User's entire response**. Select **> (1)** as shown and select **User's entire response (2)**.
 
    ![](./media/st-store-ex3-g6.png)
 
-1. Now, click on **Var1** as we have to change the variable name.
+1. Now, select **Var1** as we have to change the variable name.
 
    ![](./media/st-store-ex3-g7.png)
 
@@ -97,7 +97,7 @@ In this task, you will create a topic that allows users to place product orders 
 1. In the **Message** node, enter the following text.
 
    ```
-   The product is not avaiable, please look for other products we have!
+   The product is not available, please look for other products we have!
    ```
 
    ![](./media/st-store-ex3-g16.png)
@@ -106,17 +106,17 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g17.png)
 
-1. Once done, add one more node below that, now from list, select **Topic management (1)** and click on **Go to step (2)**.
+1. Once done, add one more node below that. From the list, select **Topic management (1)** and select **Go to step (2)**.
 
    ![](./media/st-store-ex3-g18.png)
 
-1. Once after selecting that option, you have to select a node, so that it will be navigated to that particular step directly.
+1. Once after selecting that option, you have to select a node so that the flow will be navigated to that particular step directly.
 
 1. Select the first **Question** node to select product as the Go to Step node.
 
    ![](./media/st-store-ex3-g19.png)
 
-1. Once done the flow look like this.
+1. Once done, the flow looks like this.
 
    ![](./media/st-store-ex3-g20.png)
 
@@ -142,7 +142,7 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g24.png)
 
-1. Now, click on **Var1** as we have to change the variable name.
+1. Now, select **Var1** as we have to change the variable name.
 
    ![](./media/st-store-ex3-g25.png)
 
@@ -174,8 +174,7 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g31.png)
 
-1. In the **Variable properties** pane, enter **UserName (1)** under **Variable name**, and then select **Close (2)**
-
+1. In the **Variable properties** pane, enter **UserName (1)** under **Variable name**, and then select **Close (2)**.
    ![](./media/st-store-ex3-g32.png)
 
 1. Select **+** to add a new node.
@@ -214,7 +213,7 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g39.png)
 
-1. Now that you have successfully created the flow to collect the order details, you need to create an Agent Flow (formerly known as Action) to add these order details to the Dataverse table.
+1. Now that you have successfully created the flow to collect the order details, you need to create an agent flow (formerly known as Action) to add these order details to the Dataverse table.
 
 ## Task 2: Define an Agent Flow to Insert Order Details into Dataverse
 
@@ -354,7 +353,7 @@ In this task, you will create an action that inserts the collected order details
 
    ![](./media/st-store-ex3-g64.png)
 
-1. From the top right corner, select **Publish** to save the agent flow.
+1. From the top-right corner, select **Publish** to save the agent flow.
 
    ![](./media/st-store-ex3-g65.png)
 
@@ -470,11 +469,11 @@ In this task, you will create an action that inserts the collected order details
 
 1. Now, to verify the creation of record inside the dataverse table, navigate back to power apps portal.
 
-1. once you are in Power apps portal, select **Tables (1)** from left menu and from the list click on **Order (2)** table.
+1. Once you are in the Power Apps portal, select **Tables (1)** from the left menu, and from the list, select the **Order (2)** table.
 
    ![](./media/st-store-ex3-g86.png)
 
-1. Now, you can able to a record is added with the details that you have provided.
+1. Now, you can see that a record has been added with the details that you provided.
 
    ![](./media/st-store-ex3-g87.png)
 
@@ -490,7 +489,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g66.png)
 
-1. In copilot Studio portal, select **Topics (1)** tab from top menu, click on **+ Add a topic (2)** and select **From blank**.
+1. In Copilot Studio, select the **Topics (1)** tab from the top menu, select **+ Add a topic (2)**, and then select **From blank**.
 
    ![](./media/st-store-ex3-g1.png)
 
@@ -526,7 +525,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g93.png)
 
-1. Once done, click on **+ (1)** option to add a new node, from the list select **Ask a question (2)** as the agent should ask a question to user related to the product they want to buy.
+1. Once done, select **+ (1)** to add a new node. From the list, select **Ask a question (2)**.
 
    ![](./media/st-store-ex3-g94.png)
 
@@ -590,7 +589,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
 
-1. In the **Create a ticket** pane, provide the following details and click on **Create new**:
+1. In the **Create a ticket** pane, provide the following details and select **Create new**:
 
    - **Connection name:** `helpdesk` **(1)**
    - **Account URL:** add the **Account URL (2)**, which you have copied in the first exercise
@@ -599,7 +598,7 @@ In this task, you will build a topic that enables users to request support by cr
 
      ![](./media/st-store-ex3-g103.png)
 
-1. Once done, for parameter **Subject**, click on **Dynamic Content** coption as shown.
+1. Once done, for the **Subject** parameter, select the **Dynamic content** option as shown.
 
    ![](./media/fw16.png)
 
@@ -617,7 +616,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g104.png)
 
-1. Now, you have successfully set up your agent flow, click on **Publish** from the top right corner to save the flow.
+1. Now, you have successfully set up your agent flow. Select **Publish** from the top-right corner to save the flow.
 
    ![](./media/st-store-ex3-g105.png)
 
@@ -708,7 +707,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g120.png)
 
-1. On the **Create or pick connections** page, confirm that the **Freshdesk** connection is selected and then click on **Submit**.
+1. On the **Create or pick connections** page, confirm that the **Freshdesk** connection is selected and then select **Submit**.
 
    ![](./media/st-store-ex3-g121.png)
 
@@ -716,7 +715,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g122.png)
 
-1. Return to the chat window and click on **Retry (1)** to trigger the ticket creation again. You will see a confirmation message stating that your ticket has been successfully submitted **(2)**.
+1. Return to the chat window and select **Retry (1)** to trigger the ticket creation again. You will see a confirmation message stating that your ticket has been successfully submitted **(2)**.
 
    ![](./media/st-store-ex3-g123.png)
 
@@ -726,7 +725,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g125.png)
 
-1. To finalize all changes and make the agent live, navigate back to **copilot Studio** portal and select **Publish** from the top right corner of the page.
+1. To finalize all changes and make the agent live, navigate back to **Copilot Studio** and select **Publish** from the top-right corner of the page.
 
    ![](./media/st-store-ex3-g126.png)
 
