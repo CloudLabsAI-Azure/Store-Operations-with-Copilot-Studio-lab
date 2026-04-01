@@ -1,10 +1,10 @@
-# Exercise 3: Build Advanced AI Workflows for Orders & Tickets
+# Exercise 3: Build Workflows for Orders and Tickets
 
 ### Estimated Duration: 60 Minutes
 
 ## Overview
 
-In this exercise, you will enhance your StoreOps Assistant by building advanced AI workflows that go beyond static knowledge responses. You will create dynamic topics that allow users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and Freshworks. These enhancements will enable your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you will enhance your StoreOps Assistant by building workflows that go beyond static knowledge responses. You will create topics that allow users to place orders and request support, while integrating your agent with Microsoft Dataverse and SharePoint HelpDesk. These additions will let your assistant perform end-to-end operations such as order recording and ticket creation for real-world store operations.
 
 ## Objectives
 
@@ -12,11 +12,11 @@ You will be able to complete the following tasks:
 
 - Task 1: Create a topic to record orders in Dataverse
 
-- Task 2: Create a “Support Ticket” topic and integrate with Freshworks
+- Task 2: Create a "Support Ticket" topic and integrate with SharePoint HelpDesk
 
 ## Task 1: Create a topic to record orders in Dataverse
 
-In this task, you will create a topic that allows users to place product orders using the StoreOps Assistant. The topic will collect essential details such as the product name, quantity, and delivery preferences. Once the user confirms the order, the assistant will trigger an action to store the order details in a Microsoft Dataverse table. This enables seamless tracking and management of customer orders within your store’s database.
+In this task, you will create a topic that allows users to place product orders using the StoreOps Assistant. The topic will collect details such as the product name, quantity, and delivery preferences. Once the user confirms the order, the assistant will trigger an action to store the order details in a Microsoft Dataverse table. This allows tracking and management of customer orders within your store's database.
 
 1. In Copilot Studio, select the **Topics (1)** tab from the top menu, select **+ Add a topic (2)**, and then select **From blank**.
 
@@ -479,11 +479,11 @@ In this task, you will create an action that inserts the collected order details
 
 1. You have successfully created a flow with an Action to manage order placements.
 
-## Task 2: Create a “Support Ticket” topic and integrate with Freshworks
+## Task 2: Create a "Support Ticket" topic and integrate with SharePoint HelpDesk
 
-In this task, you will build a topic that enables users to request support by creating a service ticket. The topic will gather information like the issue description, urgency level, and user contact details. Once the data is collected, the agent will connect to Freshworks and automatically generate a corresponding incident ticket. This integration ensures quick and efficient resolution of customer issues without manual ticket creation.
+In this task, you will build a topic that lets users request support by creating a service ticket. The topic will gather information like the issue description and subject. Once the data is collected, the agent will connect to the SharePoint IT HelpDesk site and create a corresponding ticket in the Tickets list. This integration handles ticket creation without manual steps, keeping everything within the Microsoft 365 ecosystem.
 
-1. As you have started a free trial for Freshworks. You will be creating a topic that integrating with Freshworks.
+1. You will now create a topic that integrates with the SharePoint IT HelpDesk site you set up earlier.
 
 1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
@@ -589,48 +589,53 @@ In this task, you will build a topic that enables users to request support by cr
 
    >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
 
-1. In the **Create a ticket** pane, provide the following details and select **Create new**:
+1. Select **+** to add the next action to the flow, where you will configure the **SharePoint** operation.
 
-   - **Connection name:** `helpdesk` **(1)**
-   - **Account URL:** add the **Account URL (2)**, which you have copied in the first exercise
-   - **Email or API key:** Please add the **API KEY (3)**, which you copied in first exercise
-   - **Password:** As you have provided API Keys, password is not important here but as it is a required parameter just provide a random value.
+1. In the **Add an action** pane, search for **SharePoint (1)** and then select **See more (2)**.
 
-     ![](./media/st-store-ex3-g103.png)
+1. From the **SharePoint** actions list, select **Create item**.
 
-1. Once done, for the **Subject** parameter, select the **Dynamic content** option as shown.
+1. In the **Create a new connection** pane, enter the following value for **Connection name (1)**, and then select **Sign in (2)**.
 
-   ![](./media/fw16.png)
+   ```
+   SharePoint HelpDesk
+   ```
 
-1. From the variable list, select **Subject**.
+   > **Note:** If the sign-in pop-up does not appear, check your browser address bar and allow pop-ups for **copilotstudio.microsoft.com**, then select **Done** and try signing in again.
 
-   ![](./media/ex5img23.png)
+1. In the **Pick an account** window, select the lab user account to sign in.
 
-1. Repeat the same for **Description** and select **Description** from variable.
+1. In the **Confirmation required** page, select **Allow access** to grant permissions for the **SharePoint** connection.
 
-1. Once done, for **Email**, select **Enter custom value** from the list.
+1. In the **Create item** action, under **Site Address**, from the dropdown select the IT HelpDesk site you created. If no values are shown in the dropdown, then manually enter the site address that you copied earlier.
 
-   ![](./media/fw15.png)
+   > **Note:** The Site Address should be in the format: `https://cloudlabssandbox.sharepoint.com/sites/ITSM-Copilot-<inject key="Deployment ID" enableCopy="false"></inject>`
 
-1. Now, provide the **Email** as `john@contoso.com` **(1)**, select **Priority** as `Medium` **(2)** and select **Status** as `Open` **(3)**.
+1. Under **List Name**, select **Tickets**.
 
-   ![](./media/st-store-ex3-g104.png)
+1. From the **Advanced Parameters** list, select **Title**, **Issue Description**, and **Priority Value**.
+
+1. For the **Title** parameter, select the **Dynamic content** option and choose **Subject** from the trigger's input variables.
+
+1. For the **Issue Description** parameter, select the **Dynamic content** option and choose **Description** from the trigger's input variables.
+
+1. For the **Priority Value** parameter, select **High** from the dropdown.
+
+   > **Note:** Leave the **Status** value as **New** (default).
 
 1. Now, you have successfully set up your agent flow. Select **Publish** from the top-right corner to save the flow.
 
    ![](./media/st-store-ex3-g105.png)
 
-1. On the **Untitled** flow page, ensure you are on the **Overview (1)** tab and select **Edit (2)** from the **Details** section.
+1. On the flow page, ensure you are on the **Overview (1)** tab and select **Edit (2)** from the **Details** section.
 
    ![](./media/st-store-ex3-g106.png)
 
 1. In the **Details** pane, enter the following name in the **Flow name (1)** field and then select **Save (2)**.
 
    ```
-   Freshdesk
+   SharePoint HelpDesk
    ```
-
-   ![](./media/st-store-ex3-g107.png)
 
 1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
@@ -644,9 +649,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g109.png)
 
-1. From the node options, select **Add a tool (1)** and then choose **Freshdesk (2)** to integrate the ticket creation flow.
-
-   ![](./media/st-store-ex3-g110.png)
+1. From the node options, select **Add a tool (1)** and then choose **SharePoint HelpDesk (2)** to integrate the ticket creation flow.
 
 1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Subject (String)** field and choose the **Subject (2)** variable from the list.
 
@@ -656,9 +659,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g112.png)
 
-1. Select **+ (1)** below the Freshdesk action node and choose **Send a message (2)**.
-
-   ![](./media/st-store-ex3-g113.png)
+1. Select **+** below the SharePoint HelpDesk action node and choose **Send a message**.
 
 1. In the **Message** node, enter the following text in the message box.
 
@@ -699,31 +700,21 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g118.png)
 
-1. In the chat window, select **Open connection manager** to verify and configure your credentials for the integration.
+1. In the chat window, if prompted, select **Open connection manager** to verify and configure your credentials for the SharePoint integration.
 
    ![](./media/st-store-ex3-g119.png)
 
-1. On the **Manage your connections** page, locate the **Freshdesk** connection and select **Connect**.
+1. On the **Manage your connections** page, locate the **SharePoint** connection and select **Connect**.
 
-   ![](./media/st-store-ex3-g120.png)
-
-1. On the **Create or pick connections** page, confirm that the **Freshdesk** connection is selected and then select **Submit**.
-
-   ![](./media/st-store-ex3-g121.png)
+1. On the **Create or pick connections** page, confirm that the **SharePoint** connection is selected and then select **Submit**.
 
 1. Verify that the **Status** now shows as **Connected**.
-
-   ![](./media/st-store-ex3-g122.png)
 
 1. Return to the chat window and select **Retry (1)** to trigger the ticket creation again. You will see a confirmation message stating that your ticket has been successfully submitted **(2)**.
 
    ![](./media/st-store-ex3-g123.png)
 
-1. Navigate back to **Freshworks** portal, you can see that the ticket with a subject **Refund Not Received** is created.
-
-   ![](./media/st-store-ex3-g124.png)
-
-   ![](./media/st-store-ex3-g125.png)
+1. Navigate back to the **SharePoint IT HelpDesk** site and open the **Tickets** list. You can see that a new ticket with the subject **Refund Not Received** has been created.
 
 1. To finalize all changes and make the agent live, navigate back to **Copilot Studio** and select **Publish** from the top-right corner of the page.
 
@@ -742,6 +733,6 @@ In this task, you will build a topic that enables users to request support by cr
 
 ## Summary
 
-In this exercise, you enhanced your StoreOps Assistant by building advanced AI workflows that extended beyond static knowledge responses. You created dynamic topics that allowed users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and Freshworks. These enhancements enabled your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you enhanced your StoreOps Assistant by building workflows that extended beyond static knowledge responses. You created topics that allowed users to place orders and request support, while integrating your agent with Microsoft Dataverse and SharePoint HelpDesk. These additions let your assistant perform end-to-end operations such as order recording and ticket creation for real-world store operations.
 
 ### You have successfully completed this exercise, please continue to next one >>

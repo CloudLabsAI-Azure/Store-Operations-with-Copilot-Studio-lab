@@ -1,10 +1,10 @@
-# Exercise 2: Create Store‑Operations Agent in Copilot Studio
+# Exercise 2: Create Store Operations Agent in Copilot Studio
 
 ### Estimated Duration: 45 Minutes
 
 ## Overview
 
-In this exercise, you will create a Copilot Studio agent that will serve as the foundation for your store operations assistant. You will define the agent’s purpose by assigning it a name and description, and connect it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps will enable your agent to deliver relevant, AI-powered responses based on indexed information.
+In this exercise, you will create a Copilot Studio agent that will serve as the foundation for your store operations assistant. You will define the agent's purpose by assigning it a name and description, and connect it to knowledge sources such as the product catalog, store policy documents, and website content. These steps will allow your agent to return relevant responses based on indexed information.
 
 ## Objectives
 
@@ -16,7 +16,7 @@ You will be able to complete the following tasks:
 
 ## Task 1: Creating a store-operations agent in Copilot Studio
 
-In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for enabling intelligent store operations.
+In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for your store operations workflows.
 
 1. In the Copilot Studio home page, from the left navigation pane, select **Agents (1)** and then select **Create blank agent (2)**.
 
@@ -39,7 +39,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
    | Field | Value |
    |-------|-------|
    | Name | `StoreOps Assistant` |
-   | Description | `StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets, all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy.` |
+   | Description | `StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets, all through conversational AI. Integrated with Dataverse, SharePoint HelpDesk, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy.` |
 
    ![](./media/st-store-ex2-g5.png)
 
@@ -54,7 +54,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
    - Searching for products from the catalog using natural language
    - Providing accurate answers using connected knowledge sources such as store policies and website content
    - Assisting in placing orders and logging them in Dataverse
-   - Creating and tracking support tickets in Freshworks when issues arise
+   - Creating and tracking support tickets in SharePoint HelpDesk when issues arise
    - Answering general store operations questions
 
    Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If a request is unclear, ask clarifying questions before proceeding.
@@ -66,7 +66,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 
 ## Task 2: Adding knowledge sources to the agent
 
-In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
+In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide answers using Retrieval-Augmented Generation (RAG).
 
 1. Select **+ Add knowledge** to add data and resources to the agent.
 
@@ -177,6 +177,6 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 ## Summary
 
-In this exercise, you created a Copilot Studio agent that served as the foundation for your store operations assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
+In this exercise, you created a Copilot Studio agent that serves as the foundation for your store operations assistant. You defined the agent's purpose by assigning it a name and description, and connected it to knowledge sources such as the product catalog, store policy documents, and website content. These steps allow the agent to return relevant responses based on indexed information.
 
 ### You have successfully completed this exercise, please continue to next one >>

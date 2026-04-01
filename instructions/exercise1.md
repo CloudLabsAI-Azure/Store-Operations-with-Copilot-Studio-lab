@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will provision a Power Platform environment—enabling Dataverse, Azure AI services, and the Copilot Studio trial. You will also set up and configure Freshworks to handle incident management. Together, these foundational steps establish the infrastructure needed to build and deploy your RAG‑driven store operations agent.
+In this exercise, you will provision a Power Platform environment, enable Dataverse and the Copilot Studio trial. You will also create and configure a SharePoint IT HelpDesk site to handle incident management. These steps set up the infrastructure needed to build and deploy your store operations agent.
 
 ## Objectives
 
@@ -12,7 +12,7 @@ You will be able to complete the following tasks:
 
 - Task 1 : Provisioning power platform environment
 
-- Task 2 : Setting up Freshworks for incident management
+- Task 2 : Setting up SharePoint IT HelpDesk for incident management
 
 ## Task 1 : Provisioning power platform environment
 
@@ -112,107 +112,80 @@ Select the file **product_catalog.csv (2)** and select **Open (3)**.
 
    ![](./media/st-store-ex1-g10.png)
 
-## Task 2: Setting up Freshworks for incident management
+## Task 2: Setting up SharePoint IT HelpDesk for incident management
 
-In this task, you will set up and configure Freshworks to enable automated incident management for your store operations agent.
+In this task, you will create a SharePoint IT HelpDesk site using the built-in IT help desk template. This site includes a **Tickets** list (issue tracker) and an asset manager list. You will use the **Tickets** list to create and track support tickets from your Copilot Studio agent using the SharePoint connector in Power Automate.
 
-**Freshworks** is a cloud-based customer service and engagement platform designed to improve customer support operations and enhance user satisfaction. It offers a suite of tools for ticket management, live chat, help center creation, and customer self-service. Freshworks supports omnichannel communication, enabling businesses to manage customer interactions across email, chat, phone, and social media from a centralized interface. Its automation features help streamline workflows, assign tickets, and provide analytics for performance tracking. Now you will set up the Freshworks account.
-
-1. Open a new browser tab and navigate to:
+1. In a new browser tab, navigate to MyApps portal using the below link.
 
    ```
-   https://www.freshworks.com/freshdesk/
+   https://myapps.microsoft.com
    ```
 
-1. On the Freshdesk homepage, select **Try it free** to start creating your trial account.
+1. In the next pane, select **SharePoint** icon.
 
-   ![](./media/m36-copg-ex9-i-g1.png)
+   ![](./media/itimg1.png)
 
-1. Fill in the registration form with the following details, accept the **Terms & Conditions**, and then select **Try it free**.
+   > **Note:** If you are not able to see SharePoint in the MyApps section, navigate to `https://cloudlabssandbox.sharepoint.com/` directly to access SharePoint.
 
-   | Field | Value |
-   |-------|-------|
-   | First name | **ODL User** |
-   | Last name | **<inject key="DeploymentID"></inject>** |
-   | Work email | **<inject key="AzureAdUserEmail" enableCopy="false"/>** |
-   | Company name | **Contoso** |
-   | Organization size | **11-50** |
-   | Terms & Conditions | **Checked** |
+1. Close the pop-up window.
 
-   ![](./media/m36-copg-ex9-i-g2.png)
+   ![](./media/itimg2.png)
 
-1. In your inbox, look for the **Freshworks verification email**.
+1. Once navigated to SharePoint, select **+ Create site** option.
 
-   - Open a new tab and navigate to: `https://outlook.office.com`
-   - Look for an email from Freshdesk with a subject like "Activate your account"
+   ![](./media/itimg3.png)
 
-      ![](./media/m36-copg-ex9-i-g3.png)
+1. In the next page, select **Team site**.
 
-   > **Note:** If you are unable to locate the email from Freshworks, wait a few minutes as there might be a delay in email delivery. Also check your spam or junk folder.
+   ![](./media/itimg4.png)
 
-1. Open the email. Depending on the email you received, follow **one** of the paths below:
+1. From the available templates, select **IT help desk** template.
 
-   **Path A – Verification Code (most common):**
+   ![](./media/itimg5.png)
 
-   1. Copy the **six-digit verification code** from the email.
+1. In the IT Helpdesk template page, select **Use template**.
 
-      ![](./media/m36-copg-ex9-i-g4.png)
+   ![](./media/itimg6.png)
 
-   1. Go back to the Freshworks sign-up tab and enter the code in the **Enter your verification code** fields.
+1. In the configuration pane, provide the following name. Copy the **Site Address** as you will be using this further in the exercises. Select **Next**.
 
-      ![](./media/m36-copg-ex9-i-g5.png)
+   ```
+   ITSM-Copilot-<inject key="Deployment ID" enableCopy="false"></inject>
+   ```
 
-   1. If prompted with a CAPTCHA challenge, complete the verification by selecting the required images, and then select **VERIFY**.
+   ![](./media/itimg7.png)
 
-   1. Enter the password **<inject key="AzureAdUserPassword"></inject>** in the **Password** field, and then select **Start my trial**.
+1. Under privacy settings, leave it as **Private** and select **Create site**.
 
-      ![](./media/m36-copg-ex9-i-g6.png)
+   ![](./media/itimg8.png)
 
-   **Path B – Activation Link:**
+1. In the final pane, please wait till the **Finish** button is enabled and then select **Finish**. This may take up to 5 minutes.
 
-   > **Note:** If you received an activation link instead of a verification code, follow these steps.
+   ![](./media/itimg9.png)
 
-   1. In the email, select **Activate Account**.
+1. Once created, the page will look similar to this.
 
-      ![](./media/d3-cor3-g3-g11.png)
+   ![](./media/itimg10.png)
 
-   1. On the activation page, enter **<inject key="AzureAdUserPassword"></inject>** in both the **Enter password** and **Confirm password** fields, and then select **Activate your account**.
+1. From the left navigation or the site contents, locate and select the **Tickets** list.
 
-      ![](./media/d3-cor3-g3-g12.png)
+   > **Note:** The IT HelpDesk template comes with a **Tickets** list (issue tracker) that includes columns such as **Title**, **Issue Description**, **Priority**, and **Status**. This is the list where your agent will create support tickets.
 
-1. On the personalization page, confirm **Software and Internet (1)** as the industry, select **I’m trying customer service software for the first time (2)**, and then select **Next (3)**.
+1. Verify that the **Tickets** list is accessible and note the available columns. You should see columns like:
+   - **Title** - The ticket subject
+   - **Issue Description** - Detailed description of the issue
+   - **Priority** - Priority level (Critical, High, Normal, Low)
+   - **Status** - Ticket status (New, In Progress, Resolved, etc.)
 
-   ![](./media/m36-copg-ex9-i-g8.png)
+1. Copy the **Site Address** (for example, `https://cloudlabssandbox.sharepoint.com/sites/ITSM-Copilot-XXXXXX`) from the browser address bar and save it securely for later use.
 
-1. Wait for the Freshdesk portal to load. You should now be logged in to your Freshdesk dashboard.
+   > This is your **SharePoint HelpDesk Site Address** which you will need in Exercise 3 when configuring the agent flow.
 
-1. From the left menu, select the **Tickets** icon. You can see some default tickets that are present.
+1. You should now have the following value saved:
+   - **Site Address:** `https://cloudlabssandbox.sharepoint.com/sites/ITSM-Copilot-<inject key="Deployment ID" enableCopy="false"></inject>`
 
-   ![](./media/fw11.png)
-
-1. In the top-right corner, select your **profile icon (1)**, and then choose **Profile settings (2)** from the menu.
-
-   ![](./media/m36-copg-ex9-i-g9.png)
-
-1. In **Profile settings**, select **View API Key** to display your API key.
-
-   ![](./media/m36-copg-ex9-i-g10.png)
-
-1. Under **Your API Key**, copy the displayed API key and save it securely for later use.
-
-   ![](./media/m36-copg-ex9-i-g12.png)
-
-1. From the browser address bar, copy the **Account URL** (for example, `https://your-company-name.freshdesk.com`) and save it for use in the next task.
-
-   ![](./media/m36-copg-ex9-i-g13.png)
-
-   >This is your **Account URL** which you will need in the later task.
-
-1. You should now have two values saved:
-   - **Account URL:** `https://your-company-name.freshdesk.com`
-   - **API Key:** Your copied API key
-
-1. Now you have successfully set up Freshworks for ticket management.
+1. Now you have successfully verified the SharePoint IT HelpDesk for ticket management.
 
 <validation step="9ec40b7e-aa69-4359-a1f4-833d8ca8d8b4" />
  
@@ -223,7 +196,7 @@ In this task, you will set up and configure Freshworks to enable automated incid
 
 ## Summary
 
-In this exercise, you provisioned a Power Platform environment—enabled Dataverse and the Copilot Studio trial. You also set up and configured Freshworks to handle incident management. Together, these foundational steps established the infrastructure needed to build and deploy your RAG-driven store operations agent.
+In this exercise, you provisioned a Power Platform environment, enabled Dataverse and the Copilot Studio trial, and set up the SharePoint IT HelpDesk site for incident management. These steps established the infrastructure needed to build and deploy your store operations agent.
 
 ### You have successfully completed this exercise, please continue to next one >>
 

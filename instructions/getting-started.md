@@ -4,19 +4,19 @@
 
 ## Overview
 
-This hands‑on lab guides participants through building and automating a smart store‑operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and servicedesk data. The lab covers customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging, and Freshworks ticket creation. Additionally, participants will learn to publish their finished agent to custom channels such as Microsoft Teams or a web portal.
+This hands-on lab guides participants through building and automating a store operations agent using Microsoft Copilot Studio. Participants will explore ingesting and indexing product catalogs, policy documents, website content and servicedesk data. The lab covers customizing knowledge topics and automating workflows for product search, order placement, Dataverse logging, and SharePoint HelpDesk ticket creation. Additionally, participants will learn to publish their finished agent to channels such as Microsoft Teams or a web portal.
 
 ## Objective
 
-Learn to build and automate a smart store‑operations agent using Microsoft Copilot Studio, leveraging AI models like text embeddings, language models, and generative AI. By the end of this lab, you will:
+Learn to build and automate a store operations agent using Microsoft Copilot Studio, using AI models like text embeddings, language models, and generative AI. By the end of this lab, you will:
 
-- **Setting up Pre-Requisites for Store operations Agent:** Understand how to set up your Power Platform tenant, enable the Copilot Studio free trial, and configure Azure AI and Dataverse permissions.
+- **Setting up Pre-Requisites for Store operations Agent:** Set up your Power Platform tenant, enable the Copilot Studio free trial, configure Dataverse permissions, and create a SharePoint IT HelpDesk site for ticket management.
 
-- **Create Store‑Operations Agent in Copilot Studio:** Get insights on spinning up a new Copilot Studio agent, assigning it a name and description, and connecting initial knowledge sources (product catalog, policy docs, website content).
+- **Create Store-Operations Agent in Copilot Studio:** Create a new Copilot Studio agent, assign it a name and description, and connect initial knowledge sources (product catalog, policy docs, website content).
 
-- **Build Advanced AI Workflows for Orders & Tickets:** Understand how to extend your agent with retrieval‑augmented prompts, configure actions to record orders in Dataverse, and integrate Freshworks to auto‑create support tickets.
+- **Build Advanced AI Workflows for Orders & Tickets:** Extend your agent with retrieval-augmented prompts, configure actions to record orders in Dataverse, and integrate SharePoint HelpDesk to auto-create support tickets.
 
-- **Deploy & Publish Your Agent to Microsoft Teams:** Get insights on packaging and publishing your completed agent into a Teams channel, then validating end‑to‑end functionality—product lookup, order placement, and ticket creation—directly within Teams.
+- **Deploy & Publish Your Agent to Microsoft Teams:** Publish your completed agent into a Teams channel, then validate end-to-end functionality including product lookup, order placement, and ticket creation directly within Teams.
 
 ## Pre-requisites
 
@@ -28,7 +28,7 @@ Participants should have the following prerequisites:
 
 ## Architecture
 
-The architecture enables end‑to‑end store operations automation by seamlessly ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as knowledge sources. Workflow actions—such as placing orders in Dataverse and opening tickets in Freshworks—are wired into the agent via Copilot Studio’s action framework. Finally, the fully indexed, action‑enabled agent is published into a Microsoft Teams channel, delivering intuitive, conversational store‑operations support directly where your staff already collaborate.
+The architecture enables end-to-end store operations automation by ingesting, processing, indexing, and interacting with multiple data sources in Copilot Studio. Product catalogs, policy documents, and website content are ingested as knowledge sources. Workflow actions like placing orders in Dataverse and creating tickets in SharePoint HelpDesk are configured in the agent via Copilot Studio's action framework. Finally, the agent is published into a Microsoft Teams channel, providing conversational store operations support where your staff already collaborate.
 
 ## Architecture Diagram
 
@@ -38,15 +38,15 @@ The architecture enables end‑to‑end store operations automation by seamlessl
 
 The architecture for this lab involves several key components:
 
-- **Copilot Studio:** Facilitates user interaction by connecting to Azure AI Search for Q&A and other workflows. It provides an intuitive interface for leveraging indexed data and AI capabilities in real-time.
+- **Copilot Studio:** Handles user interaction by connecting to Azure AI Search for Q&A and other workflows. It provides an interface for using indexed data and AI capabilities in real-time.
 
-- **Freshworks:** Manages support and exception workflows by exposing ticket‑creation and incident‑management APIs. The Copilot Studio agent invokes Freshworks actions to automatically open, update, and track service tickets based on user requests or operational alerts.
+- **SharePoint HelpDesk:** Manages support and incident workflows using the SharePoint IT HelpDesk site template. The Copilot Studio agent uses the SharePoint connector to automatically create, track, and manage support tickets in the Tickets list based on user requests or operational alerts.
 
-- **Dataverse:** Acts as the centralized, low‑code data backend for transactional records. It stores order entries, inventory updates, and other structured data; the Copilot Studio agent uses Dataverse actions to create, read, update, and delete records as part of automated store‑operations workflows.
+- **Dataverse:** Acts as the centralized, low-code data backend for transactional records. It stores order entries, inventory updates, and other structured data. The Copilot Studio agent uses Dataverse actions to create, read, update, and delete records as part of automated store operations workflows.
 
 ## Getting Started with Lab
 
-Welcome to Store Operations with Microsoft Copilot Studio Hands-On-Lab! We've prepared a seamless environment for you to explore and learn. Let's begin by making the most of this experience.
+Welcome to Store Operations with Microsoft Copilot Studio Hands-On-Lab! We've prepared an environment for you to explore and learn. Let's begin by making the most of this experience.
 
 ### Accessing Your Lab Environment
 
@@ -187,7 +187,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
 ## Support Contact
 
-The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed. Learner Support Contacts:
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to assist you at any time. We offer dedicated support channels for both learners and instructors, ensuring that all your needs are promptly addressed. Learner Support Contacts:
 
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
