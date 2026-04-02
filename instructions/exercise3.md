@@ -551,9 +551,23 @@ In this task, you will build a topic that lets users request support by creating
 
 1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
 
-1. Under **Save user response as**, select **Var1**, enter **Description** under **Variable name**, and then select **Close**.
+   ![](./media/st-op-sb-ex3-g5.png)
 
-1. Select **+** to add a new node. From the list, select **Ask a question**.
+1. Under **Save user response as**, select **Var1**.
+
+   ![](./media/st-op-sb-ex3-g6.png)
+
+1. Enter **Description** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g7.png)
+
+1. Select **+** to add a new node.
+
+   ![](./media/st-op-sb-ex3-g31.png)
+
+1.  From the list, select **Ask a question**.
+
+   ![](./media/st-op-sb-ex3-g32.png)
 
 1. In the **Question** node, enter the following text in the message box.
 
@@ -561,11 +575,27 @@ In this task, you will build a topic that lets users request support by creating
    Please provide your name
    ```
 
+   ![](./media/st-op-sb-ex3-g33.png)
+
 1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
 
-1. Under **Save user response as**, select **Var1**, enter **UserName** under **Variable name**, and then select **Close**.
+   ![](./media/st-op-sb-ex3-g34.png)
 
-1. Select **+** to add a new node. From the list, select **Ask a question**.
+1. Under **Save user response as**, select **Var1**.
+
+   ![](./media/st-op-sb-ex3-g35.png)
+
+1. Enter **UserName** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g36.png)
+
+1. Select **+** to add a new node.
+
+   ![](./media/st-op-sb-ex3-g37.png)
+
+1. From the list, select **Ask a question**.
+
+   ![](./media/st-op-sb-ex3-g38.png)
 
 1. In the **Question** node, enter the following text in the message box.
 
@@ -573,13 +603,23 @@ In this task, you will build a topic that lets users request support by creating
    Please provide your email address
    ```
 
+   ![](./media/st-op-sb-ex3-g39.png)
+
 1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
 
-1. Under **Save user response as**, select **Var1**, enter **Email** under **Variable name**, and then select **Close**.
+   ![](./media/st-op-sb-ex3-g40.png)
+
+1. Under **Save user response as**, select **Var1**.
+
+   ![](./media/st-op-sb-ex3-g41.png)
+
+1. Enter **Email** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g42.png)
 
 1. From the top menu, select **Save** to save the topic.
 
-   ![](./media/st-store-ex3-g96.png)
+   ![](./media/st-op-sb-ex3-g43.png)
 
 1. In the **Save your topic** dialog, enter the following name in the **Name your topic (1)** field, and then select **Save (2)**.
 
@@ -587,7 +627,7 @@ In this task, you will build a topic that lets users request support by creating
    Ticket Creation
    ```
 
-   ![](./media/st-store-ex3-g97.png)
+   ![](./media/st-op-sb-ex3-g43.png)
 
 1. From the left navigation pane, select **Flows (1)** and then choose **+ New agent flow (2)**.
 
@@ -599,7 +639,7 @@ In this task, you will build a topic that lets users request support by creating
 
    > **Note:** After searching, you may need to scroll down to locate the **When an agent calls the flow** option in the results.
 
-1. In the **When an agent calls the flow** node, select **Add an input** to add input parameters.
+1. In the **When an agent calls the flow** node, select **+ Add an input** to add input parameters.
 
    ![](./media/st-store-ex3-g42.png)
 
@@ -607,7 +647,7 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g43.png)
 
-1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **Add an input (2)**.
+1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ Add an input (2)**.
 
    ```
    Subject
@@ -617,39 +657,53 @@ In this task, you will build a topic that lets users request support by creating
 
 1. Under **Choose the type of user input**, select **Text**.
 
-   ![](./media/st-store-ex3-g100.png)
+   ![](./media/st-op-sb-ex3-g45.png)
 
-1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ (2)**.
+1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ Add an input (2)**.
 
    ```
    Description
    ```
 
-   ![](./media/st-store-ex3-g101.png)
+   ![](./media/st-op-sb-ex3-g44.png)
 
 1. Under **Choose the type of user input**, select **Text**.
 
-1. Enter the following input name under **Text**, and then select **Add an input**.
+   ![](./media/st-op-sb-ex3-g45.png)
+
+1. Enter the following input name under **Text (1)**, and then select **+ Add an input (2)**.
 
    ```
    UserName
    ```
 
+   ![](./media/st-op-sb-ex3-g46.png)
+
 1. Under **Choose the type of user input**, select **Text**.
 
-1. Enter the following input name under **Text**.
+   ![](./media/st-op-sb-ex3-g47.png)
+
+1. Enter the following input name under **Text (1)** and then click on **+** **(2)** to configure the **SharePoint** operation.
 
    ```
    Email
    ```
 
-   >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
+   ![](./media/st-op-sb-ex3-g48.png)
 
-1. Select **+** to add the next action to the flow, where you will configure the **SharePoint** operation.
+   >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
 
 1. In the **Add an action** pane, search for **SharePoint (1)** and then select **See more (2)**.
 
+   ![](./media/st-op-sb-ex3-g8.png)
+
 1. From the **SharePoint** actions list, select **Create item**.
+
+   ![](./media/st-op-sb-ex3-g9.png)
+
+1. In the **Create item** action, select **Sign in** to create a connection to SharePoint.
+
+   ![](./media/st-op-sb-ex3-g10.png)
 
 1. In the **Create a new connection** pane, enter the following value for **Connection name (1)**, and then select **Sign in (2)**.
 
