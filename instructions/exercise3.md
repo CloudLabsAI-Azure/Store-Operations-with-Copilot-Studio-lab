@@ -485,7 +485,7 @@ In this task, you will create an action that inserts the collected order details
 
 ## Task 2: Create a "Support Ticket" topic and integrate with SharePoint HelpDesk
 
-In this task, you will build a topic that lets users request support by creating a service ticket. The topic will gather information like the issue description and subject. Once the data is collected, the agent will connect to the SharePoint IT HelpDesk site and create a corresponding ticket in the Tickets list. This integration handles ticket creation without manual steps, keeping everything within the Microsoft 365 ecosystem.
+In this task, you will build a topic that lets users request support by creating a service ticket. The topic will gather information like the subject, description, user name, and email address. Once the data is collected, the agent will connect to the SharePoint IT HelpDesk site and create a corresponding ticket in the Tickets list with the user's details included. This integration handles ticket creation without manual steps, keeping everything within the Microsoft 365 ecosystem.
 
 1. You will now create a topic that integrates with the SharePoint IT HelpDesk site you set up earlier.
 
@@ -541,6 +541,34 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g95.png)
 
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
+
+1. Under **Save user response as**, select **Var1**, enter **Description** under **Variable name**, and then select **Close**.
+
+1. Select **+** to add a new node. From the list, select **Ask a question**.
+
+1. In the **Question** node, enter the following text in the message box.
+
+   ```
+   Please provide your name
+   ```
+
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
+
+1. Under **Save user response as**, select **Var1**, enter **UserName** under **Variable name**, and then select **Close**.
+
+1. Select **+** to add a new node. From the list, select **Ask a question**.
+
+1. In the **Question** node, enter the following text in the message box.
+
+   ```
+   Please provide your email address
+   ```
+
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
+
+1. Under **Save user response as**, select **Var1**, enter **Email** under **Variable name**, and then select **Close**.
+
 1. From the top menu, select **Save** to save the topic.
 
    ![](./media/st-store-ex3-g96.png)
@@ -591,6 +619,22 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g101.png)
 
+1. Under **Choose the type of user input**, select **Text**.
+
+1. Enter the following input name under **Text**, and then select **Add an input**.
+
+   ```
+   UserName
+   ```
+
+1. Under **Choose the type of user input**, select **Text**.
+
+1. Enter the following input name under **Text**.
+
+   ```
+   Email
+   ```
+
    >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
 
 1. Select **+** to add the next action to the flow, where you will configure the **SharePoint** operation.
@@ -621,7 +665,18 @@ In this task, you will build a topic that lets users request support by creating
 
 1. For the **Title** parameter, select the **Dynamic content** option and choose **Subject** from the trigger's input variables.
 
-1. For the **Issue Description** parameter, select the **Dynamic content** option and choose **Description** from the trigger's input variables.
+1. For the **Issue Description** parameter, you will build a concatenated value that includes the user's name, email, and the description. Copy the following template into the **Issue Description** field:
+
+   ```
+   Name: {UserName} | Email: {Email} | Description: {Description}
+   ```
+
+   Now replace each placeholder with dynamic content:
+   - Select `{UserName}` and delete it. Then select the **Dynamic content** icon and choose **UserName**.
+   - Select `{Email}` and delete it. Then select the **Dynamic content** icon and choose **Email**.
+   - Select `{Description}` and delete it. Then select the **Dynamic content** icon and choose **Description**.
+
+   > After replacing all placeholders, the field should show: `Name:` **UserName** `| Email:` **Email** `| Description:` **Description** with the dynamic content tokens in place.
 
 1. For the **Priority Value** parameter, select **High** from the dropdown.
 
@@ -649,7 +704,7 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g108.png)
 
-1. In **Action** node, select **+** below the **Description** question node to add a new node.
+1. In **Action** node, select **+** below the **Email** question node to add a new node.
 
    ![](./media/st-store-ex3-g109.png)
 
@@ -662,6 +717,10 @@ In this task, you will build a topic that lets users request support by creating
 1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Description (String)** field and choose the **Description (2)** variable from the list.
 
    ![](./media/st-store-ex3-g112.png)
+
+1. Under **Power Automate inputs**, select the **...** icon next to the **UserName (String)** field and choose the **UserName** variable from the list.
+
+1. Under **Power Automate inputs**, select the **...** icon next to the **Email (String)** field and choose the **Email** variable from the list.
 
 1. Select **+** below the SharePoint HelpDesk action node and choose **Send a message**.
 
@@ -704,6 +763,18 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g118.png)
 
+1. The agent will ask for your name. Enter the following:
+
+   ```
+   John
+   ```
+
+1. The agent will ask for your email address. Enter the following:
+
+   ```
+   john@contoso.com
+   ```
+
 1. In the chat window, if prompted, select **Open connection manager** to verify and configure your credentials for the SharePoint integration.
 
    ![](./media/st-store-ex3-g119.png)
@@ -718,7 +789,7 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g123.png)
 
-1. Navigate back to the **SharePoint IT HelpDesk** site and open the **Tickets** list. You can see that a new ticket with the subject **Refund Not Received** has been created.
+1. Navigate back to the **SharePoint IT HelpDesk** site and open the **Tickets** list. You can see that a new ticket with the subject **Refund Not Received** has been created. Open the ticket and verify that the **Issue Description** field contains the user's name, email, and description.
 
 1. To finalize all changes and make the agent live, navigate back to **Copilot Studio** and select **Publish** from the top-right corner of the page.
 
