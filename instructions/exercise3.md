@@ -431,21 +431,25 @@ In this task, you will create an action that inserts the collected order details
 
 1. Now use the **Test** area in the right to validate the working of the flow.
 
+1. In the top menu, select **New test session**.
+
+   ![](./media/st-op-sb-ex3-g76.png)
+
 1. Provide the prompts as given below and check the flow of the agent:
 
    - ```
      I want to place an order
      ```
 
-     ![](./media/st-store-ex3-g80.png)
+     ![](./media/st-op-sb-ex3-g83.png)
      
      >The agent will reply with a question to get the product details.
 
    - ```
-     Galaxy Fitness Tracker
+     Tailwind Sneakers
      ```
 
-     ![](./media/st-store-ex3-g81.png)
+     ![](./media/st-op-sb-ex3-g84.png)
 
      >The agent will ask a question to get the quantity of the order.
    
@@ -453,7 +457,7 @@ In this task, you will create an action that inserts the collected order details
      1
      ```
 
-     ![](./media/st-store-ex3-g82.png)
+     ![](./media/st-op-sb-ex3-g79.png)
 
      >The agent will ask to provide UserName
 
@@ -461,29 +465,29 @@ In this task, you will create an action that inserts the collected order details
      John
      ```
 
-     ![](./media/st-store-ex3-g83.png)
+     ![](./media/st-op-sb-ex3-g80.png)
 
      >Next, the agent will ask for delivery address.
 
    - ```
-     1st Street, California
+     200 Main St, City Hall, 200 N Spring St, Los Angeles, CA 90012, USA
      ```
      
-     ![](./media/st-store-ex3-g84.png)
+     ![](./media/st-op-sb-ex3-g81.png)
 
      >Now the Action will run. It may take few seconds once done, you will get the acknowledgement.
 
-     ![](./media/st-store-ex3-g85.png)
+     ![](./media/st-op-sb-ex3-g82.png)
 
 1. Now, to verify the creation of record inside the dataverse table, navigate back to power apps portal.
 
 1. Once you are in the Power Apps portal, select **Tables (1)** from the left menu, and from the list, select the **Order (2)** table.
 
-   ![](./media/st-store-ex3-g86.png)
+   ![](./media/st-op-sb-ex3-g87.png)
 
 1. Now, you can see that a record has been added with the details that you provided.
 
-   ![](./media/st-store-ex3-g87.png)
+   ![](./media/st-op-sb-ex3-g88.png)
 
 1. You have successfully created a flow with an Action to manage order placements.
 
@@ -705,27 +709,35 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-op-sb-ex3-g10.png)
 
-1. In the **Create a new connection** pane, enter the following value for **Connection name (1)**, and then select **Sign in (2)**.
-
-   ```
-   SharePoint HelpDesk
-   ```
-
-   > **Note:** If the sign-in pop-up does not appear, check your browser address bar and allow pop-ups for **copilotstudio.microsoft.com**, then select **Done** and try signing in again.
-
-1. In the **Pick an account** window, select the lab user account to sign in.
-
 1. In the **Confirmation required** page, select **Allow access** to grant permissions for the **SharePoint** connection.
+
+   ![](./media/st-op-sb-ex3-g11.png)
 
 1. In the **Create item** action, under **Site Address**, from the dropdown select the IT HelpDesk site you created. If no values are shown in the dropdown, then manually enter the site address that you copied earlier.
 
+   ![](./media/st-op-sb-ex3-g12.png)
+
    > **Note:** The Site Address should be in the format: `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
 
-1. Under **List Name**, select **Tickets**.
+1. Under **List Name**, select the dropdown (1) and choose **Tickets (2)**.
 
-1. From the **Advanced Parameters** list, select **Title**, **Issue Description**, and **Priority Value**.
+   ![](./media/st-op-sb-ex3-g13.png)
 
-1. For the **Title** parameter, select the **Dynamic content** option and choose **Subject** from the trigger's input variables.
+1. Under **Advanced parameters**, select the dropdown to expand the options
+
+   ![](./media/st-op-sb-ex3-g14.png)
+
+1. Select **Title**, **Issue Description**, and **Priority Value**.
+
+   ![](./media/st-op-sb-ex3-g15.png)
+
+1. In the **Title (1)** field, select the **Dynamic content (2)** icon and choose **Subject**.
+
+   ![](./media/st-op-sb-ex3-g16.png)
+
+1. In the **Dynamic content** pane, select **Subject** to populate the field.
+
+   ![](./media/st-op-sb-ex3-g89.png)
 
 1. For the **Issue Description** parameter, you will build a concatenated value that includes the user's name, email, and the description. Copy the following template into the **Issue Description** field:
 
@@ -733,20 +745,47 @@ In this task, you will build a topic that lets users request support by creating
    Name: {UserName} | Email: {Email} | Description: {Description}
    ```
 
-   Now replace each placeholder with dynamic content:
-   - Select `{UserName}` and delete it. Then select the **Dynamic content** icon and choose **UserName**.
-   - Select `{Email}` and delete it. Then select the **Dynamic content** icon and choose **Email**.
-   - Select `{Description}` and delete it. Then select the **Dynamic content** icon and choose **Description**.
+   ![](./media/st-op-sb-ex3-g49.png)
 
-   > After replacing all placeholders, the field should show: `Name:` **UserName** `| Email:` **Email** `| Description:` **Description** with the dynamic content tokens in place.
+1. In the **Issue description** field, replace **{UserName} (1)** by selecting the **Dynamic content (2)** icon.
 
-1. For the **Priority Value** parameter, select **High** from the dropdown.
+   ![](./media/st-op-sb-ex3-g50.png)
 
-   > **Note:** Leave the **Status** value as **New** (default).
+1. In the **Dynamic content** pane, select **UserName** to insert it into the field.
+
+   ![](./media/st-op-sb-ex3-g51.png)
+
+1. In the **Issue description** field, replace **{Email} (1)** by selecting the **Dynamic content (2)** icon.
+
+   ![](./media/st-op-sb-ex3-g52.png)
+
+1. In the **Dynamic content** pane, select **Email** to insert it into the field.
+
+   ![](./media/st-op-sb-ex3-g53.png)
+
+1. In the **Issue description** field, replace **{Description} (1)** by selecting the **Dynamic content (2)**.
+
+   ![](./media/st-op-sb-ex3-g54.png)
+
+1. In the **Dynamic content** pane, select **Description** to insert it into the field.
+
+   ![](./media/st-op-sb-ex3-g55.png)
+
+1. Under **Priority Value**, select the dropdown.
+
+   ![](./media/st-op-sb-ex3-g56.png)
+
+1. Select **High** from the dropdown list.
+
+   ![](./media/st-op-sb-ex3-g57.png)
+
+1. Under **Status Value**, keep the default value as **New**.
+
+   ![](./media/st-op-sb-ex3-g58.png)
 
 1. Now, you have successfully set up your agent flow. Select **Publish** from the top-right corner to save the flow.
 
-   ![](./media/st-store-ex3-g105.png)
+   ![](./media/st-op-sb-ex3-g22.png)
 
 1. On the flow page, ensure you are on the **Overview (1)** tab and select **Edit (2)** from the **Details** section.
 
@@ -758,6 +797,8 @@ In this task, you will build a topic that lets users request support by creating
    SharePoint HelpDesk
    ```
 
+   ![](./media/st-op-sb-ex3-g90.png)
+
 1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
    ![](./media/st-store-ex3-g66.png)
@@ -766,25 +807,37 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g108.png)
 
-1. In **Action** node, select **+** below the **Email** question node to add a new node.
+1. In **Action** node, select **+** below the question node to add a new node.
 
-   ![](./media/st-store-ex3-g109.png)
+   ![](./media/st-op-sb-ex3-g59.png)
 
 1. From the node options, select **Add a tool (1)** and then choose **SharePoint HelpDesk (2)** to integrate the ticket creation flow.
 
-1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Subject (String)** field and choose the **Subject (2)** variable from the list.
+   ![](./media/st-op-sb-ex3-g60.png)
 
-   ![](./media/st-store-ex3-g111.png)
+1. In the **Subject (String)** field, select the **... (1)** option and choose **Subject (2)** from the variable list.
 
-1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Description (String)** field and choose the **Description (2)** variable from the list.
+   ![](./media/st-op-sb-ex3-g61.png)
 
-   ![](./media/st-store-ex3-g112.png)
+1. In the **Description (String)** field, select the **... (1)** option and choose **Description (2)** from the variable list.
 
-1. Under **Power Automate inputs**, select the **...** icon next to the **UserName (String)** field and choose the **UserName** variable from the list.
+   ![](./media/st-op-sb-ex3-g62.png)
 
-1. Under **Power Automate inputs**, select the **...** icon next to the **Email (String)** field and choose the **Email** variable from the list.
+1. In the **UserName (String)** field, select the **... (1)** option and choose **UserName (2)** from the variable list.
 
-1. Select **+** below the SharePoint HelpDesk action node and choose **Send a message**.
+   ![](./media/st-op-sb-ex3-g63.png)
+
+1. In the **Email (String)** field, select the **... (1)** option and choose **Email (2)** from the variable list.
+
+   ![](./media/st-op-sb-ex3-g65.png)
+
+1. Select **+** below the SharePoint HelpDesk action node.
+
+   ![](./media/st-op-sb-ex3-g66.png)
+
+1. And choose **Send a message**.
+
+   ![](./media/st-op-sb-ex3-g67.png)
 
 1. In the **Message** node, enter the following text in the message box.
 
@@ -792,11 +845,11 @@ In this task, you will build a topic that lets users request support by creating
    Thank you, your ticket has been successfully submitted.
    ```
 
-   ![](./media/st-store-ex3-g114.png)
+   ![](./media/st-op-sb-ex3-g68.png)
 
 1. From the top menu, select **Save** to finalize the changes to your topic.
 
-   ![](./media/st-store-ex3-g115.png)
+   ![](./media/st-op-sb-ex3-g69.png)
 
 1. Now use the **Test** area in the right to validate the working of the flow.
 
@@ -831,35 +884,31 @@ In this task, you will build a topic that lets users request support by creating
    John
    ```
 
+   ![](./media/st-op-sb-ex3-g70.png)
+
 1. The agent will ask for your email address. Enter the following:
 
    ```
    john@contoso.com
    ```
 
-1. In the chat window, if prompted, select **Open connection manager** to verify and configure your credentials for the SharePoint integration.
+   ![](./media/st-op-sb-ex3-g71.png)
 
-   ![](./media/st-store-ex3-g119.png)
+1. In the chat window, if prompted, select **Allow (1)**, and verify the confirmation message **Thank you, your ticket has been successfully submitted. (2)**.
 
-1. On the **Manage your connections** page, locate the **SharePoint** connection and select **Connect**.
-
-1. On the **Create or pick connections** page, confirm that the **SharePoint** connection is selected and then select **Submit**.
-
-1. Verify that the **Status** now shows as **Connected**.
-
-1. Return to the chat window and select **Retry (1)** to trigger the ticket creation again. You will see a confirmation message stating that your ticket has been successfully submitted **(2)**.
-
-   ![](./media/st-store-ex3-g123.png)
+   ![](./media/st-op-sb-ex3-g72.png)
 
 1. Navigate back to the **SharePoint IT HelpDesk** site and open the **Tickets** list. You can see that a new ticket with the subject **Refund Not Received** has been created. Open the ticket and verify that the **Issue Description** field contains the user's name, email, and description.
 
+   ![](./media/st-op-sb-ex3-g73.png)
+
 1. To finalize all changes and make the agent live, navigate back to **Copilot Studio** and select **Publish** from the top-right corner of the page.
 
-   ![](./media/st-store-ex3-g126.png)
+   ![](./media/st-op-sb-ex3-g74.png)
 
 1. On the **Publish this agent** dialog box, review the information and then select **Publish** to make your agent and its recent changes available to users.
 
-   ![](./media/st-store-ex3-g127.png)
+   ![](./media/st-op-sb-ex3-g75.png)
 
 <validation step="09f5e08a-c2db-4bd9-add0-435e23d74659" />
  
