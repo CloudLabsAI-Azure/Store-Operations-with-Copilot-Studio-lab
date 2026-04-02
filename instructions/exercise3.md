@@ -32,7 +32,7 @@ In this task, you will create a topic that allows users to place product orders 
 
 1. Select **+** to add a new node.
 
-   ![](./media/st-store-ex3-g2.png)
+   ![](./media/st-store-ex3-g3.png)
 
 1. From the node options, select **Ask a question**.
 
@@ -271,7 +271,11 @@ In this task, you will create an action that inserts the collected order details
 
    ![](./media/st-store-ex3-g48.png)
 
-1. Provide **Quantity** as the Input name.
+1. Provide the following name as the **Input name**.
+
+   ```
+   Quantity
+   ```
 
    ![](./media/ex3img37.png)
 
@@ -609,7 +613,7 @@ In this task, you will build a topic that lets users request support by creating
 
 1. In the **Create item** action, under **Site Address**, from the dropdown select the IT HelpDesk site you created. If no values are shown in the dropdown, then manually enter the site address that you copied earlier.
 
-   > **Note:** The Site Address should be in the format: `https://cloudlabssandbox.sharepoint.com/sites/ITSM-Copilot-<inject key="Deployment ID" enableCopy="false"></inject>`
+   > **Note:** The Site Address should be in the format: `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
 
 1. Under **List Name**, select **Tickets**.
 

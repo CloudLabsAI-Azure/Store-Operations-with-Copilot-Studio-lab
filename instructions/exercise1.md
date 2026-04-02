@@ -151,7 +151,7 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
 1. In the configuration pane, provide the following name. Copy the **Site Address** as you will be using this further in the exercises. Select **Next**.
 
    ```
-   ITSM-Copilot-<inject key="Deployment ID" enableCopy="false"></inject>
+   Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>
    ```
 
    ![](./media/itimg7.png)
@@ -172,18 +172,12 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
 
    > **Note:** The IT HelpDesk template comes with a **Tickets** list (issue tracker) that includes columns such as **Title**, **Issue Description**, **Priority**, and **Status**. This is the list where your agent will create support tickets.
 
-1. Verify that the **Tickets** list is accessible and note the available columns. You should see columns like:
-   - **Title** - The ticket subject
-   - **Issue Description** - Detailed description of the issue
-   - **Priority** - Priority level (Critical, High, Normal, Low)
-   - **Status** - Ticket status (New, In Progress, Resolved, etc.)
-
-1. Copy the **Site Address** (for example, `https://cloudlabssandbox.sharepoint.com/sites/ITSM-Copilot-XXXXXX`) from the browser address bar and save it securely for later use.
+1. Copy the **Site Address** (for example, `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-XXXXXX`) from the browser address bar and save it securely for later use.
 
    > This is your **SharePoint HelpDesk Site Address** which you will need in Exercise 3 when configuring the agent flow.
 
 1. You should now have the following value saved:
-   - **Site Address:** `https://cloudlabssandbox.sharepoint.com/sites/ITSM-Copilot-<inject key="Deployment ID" enableCopy="false"></inject>`
+   - **Site Address:** `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
 
 1. Now you have successfully verified the SharePoint IT HelpDesk for ticket management.
 
