@@ -197,9 +197,13 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g36.png)
 
-1. Under **Save user response as**, select **DeliveryAddress (1)**, enter **DeliveryAddress (2)** under **Variable name**, and then select **Close (3)**.
+1. In the **Question** node, under **Save user response as**, select **Var1**
 
-   ![](./media/st-store-ex3-g37.png)
+   ![](./media/st-op-sb-ex3-g1.png)
+
+1. In the **Variable properties** pane, enter **DeliveryAddress (1)** in the **Variable name** field, and then select **Close (2)**.
+
+   ![](./media/st-op-sb-ex3-g2.png)
 
 1. From the top menu, select **Save** to save the topic.
 
@@ -212,42 +216,6 @@ In this task, you will create a topic that allows users to place product orders 
    ```
 
    ![](./media/st-store-ex3-g39.png)
-
-1. Now use the **Test** area on the right to verify the topic flow is working correctly.
-
-1. In the **Test your agent** pane, enter the following message and select **Send**.
-
-   ```
-   I want to place an order
-   ```
-
-1. The agent will ask which product to order. Enter the following:
-
-   ```
-   Tailwind Sneakers
-   ```
-
-1. The agent will ask for the quantity. Enter the following:
-
-   ```
-   1
-   ```
-
-1. The agent will ask for your name. Enter the following:
-
-   ```
-   John
-   ```
-
-1. The agent will ask for your delivery address. Enter the following:
-
-   ```
-   200 Main St, City Hall, 200 N Spring St, Los Angeles, CA 90012, USA
-   ```
-
-1. Verify that the agent responds with **Your order has been placed!** confirming the topic flow is collecting all inputs correctly.
-
-   > **Note:** At this point the order is not yet saved to Dataverse. You will configure the agent flow to handle that in the next steps.
 
 1. Now that you have successfully created the flow to collect the order details, you need to create an agent flow (formerly known as Action) to add these order details to the Dataverse table.
 
@@ -561,9 +529,13 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g92.png)
 
-1. Under **Save user response as**, select **Var1 (1)**, enter **Subject (2)** under **Variable name**, and then select **Close (3)**.
+1. Under **Save user response as**, select **Var1**.
 
-   ![](./media/st-store-ex3-g93.png)
+   ![](./media/st-op-sb-ex3-g3.png)
+
+1. Enter **Subject** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g4.png)
 
 1. Once done, select **+ (1)** to add a new node. From the list, select **Ask a question (2)**.
 
