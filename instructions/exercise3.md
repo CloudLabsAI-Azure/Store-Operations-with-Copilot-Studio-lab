@@ -213,6 +213,42 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g39.png)
 
+1. Now use the **Test** area on the right to verify the topic flow is working correctly.
+
+1. In the **Test your agent** pane, enter the following message and select **Send**.
+
+   ```
+   I want to place an order
+   ```
+
+1. The agent will ask which product to order. Enter the following:
+
+   ```
+   Tailwind Sneakers
+   ```
+
+1. The agent will ask for the quantity. Enter the following:
+
+   ```
+   1
+   ```
+
+1. The agent will ask for your name. Enter the following:
+
+   ```
+   John
+   ```
+
+1. The agent will ask for your delivery address. Enter the following:
+
+   ```
+   200 Main St, City Hall, 200 N Spring St, Los Angeles, CA 90012, USA
+   ```
+
+1. Verify that the agent responds with **Your order has been placed!** confirming the topic flow is collecting all inputs correctly.
+
+   > **Note:** At this point the order is not yet saved to Dataverse. You will configure the agent flow to handle that in the next steps.
+
 1. Now that you have successfully created the flow to collect the order details, you need to create an agent flow (formerly known as Action) to add these order details to the Dataverse table.
 
 ## Task 2: Define an Agent Flow to Insert Order Details into Dataverse
