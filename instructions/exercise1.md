@@ -122,31 +122,29 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
    https://myapps.microsoft.com
    ```
 
-1. In the next pane, select **SharePoint** icon.
+1. In the Apps dashboard pane, select **SharePoint** icon.
 
-   ![](./media/itimg1.png)
+   ![](./media/st-op-sb-ex1-g1.png)
 
    > **Note:** If you are not able to see SharePoint in the MyApps section, navigate to `https://cloudlabssandbox.sharepoint.com/` directly to access SharePoint.
 
 1. Close the pop-up window.
 
-   ![](./media/itimg2.png)
-
 1. Once navigated to SharePoint, select **+ Create site** option.
 
-   ![](./media/itimg3.png)
+   ![](./media/st-op-sb-ex1-g2.png)
 
 1. In the next page, select **Team site**.
 
-   ![](./media/itimg4.png)
+   ![](./media/st-op-sb-ex1-g3.png)
 
 1. From the available templates, select **IT help desk** template.
 
-   ![](./media/itimg5.png)
+   ![](./media/st-op-sb-ex1-g4.png)
 
 1. In the IT Helpdesk template page, select **Use template**.
 
-   ![](./media/itimg6.png)
+   ![](./media/st-op-sb-ex1-g5.png)
 
 1. In the configuration pane, provide the following name. Copy the **Site Address** as you will be using this further in the exercises. Select **Next**.
 
@@ -154,32 +152,34 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
    Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>
    ```
 
-   ![](./media/itimg7.png)
+   ![](./media/st-op-sb-ex1-g6.png)
 
 1. Under privacy settings, leave it as **Private** and select **Create site**.
 
-   ![](./media/itimg8.png)
+   ![](./media/st-op-sb-ex1-g7.png)
 
 1. In the final pane, please wait till the **Finish** button is enabled and then select **Finish**. This may take up to 5 minutes.
 
-   ![](./media/itimg9.png)
+   ![](./media/st-op-sb-ex1-g8.png)
 
 1. Once created, the page will look similar to this.
 
-   ![](./media/itimg10.png)
+   ![](./media/st-op-sb-ex1-g9.png)
 
 1. From the left navigation or the site contents, locate and select the **Tickets** list.
+
+   ![](./media/st-op-sb-ex1-g10.png)
 
    > **Note:** The IT HelpDesk template comes with a **Tickets** list (issue tracker) that includes columns such as **Title**, **Issue Description**, **Priority**, and **Status**. This is the list where your agent will create support tickets.
 
 1. Copy the **Site Address** (for example, `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-XXXXXX`) from the browser address bar and save it securely for later use.
 
+   ![](./media/st-op-sb-ex1-g11.png)
+
    > This is your **SharePoint HelpDesk Site Address** which you will need in Exercise 3 when configuring the agent flow.
 
 1. You should now have the following value saved:
    - **Site Address:** `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
-
-1. Now you have successfully verified the SharePoint IT HelpDesk for ticket management.
 
 <validation step="9ec40b7e-aa69-4359-a1f4-833d8ca8d8b4" />
  
