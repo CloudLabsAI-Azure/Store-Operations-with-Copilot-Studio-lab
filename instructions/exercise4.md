@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will deploy your completed StoreOps Assistant to Microsoft Teams. This step allows users to interact with the assistant directly within a Teams channel, making it easily accessible for daily operations. You will also validate its end-to-end functionality by testing core features such as product lookup, order placement, and support ticket creation within the Teams environment.
+In this exercise, you will deploy your completed StoreOps Assistant to Microsoft Teams. This allows users to interact with the assistant directly within a Teams channel for daily operations. You will also validate its end-to-end functionality by testing features such as product lookup, order placement, and support ticket creation within the Teams environment.
 
 ## Objectives
 
@@ -54,6 +54,6 @@ In this task, you will configure and publish your StoreOps Assistant to Microsof
 
 ## Summary
 
-In this exercise, you deployed your completed StoreOps Assistant to Microsoft Teams. This step enabled users to interact with the assistant directly within a Teams channel, making it easily accessible for daily operations. You also validated its end-to-end functionality by testing core features such as product lookup, order placement, and support ticket creation within the Teams environment.
+In this exercise, you deployed your completed StoreOps Assistant to Microsoft Teams. This allows users to interact with the assistant directly within a Teams channel for daily operations. You also validated its end-to-end functionality by testing features such as product lookup, order placement, and support ticket creation within the Teams environment.
 
 ### You have successfully completed the Lab!

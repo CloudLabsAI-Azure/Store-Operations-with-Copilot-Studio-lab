@@ -1,10 +1,10 @@
-# Exercise 3: Build Advanced AI Workflows for Orders & Tickets
+# Exercise 3: Build Workflows for Orders and Tickets
 
 ### Estimated Duration: 60 Minutes
 
 ## Overview
 
-In this exercise, you will enhance your StoreOps Assistant by building advanced AI workflows that go beyond static knowledge responses. You will create dynamic topics that allow users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and Freshworks. These enhancements will enable your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you will enhance your StoreOps Assistant by building workflows that go beyond static knowledge responses. You will create topics that allow users to place orders and request support, while integrating your agent with Microsoft Dataverse and SharePoint HelpDesk. These additions will let your assistant perform end-to-end operations such as order recording and ticket creation for real-world store operations.
 
 ## Objectives
 
@@ -12,11 +12,11 @@ You will be able to complete the following tasks:
 
 - Task 1: Create a topic to record orders in Dataverse
 
-- Task 2: Create a “Support Ticket” topic and integrate with Freshworks
+- Task 2: Create a "Support Ticket" topic and integrate with SharePoint HelpDesk
 
 ## Task 1: Create a topic to record orders in Dataverse
 
-In this task, you will create a topic that allows users to place product orders using the StoreOps Assistant. The topic will collect essential details such as the product name, quantity, and delivery preferences. Once the user confirms the order, the assistant will trigger an action to store the order details in a Microsoft Dataverse table. This enables seamless tracking and management of customer orders within your store’s database.
+In this task, you will create a topic that allows users to place product orders using the StoreOps Assistant. The topic will collect details such as the product name, quantity, and delivery preferences. Once the user confirms the order, the assistant will trigger an action to store the order details in a Microsoft Dataverse table. This allows tracking and management of customer orders within your store's database.
 
 1. In Copilot Studio, select the **Topics (1)** tab from the top menu, select **+ Add a topic (2)**, and then select **From blank**.
 
@@ -32,7 +32,7 @@ In this task, you will create a topic that allows users to place product orders 
 
 1. Select **+** to add a new node.
 
-   ![](./media/st-store-ex3-g2.png)
+   ![](./media/st-store-ex3-g3.png)
 
 1. From the node options, select **Ask a question**.
 
@@ -197,9 +197,13 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g36.png)
 
-1. Under **Save user response as**, select **DeliveryAddress (1)**, enter **DeliveryAddress (2)** under **Variable name**, and then select **Close (3)**.
+1. In the **Question** node, under **Save user response as**, select **Var1**
 
-   ![](./media/st-store-ex3-g37.png)
+   ![](./media/st-op-sb-ex3-g1.png)
+
+1. In the **Variable properties** pane, enter **DeliveryAddress (1)** in the **Variable name** field, and then select **Close (2)**.
+
+   ![](./media/st-op-sb-ex3-g2.png)
 
 1. From the top menu, select **Save** to save the topic.
 
@@ -271,7 +275,11 @@ In this task, you will create an action that inserts the collected order details
 
    ![](./media/st-store-ex3-g48.png)
 
-1. Provide **Quantity** as the Input name.
+1. Provide the following name as the **Input name**.
+
+   ```
+   Quantity
+   ```
 
    ![](./media/ex3img37.png)
 
@@ -423,21 +431,25 @@ In this task, you will create an action that inserts the collected order details
 
 1. Now use the **Test** area in the right to validate the working of the flow.
 
+1. In the top menu, select **New test session**.
+
+   ![](./media/st-op-sb-ex3-g76.png)
+
 1. Provide the prompts as given below and check the flow of the agent:
 
    - ```
      I want to place an order
      ```
 
-     ![](./media/st-store-ex3-g80.png)
+     ![](./media/st-op-sb-ex3-g83.png)
      
      >The agent will reply with a question to get the product details.
 
    - ```
-     Galaxy Fitness Tracker
+     Tailwind Sneakers
      ```
 
-     ![](./media/st-store-ex3-g81.png)
+     ![](./media/st-op-sb-ex3-g84.png)
 
      >The agent will ask a question to get the quantity of the order.
    
@@ -445,7 +457,7 @@ In this task, you will create an action that inserts the collected order details
      1
      ```
 
-     ![](./media/st-store-ex3-g82.png)
+     ![](./media/st-op-sb-ex3-g79.png)
 
      >The agent will ask to provide UserName
 
@@ -453,37 +465,37 @@ In this task, you will create an action that inserts the collected order details
      John
      ```
 
-     ![](./media/st-store-ex3-g83.png)
+     ![](./media/st-op-sb-ex3-g80.png)
 
      >Next, the agent will ask for delivery address.
 
    - ```
-     1st Street, California
+     200 Main St, City Hall, 200 N Spring St, Los Angeles, CA 90012, USA
      ```
      
-     ![](./media/st-store-ex3-g84.png)
+     ![](./media/st-op-sb-ex3-g81.png)
 
      >Now the Action will run. It may take few seconds once done, you will get the acknowledgement.
 
-     ![](./media/st-store-ex3-g85.png)
+     ![](./media/st-op-sb-ex3-g82.png)
 
 1. Now, to verify the creation of record inside the dataverse table, navigate back to power apps portal.
 
 1. Once you are in the Power Apps portal, select **Tables (1)** from the left menu, and from the list, select the **Order (2)** table.
 
-   ![](./media/st-store-ex3-g86.png)
+   ![](./media/st-op-sb-ex3-g87.png)
 
 1. Now, you can see that a record has been added with the details that you provided.
 
-   ![](./media/st-store-ex3-g87.png)
+   ![](./media/st-op-sb-ex3-g88.png)
 
 1. You have successfully created a flow with an Action to manage order placements.
 
-## Task 2: Create a “Support Ticket” topic and integrate with Freshworks
+## Task 2: Create a "Support Ticket" topic and integrate with SharePoint HelpDesk
 
-In this task, you will build a topic that enables users to request support by creating a service ticket. The topic will gather information like the issue description, urgency level, and user contact details. Once the data is collected, the agent will connect to Freshworks and automatically generate a corresponding incident ticket. This integration ensures quick and efficient resolution of customer issues without manual ticket creation.
+In this task, you will build a topic that lets users request support by creating a service ticket. The topic will gather information like the subject, description, user name, and email address. Once the data is collected, the agent will connect to the SharePoint IT HelpDesk site and create a corresponding ticket in the Tickets list with the user's details included. This integration handles ticket creation without manual steps, keeping everything within the Microsoft 365 ecosystem.
 
-1. As you have started a free trial for Freshworks. You will be creating a topic that integrating with Freshworks.
+1. You will now create a topic that integrates with the SharePoint IT HelpDesk site you set up earlier.
 
 1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
@@ -521,9 +533,13 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g92.png)
 
-1. Under **Save user response as**, select **Var1 (1)**, enter **Subject (2)** under **Variable name**, and then select **Close (3)**.
+1. Under **Save user response as**, select **Var1**.
 
-   ![](./media/st-store-ex3-g93.png)
+   ![](./media/st-op-sb-ex3-g3.png)
+
+1. Enter **Subject** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g4.png)
 
 1. Once done, select **+ (1)** to add a new node. From the list, select **Ask a question (2)**.
 
@@ -537,9 +553,77 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g95.png)
 
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
+
+   ![](./media/st-op-sb-ex3-g5.png)
+
+1. Under **Save user response as**, select **Var1**.
+
+   ![](./media/st-op-sb-ex3-g6.png)
+
+1. Enter **Description** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g7.png)
+
+1. Select **+** to add a new node.
+
+   ![](./media/st-op-sb-ex3-g31.png)
+
+1.  From the list, select **Ask a question**.
+
+   ![](./media/st-op-sb-ex3-g32.png)
+
+1. In the **Question** node, enter the following text in the message box.
+
+   ```
+   Please provide your name
+   ```
+
+   ![](./media/st-op-sb-ex3-g33.png)
+
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
+
+   ![](./media/st-op-sb-ex3-g34.png)
+
+1. Under **Save user response as**, select **Var1**.
+
+   ![](./media/st-op-sb-ex3-g35.png)
+
+1. Enter **UserName** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g36.png)
+
+1. Select **+** to add a new node.
+
+   ![](./media/st-op-sb-ex3-g37.png)
+
+1. From the list, select **Ask a question**.
+
+   ![](./media/st-op-sb-ex3-g38.png)
+
+1. In the **Question** node, enter the following text in the message box.
+
+   ```
+   Please provide your email address
+   ```
+
+   ![](./media/st-op-sb-ex3-g39.png)
+
+1. Under **Identify**, select **Multiple choice options (1)** and choose **User's entire response (2)**.
+
+   ![](./media/st-op-sb-ex3-g40.png)
+
+1. Under **Save user response as**, select **Var1**.
+
+   ![](./media/st-op-sb-ex3-g41.png)
+
+1. Enter **Email** under **Variable name**, and then select **Close**.
+
+   ![](./media/st-op-sb-ex3-g42.png)
+
 1. From the top menu, select **Save** to save the topic.
 
-   ![](./media/st-store-ex3-g96.png)
+   ![](./media/st-op-sb-ex3-g43.png)
 
 1. In the **Save your topic** dialog, enter the following name in the **Name your topic (1)** field, and then select **Save (2)**.
 
@@ -547,7 +631,7 @@ In this task, you will build a topic that enables users to request support by cr
    Ticket Creation
    ```
 
-   ![](./media/st-store-ex3-g97.png)
+   ![](./media/st-op-sb-ex3-g43.png)
 
 1. From the left navigation pane, select **Flows (1)** and then choose **+ New agent flow (2)**.
 
@@ -559,7 +643,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    > **Note:** After searching, you may need to scroll down to locate the **When an agent calls the flow** option in the results.
 
-1. In the **When an agent calls the flow** node, select **Add an input** to add input parameters.
+1. In the **When an agent calls the flow** node, select **+ Add an input** to add input parameters.
 
    ![](./media/st-store-ex3-g42.png)
 
@@ -567,7 +651,7 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g43.png)
 
-1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **Add an input (2)**.
+1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ Add an input (2)**.
 
    ```
    Subject
@@ -577,60 +661,143 @@ In this task, you will build a topic that enables users to request support by cr
 
 1. Under **Choose the type of user input**, select **Text**.
 
-   ![](./media/st-store-ex3-g100.png)
+   ![](./media/st-op-sb-ex3-g45.png)
 
-1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ (2)**.
+1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ Add an input (2)**.
 
    ```
    Description
    ```
 
-   ![](./media/st-store-ex3-g101.png)
+   ![](./media/st-op-sb-ex3-g44.png)
+
+1. Under **Choose the type of user input**, select **Text**.
+
+   ![](./media/st-op-sb-ex3-g45.png)
+
+1. Enter the following input name under **Text (1)**, and then select **+ Add an input (2)**.
+
+   ```
+   UserName
+   ```
+
+   ![](./media/st-op-sb-ex3-g46.png)
+
+1. Under **Choose the type of user input**, select **Text**.
+
+   ![](./media/st-op-sb-ex3-g47.png)
+
+1. Enter the following input name under **Text (1)** and then click on **+** **(2)** to configure the **SharePoint** operation.
+
+   ```
+   Email
+   ```
+
+   ![](./media/st-op-sb-ex3-g48.png)
 
    >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
 
-1. In the **Create a ticket** pane, provide the following details and select **Create new**:
+1. In the **Add an action** pane, search for **SharePoint (1)** and then select **See more (2)**.
 
-   - **Connection name:** `helpdesk` **(1)**
-   - **Account URL:** add the **Account URL (2)**, which you have copied in the first exercise
-   - **Email or API key:** Please add the **API KEY (3)**, which you copied in first exercise
-   - **Password:** As you have provided API Keys, password is not important here but as it is a required parameter just provide a random value.
+   ![](./media/st-op-sb-ex3-g8.png)
 
-     ![](./media/st-store-ex3-g103.png)
+1. From the **SharePoint** actions list, select **Create item**.
 
-1. Once done, for the **Subject** parameter, select the **Dynamic content** option as shown.
+   ![](./media/st-op-sb-ex3-g9.png)
 
-   ![](./media/fw16.png)
+1. In the **Create item** action, select **Sign in** to create a connection to SharePoint.
 
-1. From the variable list, select **Subject**.
+   ![](./media/st-op-sb-ex3-g10.png)
 
-   ![](./media/ex5img23.png)
+1. In the **Confirmation required** page, select **Allow access** to grant permissions for the **SharePoint** connection.
 
-1. Repeat the same for **Description** and select **Description** from variable.
+   ![](./media/st-op-sb-ex3-g11.png)
 
-1. Once done, for **Email**, select **Enter custom value** from the list.
+1. In the **Create item** action, under **Site Address**, from the dropdown select the IT HelpDesk site you created. If no values are shown in the dropdown, then manually enter the site address that you copied earlier.
 
-   ![](./media/fw15.png)
+   ![](./media/st-op-sb-ex3-g12.png)
 
-1. Now, provide the **Email** as `john@contoso.com` **(1)**, select **Priority** as `Medium` **(2)** and select **Status** as `Open` **(3)**.
+   > **Note:** The Site Address should be in the format: `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
 
-   ![](./media/st-store-ex3-g104.png)
+1. Under **List Name**, select the dropdown (1) and choose **Tickets (2)**.
+
+   ![](./media/st-op-sb-ex3-g13.png)
+
+1. Under **Advanced parameters**, select the dropdown to expand the options
+
+   ![](./media/st-op-sb-ex3-g14.png)
+
+1. Select **Title**, **Issue Description**, and **Priority Value**.
+
+   ![](./media/st-op-sb-ex3-g15.png)
+
+1. In the **Title (1)** field, select the **Dynamic content (2)** icon and choose **Subject**.
+
+   ![](./media/st-op-sb-ex3-g16.png)
+
+1. In the **Dynamic content** pane, select **Subject** to populate the field.
+
+   ![](./media/st-op-sb-ex3-g89.png)
+
+1. For the **Issue Description** parameter, you will build a concatenated value that includes the user's name, email, and the description. Copy the following template into the **Issue Description** field:
+
+   ```
+   Name: {UserName} | Email: {Email} | Description: {Description}
+   ```
+
+   ![](./media/st-op-sb-ex3-g49.png)
+
+1. In the **Issue description** field, replace **{UserName} (1)** by selecting the **Dynamic content (2)** icon.
+
+   ![](./media/st-op-sb-ex3-g50.png)
+
+1. In the **Dynamic content** pane, select **UserName** to insert it into the field.
+
+   ![](./media/st-op-sb-ex3-g51.png)
+
+1. In the **Issue description** field, replace **{Email} (1)** by selecting the **Dynamic content (2)** icon.
+
+   ![](./media/st-op-sb-ex3-g52.png)
+
+1. In the **Dynamic content** pane, select **Email** to insert it into the field.
+
+   ![](./media/st-op-sb-ex3-g53.png)
+
+1. In the **Issue description** field, replace **{Description} (1)** by selecting the **Dynamic content (2)**.
+
+   ![](./media/st-op-sb-ex3-g54.png)
+
+1. In the **Dynamic content** pane, select **Description** to insert it into the field.
+
+   ![](./media/st-op-sb-ex3-g55.png)
+
+1. Under **Priority Value**, select the dropdown.
+
+   ![](./media/st-op-sb-ex3-g56.png)
+
+1. Select **High** from the dropdown list.
+
+   ![](./media/st-op-sb-ex3-g57.png)
+
+1. Under **Status Value**, keep the default value as **New**.
+
+   ![](./media/st-op-sb-ex3-g58.png)
 
 1. Now, you have successfully set up your agent flow. Select **Publish** from the top-right corner to save the flow.
 
-   ![](./media/st-store-ex3-g105.png)
+   ![](./media/st-op-sb-ex3-g22.png)
 
-1. On the **Untitled** flow page, ensure you are on the **Overview (1)** tab and select **Edit (2)** from the **Details** section.
+1. On the flow page, ensure you are on the **Overview (1)** tab and select **Edit (2)** from the **Details** section.
 
    ![](./media/st-store-ex3-g106.png)
 
 1. In the **Details** pane, enter the following name in the **Flow name (1)** field and then select **Save (2)**.
 
    ```
-   Freshdesk
+   SharePoint HelpDesk
    ```
 
-   ![](./media/st-store-ex3-g107.png)
+   ![](./media/st-op-sb-ex3-g90.png)
 
 1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
@@ -640,25 +807,37 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g108.png)
 
-1. In **Action** node, select **+** below the **Description** question node to add a new node.
+1. In **Action** node, select **+** below the question node to add a new node.
 
-   ![](./media/st-store-ex3-g109.png)
+   ![](./media/st-op-sb-ex3-g59.png)
 
-1. From the node options, select **Add a tool (1)** and then choose **Freshdesk (2)** to integrate the ticket creation flow.
+1. From the node options, select **Add a tool (1)** and then choose **SharePoint HelpDesk (2)** to integrate the ticket creation flow.
 
-   ![](./media/st-store-ex3-g110.png)
+   ![](./media/st-op-sb-ex3-g60.png)
 
-1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Subject (String)** field and choose the **Subject (2)** variable from the list.
+1. In the **Subject (String)** field, select the **... (1)** option and choose **Subject (2)** from the variable list.
 
-   ![](./media/st-store-ex3-g111.png)
+   ![](./media/st-op-sb-ex3-g61.png)
 
-1. Under **Power Automate inputs**, select the **... (1)** icon next to the **Description (String)** field and choose the **Description (2)** variable from the list.
+1. In the **Description (String)** field, select the **... (1)** option and choose **Description (2)** from the variable list.
 
-   ![](./media/st-store-ex3-g112.png)
+   ![](./media/st-op-sb-ex3-g62.png)
 
-1. Select **+ (1)** below the Freshdesk action node and choose **Send a message (2)**.
+1. In the **UserName (String)** field, select the **... (1)** option and choose **UserName (2)** from the variable list.
 
-   ![](./media/st-store-ex3-g113.png)
+   ![](./media/st-op-sb-ex3-g63.png)
+
+1. In the **Email (String)** field, select the **... (1)** option and choose **Email (2)** from the variable list.
+
+   ![](./media/st-op-sb-ex3-g65.png)
+
+1. Select **+** below the SharePoint HelpDesk action node.
+
+   ![](./media/st-op-sb-ex3-g66.png)
+
+1. And choose **Send a message**.
+
+   ![](./media/st-op-sb-ex3-g67.png)
 
 1. In the **Message** node, enter the following text in the message box.
 
@@ -666,11 +845,11 @@ In this task, you will build a topic that enables users to request support by cr
    Thank you, your ticket has been successfully submitted.
    ```
 
-   ![](./media/st-store-ex3-g114.png)
+   ![](./media/st-op-sb-ex3-g68.png)
 
 1. From the top menu, select **Save** to finalize the changes to your topic.
 
-   ![](./media/st-store-ex3-g115.png)
+   ![](./media/st-op-sb-ex3-g69.png)
 
 1. Now use the **Test** area in the right to validate the working of the flow.
 
@@ -699,39 +878,37 @@ In this task, you will build a topic that enables users to request support by cr
 
    ![](./media/st-store-ex3-g118.png)
 
-1. In the chat window, select **Open connection manager** to verify and configure your credentials for the integration.
+1. The agent will ask for your name. Enter the following:
 
-   ![](./media/st-store-ex3-g119.png)
+   ```
+   John
+   ```
 
-1. On the **Manage your connections** page, locate the **Freshdesk** connection and select **Connect**.
+   ![](./media/st-op-sb-ex3-g70.png)
 
-   ![](./media/st-store-ex3-g120.png)
+1. The agent will ask for your email address. Enter the following:
 
-1. On the **Create or pick connections** page, confirm that the **Freshdesk** connection is selected and then select **Submit**.
+   ```
+   john@contoso.com
+   ```
 
-   ![](./media/st-store-ex3-g121.png)
+   ![](./media/st-op-sb-ex3-g71.png)
 
-1. Verify that the **Status** now shows as **Connected**.
+1. In the chat window, if prompted, select **Allow (1)**, and verify the confirmation message **Thank you, your ticket has been successfully submitted. (2)**.
 
-   ![](./media/st-store-ex3-g122.png)
+   ![](./media/st-op-sb-ex3-g72.png)
 
-1. Return to the chat window and select **Retry (1)** to trigger the ticket creation again. You will see a confirmation message stating that your ticket has been successfully submitted **(2)**.
+1. Navigate back to the **SharePoint IT HelpDesk** site and open the **Tickets** list. You can see that a new ticket with the subject **Refund Not Received** has been created. Open the ticket and verify that the **Issue Description** field contains the user's name, email, and description.
 
-   ![](./media/st-store-ex3-g123.png)
-
-1. Navigate back to **Freshworks** portal, you can see that the ticket with a subject **Refund Not Received** is created.
-
-   ![](./media/st-store-ex3-g124.png)
-
-   ![](./media/st-store-ex3-g125.png)
+   ![](./media/st-op-sb-ex3-g73.png)
 
 1. To finalize all changes and make the agent live, navigate back to **Copilot Studio** and select **Publish** from the top-right corner of the page.
 
-   ![](./media/st-store-ex3-g126.png)
+   ![](./media/st-op-sb-ex3-g74.png)
 
 1. On the **Publish this agent** dialog box, review the information and then select **Publish** to make your agent and its recent changes available to users.
 
-   ![](./media/st-store-ex3-g127.png)
+   ![](./media/st-op-sb-ex3-g75.png)
 
 <validation step="09f5e08a-c2db-4bd9-add0-435e23d74659" />
  
@@ -742,6 +919,6 @@ In this task, you will build a topic that enables users to request support by cr
 
 ## Summary
 
-In this exercise, you enhanced your StoreOps Assistant by building advanced AI workflows that extended beyond static knowledge responses. You created dynamic topics that allowed users to place orders and request support, while integrating your agent with external systems like Microsoft Dataverse and Freshworks. These enhancements enabled your assistant to perform end-to-end operations such as order recording and automated ticket creation, making it more powerful and functional for real-world store operations.
+In this exercise, you enhanced your StoreOps Assistant by building workflows that extended beyond static knowledge responses. You created topics that allowed users to place orders and request support, while integrating your agent with Microsoft Dataverse and SharePoint HelpDesk. These additions let your assistant perform end-to-end operations such as order recording and ticket creation for real-world store operations.
 
 ### You have successfully completed this exercise, please continue to next one >>

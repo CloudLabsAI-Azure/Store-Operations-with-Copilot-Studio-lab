@@ -1,10 +1,10 @@
-# Exercise 2: Create Store‑Operations Agent in Copilot Studio
+# Exercise 2: Create Store Operations Agent in Copilot Studio
 
 ### Estimated Duration: 45 Minutes
 
 ## Overview
 
-In this exercise, you will create a Copilot Studio agent that will serve as the foundation for your store operations assistant. You will define the agent’s purpose by assigning it a name and description, and connect it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps will enable your agent to deliver relevant, AI-powered responses based on indexed information.
+In this exercise, you will create a Copilot Studio agent that will serve as the foundation for your store operations assistant. You will define the agent's purpose by assigning it a name and description, and connect it to knowledge sources such as the product catalog, store policy documents, and website content. These steps will allow your agent to return relevant responses based on indexed information.
 
 ## Objectives
 
@@ -16,36 +16,39 @@ You will be able to complete the following tasks:
 
 ## Task 1: Creating a store-operations agent in Copilot Studio
 
-In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for enabling intelligent store operations.
+In this task, you will create a new agent in Microsoft Copilot Studio by defining its name, description, and basic configuration settings. This agent will serve as the base for your store operations workflows.
 
 1. In the Copilot Studio home page, from the left navigation pane, select **Agents (1)** and then select **Create blank agent (2)**.
 
    ![](./media/st-store-ex2-g1.png)
 
-1. Wait until the **Getting things ready...** process completes and the agent configuration page loads.
+1. In the **Name your agent** dialog, enter the following name in the **Name (1)** field and then select **Create (2)**.
+
+   ```
+   StoreOps Assistant
+   ```
+
+   ![](./media/st-op-sb-ex2-g1.png)
+
+1. Wait until the **Getting things ready...** process completes and the agent is provisioned.
 
    ![](./media/st-store-ex2-g2.png)
 
-1. Wait until the message **Your agent has been provisioned.** appears on the **Overview** page.
+1. On the **Overview** page, select **Edit** to update the agent details.
 
-   ![](./media/st-store-ex2-g3.png)
+   ![](./media/st-op-sb-ex2-g2.png)
 
-1. On the **Overview** page, select **Edit**.
+1. Enter the description in the **Description (1)** box, and then select **Save (2)** to apply the changes.
 
-   ![](./media/st-store-ex2-g4.png)
+   ```
+   StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets, all through conversational AI. Integrated with Dataverse, SharePoint HelpDesk, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy.
+   ```
 
-1. Enter the agent name in the **Name (1)** field, add the description in the **Description (2)** box, and then select **Save (3)** to apply the changes.
-
-   | Field | Value |
-   |-------|-------|
-   | Name | `StoreOps Assistant` |
-   | Description | `StoreOps Assistant is your intelligent store operations companion. It helps staff quickly find products, understand store policies, place orders, and create support tickets, all through conversational AI. Integrated with Dataverse, Freshworks, and knowledge sources, this assistant streamlines everyday retail workflows with speed and accuracy.` |
-
-   ![](./media/st-store-ex2-g5.png)
+   ![](./media/st-op-sb-ex2-g3.png)
 
 1. Select **Edit** to update the agent instructions.
 
-   ![](./media/st-store-ex2-g6.png)
+   ![](./media/st-op-sb-ex2-g3.png)
 
 1. Enter the agent instructions in the **Instructions (1)** box, and then select **Save (2)** to apply the changes.
 
@@ -54,19 +57,19 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
    - Searching for products from the catalog using natural language
    - Providing accurate answers using connected knowledge sources such as store policies and website content
    - Assisting in placing orders and logging them in Dataverse
-   - Creating and tracking support tickets in Freshworks when issues arise
+   - Creating and tracking support tickets in SharePoint HelpDesk when issues arise
    - Answering general store operations questions
 
    Always respond in a clear, friendly, and professional tone. Use concise language and provide helpful follow-up suggestions when appropriate. If a request is unclear, ask clarifying questions before proceeding.
    ```
 
-   ![](./media/st-store-ex2-g7.png)
+   ![](./media/st-op-sb-ex2-g5.png)
 
 1. You have successfully created the StoreOps Assistant. In the next steps of this lab, you will enhance it further by adding knowledge sources and advanced features.
 
 ## Task 2: Adding knowledge sources to the agent
 
-In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide AI-powered answers using Retrieval-Augmented Generation (RAG).
+In this task, you will connect knowledge sources such as the product catalog, policy documents, and store website content to your agent, allowing it to provide answers using Retrieval-Augmented Generation (RAG).
 
 1. Select **+ Add knowledge** to add data and resources to the agent.
 
@@ -100,9 +103,9 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    >**Note:** If you are seeing **Product Record** table, instead of **Product**, please proceed with the **Product Record** table.
 
-1. Select **Selected (2) (1)** to review the selected tables, and then select **Add to agent (2)**.
+1. Clear the **Search (1)** field, select **Selected (2)** to review the chosen tables, and then select **Add to agent (3)**.
 
-   ![](./media/st-store-ex2-g15.png)
+   ![](./media/st-op-sb-ex2-g6.png)
 
 1. Once done, again select **+ Add knowledge**.
 
@@ -126,7 +129,7 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 1. Once done, select **Add to agent** in the next pane.
 
-   ![](./media/st-store-ex2-g19.png)
+   ![](./media/st-op-sb-ex2-g7.png)
 
 1. You have now successfully added all the necessary data as a knowledge source for this agent.
 
@@ -148,6 +151,8 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/st-store-ex2-g22.png)
 
+   > **Note:** The output format may vary based on the data and responses generated by the agent.
+
 1. Verify that the agent searches through the connected knowledge sources such as **https://prod.fabrikam.com**, **Fabrikam Returns Policy for Customers.docx**, and **Product, Order**.
 
    ![](./media/st-store-ex2-g23.png)
@@ -164,6 +169,8 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
    ![](./media/st-store-ex2-g26.png)
 
+   > **Note:** The output format may vary based on the data and responses generated by the agent.
+
 1. Verify that the agent returns the **Previous Orders with Product Names** using the connected knowledge sources.
 
    ![](./media/st-store-ex2-g27.png)
@@ -177,6 +184,6 @@ In this task, you will connect knowledge sources such as the product catalog, po
 
 ## Summary
 
-In this exercise, you created a Copilot Studio agent that served as the foundation for your store operations assistant. You defined the agent’s purpose by assigning it a name and description, and connected it to key knowledge sources such as the product catalog, store policy documents, and website content. These steps enabled the agent to deliver relevant, AI-powered responses based on indexed information.
+In this exercise, you created a Copilot Studio agent that serves as the foundation for your store operations assistant. You defined the agent's purpose by assigning it a name and description, and connected it to knowledge sources such as the product catalog, store policy documents, and website content. These steps allow the agent to return relevant responses based on indexed information.
 
 ### You have successfully completed this exercise, please continue to next one >>
