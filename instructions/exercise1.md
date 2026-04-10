@@ -38,7 +38,7 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
 1. In the pop-up window to create an environment, select **Create**. This will create a new Power Platform developer environment.
 
-   ![](./media/ex3img74.png)
+   > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
    
    >Note: If you are directly navigated to the **Import an Excel or .CSV file pane**, please cancel the process.
 
