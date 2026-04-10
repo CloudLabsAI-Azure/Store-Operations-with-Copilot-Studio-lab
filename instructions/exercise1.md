@@ -10,15 +10,15 @@ In this exercise, you will provision a Power Platform environment, enable Datave
 
 You will be able to complete the following tasks:
 
-- Task 1 : Provisioning power platform environment
+- Task 1: Provisioning Power Platform environment
 
-- Task 2 : Setting up SharePoint IT HelpDesk for incident management
+- Task 2: Setting up SharePoint IT HelpDesk for incident management
 
-## Task 1 : Provisioning power platform environment
+## Task 1: Provisioning Power Platform environment
 
-In this task, you will ingest the datasets to dataverse, which will be created in new power platform environment.
+In this task, you will ingest the datasets into Dataverse, which will be created in a new Power Platform environment.
 
-1. Navigate back to Power Apps portal, please switch to the environment that you created earlier.
+1. Navigate back to the Power Apps portal, and please switch to the environment that you created earlier.
 
     ![](./media/st-store-ex1-g1.png)
 
@@ -40,7 +40,7 @@ In this task, you will ingest the datasets to dataverse, which will be created i
 
    ![](./media/ex3img74.png)
    
-   >Note: If you are directly navigated to **Import an Excel or .CSV file pane**, please cancel the process.
+   >Note: If you are directly navigated to the **Import an Excel or .CSV file pane**, please cancel the process.
 
 1. In the next pane, select **Select from device**.
 
@@ -116,13 +116,13 @@ Select the file **product_catalog.csv (2)** and select **Open (3)**.
 
 In this task, you will create a SharePoint IT HelpDesk site using the built-in IT help desk template. This site includes a **Tickets** list (issue tracker) and an asset manager list. You will use the **Tickets** list to create and track support tickets from your Copilot Studio agent using the SharePoint connector in Power Automate.
 
-1. In a new browser tab, navigate to MyApps portal using the below link.
+1. In a new browser tab, navigate to the MyApps portal using the link below.
 
    ```
    https://myapps.microsoft.com
    ```
 
-1. In the Apps dashboard pane, select **SharePoint** icon.
+1. In the Apps dashboard pane, select the **SharePoint** icon.
 
    ![](./media/st-op-sb-ex1-g1.png)
 
@@ -130,7 +130,7 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
 
 1. Close the pop-up window.
 
-1. Once navigated to SharePoint, select **+ Create site** option.
+1. Once navigated to SharePoint, select the **+ Create site** option.
 
    ![](./media/st-op-sb-ex1-g2.png)
 
@@ -138,7 +138,7 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
 
    ![](./media/st-op-sb-ex1-g3.png)
 
-1. From the available templates, select **IT help desk** template.
+1. From the available templates, select the **IT help desk** template.
 
    ![](./media/st-op-sb-ex1-g4.png)
 
@@ -176,7 +176,7 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
 
    ![](./media/st-op-sb-ex1-g11.png)
 
-   > This is your **SharePoint HelpDesk Site Address** which you will need in Exercise 3 when configuring the agent flow.
+   > This is your **SharePoint HelpDesk Site Address**, which you will need in Exercise 3 when configuring the agent flow.
 
 1. You should now have the following value saved:
    - **Site Address:** `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
