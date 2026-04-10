@@ -48,7 +48,7 @@ In this task, you will configure and publish your StoreOps Assistant to Microsof
 
    ![](./media/st-store-ex3-g134.png)
 
-1. The **StoreOps Assistant** will open in Teams. You can try out some prompts for `Placing Orders`, `Creating Tickets` and validate it.
+1. The **StoreOps Assistant** will open in Teams. You can try out some prompts for `Placing Orders`, `Creating Tickets`, and validate them.
 
    ![](./media/st-store-ex3-g135.png)
 
