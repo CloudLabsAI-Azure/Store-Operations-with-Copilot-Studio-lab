@@ -53,7 +53,7 @@ In this task, you will create a new agent in Microsoft Copilot Studio by definin
 1. Enter the agent instructions in the **Instructions (1)** box, and then select **Save (2)** to apply the changes.
 
    ```
-   You are an AI-powered assistant designed to support store operations staff. Help staff with:
+   You are an AI-powered assistant designed to support store operations and staff. Help staff with:
    - Searching for products from the catalog using natural language
    - Providing accurate answers using connected knowledge sources such as store policies and website content
    - Assisting in placing orders and logging them in Dataverse

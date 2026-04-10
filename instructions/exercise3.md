@@ -25,7 +25,7 @@ In this task, you will create a topic that allows users to place product orders 
 1. Once you are in the designer, on the **Trigger** node, add the description below.
 
    ```
-   This topic helps user to place orders or buy products
+   This topic helps users to place orders or buy products
    ```
 
    ![](./media/st-store-ex3-g2.png)
@@ -68,7 +68,7 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g10.png)
 
-1. For condition the agent will check the product that user shared is present in the list or catalogue or not, for now you will be adding a sample list directly as condition.
+1. For the condition, the agent will check if the product that the user shared is present in the list or catalogue; if not, you will be adding a sample list directly as a condition.
 
 1. In the **Condition** node, select **Select a variable (1)** and choose **ProductName (2)**.
 
@@ -97,7 +97,7 @@ In this task, you will create a topic that allows users to place product orders 
 1. In the **Message** node, enter the following text.
 
    ```
-   The product is not available, please look for other products we have!
+   The product is not available. Please look for other products we have!
    ```
 
    ![](./media/st-store-ex3-g16.png)
@@ -265,7 +265,7 @@ In this task, you will create an action that inserts the collected order details
 
    ![](./media/st-store-ex3-g46.png)
 
-   >**Note:** Here you will just be creating reference variables, as you will pass the actual variables further in this task.
+   >**Note:** Here, you will just be creating reference variables, as you will pass the actual variables further in this task.
 
 1. In the **When an agent calls the flow** node, select **Add an input** to add another parameter.
 
@@ -459,7 +459,7 @@ In this task, you will create an action that inserts the collected order details
 
      ![](./media/st-op-sb-ex3-g79.png)
 
-     >The agent will ask to provide UserName
+     >The agent will ask to provide the UserName
 
    - ```
      John
@@ -467,7 +467,7 @@ In this task, you will create an action that inserts the collected order details
 
      ![](./media/st-op-sb-ex3-g80.png)
 
-     >Next, the agent will ask for delivery address.
+     >Next, the agent will ask for the delivery address.
 
    - ```
      200 Main St, City Hall, 200 N Spring St, Los Angeles, CA 90012, USA
@@ -475,11 +475,11 @@ In this task, you will create an action that inserts the collected order details
      
      ![](./media/st-op-sb-ex3-g81.png)
 
-     >Now the Action will run. It may take few seconds once done, you will get the acknowledgement.
+     >Now the Action will run. It may take a few seconds. Once done, you will get the acknowledgement.
 
      ![](./media/st-op-sb-ex3-g82.png)
 
-1. Now, to verify the creation of record inside the dataverse table, navigate back to power apps portal.
+1. Now, to verify the creation of a record inside the Dataverse table, navigate back to the Power Apps portal.
 
 1. Once you are in the Power Apps portal, select **Tables (1)** from the left menu, and from the list, select the **Order (2)** table.
 
@@ -495,7 +495,27 @@ In this task, you will create an action that inserts the collected order details
 
 In this task, you will build a topic that lets users request support by creating a service ticket. The topic will gather information like the subject, description, user name, and email address. Once the data is collected, the agent will connect to the SharePoint IT HelpDesk site and create a corresponding ticket in the Tickets list with the user's details included. This integration handles ticket creation without manual steps, keeping everything within the Microsoft 365 ecosystem.
 
-1. You will now create a topic that integrates with the SharePoint IT HelpDesk site you set up earlier.
+1. Before building the topic, you need to add a **UserEmail** column to the SharePoint **Tickets** list so the user's email can be stored directly in its own field.
+
+1. Navigate to your **SharePoint IT HelpDesk** site and open the **Tickets** list.
+
+1. In the **Tickets** list, select **+ Add column** from the column header row.
+
+   ![](./media/st-op-sb-ex3-g76.png)
+
+1. From the column type options, select **Single line of text**.
+
+   ![](./media/st-op-sb-ex3-g77.png)
+
+1. In the **Create a column** pane, enter **UserEmail** as the **Name (1)**, and then select **Save (2)**.
+
+   ![](./media/st-op-sb-ex3-g78.png)
+
+1. You can now see the **UserEmail** column added to the **Tickets** list.
+
+   ![](./media/st-op-sb-ex3-g79.png)
+
+1. Now navigate back to **Copilot Studio** to create the topic.
 
 1. From the left navigation pane, select **Agents (1)** and then select your agent, **StoreOps Assistant (2)**.
 
@@ -727,7 +747,7 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-op-sb-ex3-g14.png)
 
-1. Select **Title**, **Issue Description**, and **Priority Value**.
+1. Select **Title**, **Issue Description**, **UserEmail**, and **Priority Value**.
 
    ![](./media/st-op-sb-ex3-g15.png)
 
@@ -770,6 +790,14 @@ In this task, you will build a topic that lets users request support by creating
 1. In the **Dynamic content** pane, select **Description** to insert it into the field.
 
    ![](./media/st-op-sb-ex3-g55.png)
+
+1. In the **UserEmail (1)** field, select the **Dynamic content (2)** icon.
+
+   ![](./media/st-op-sb-ex3-g80.png)
+
+1. In the **Dynamic content** pane, select **Email** to populate the **UserEmail** field.
+
+   ![](./media/st-op-sb-ex3-g81.png)
 
 1. Under **Priority Value**, select the dropdown.
 
@@ -869,10 +897,10 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-store-ex3-g117.png)
 
-1. Again the agent will ask a question to get a description on the ticket. Provide the below description:
+1. Again, the agent will ask a question to get a description of the ticket. Provide the description below:
 
    ```
-   I returned an order and requested for a refund . However, I have not yet received the refunded amount.
+   I returned an order and requested a refund. However, I have not yet received the refunded amount.
    The expected refund timeline has passed, and I would appreciate it if you could look into this matter. Please let me know if any additional information is required from my side.
    ```
 
@@ -898,7 +926,7 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-op-sb-ex3-g72.png)
 
-1. Navigate back to the **SharePoint IT HelpDesk** site and open the **Tickets** list. You can see that a new ticket with the subject **Refund Not Received** has been created. Open the ticket and verify that the **Issue Description** field contains the user's name, email, and description.
+1. Navigate back to the **SharePoint IT HelpDesk** site and open the **Tickets** list. You can see that a new ticket with the subject **Refund Not Received** has been created. Open the ticket and verify that the **Issue Description** field contains the user's name, email, and description, and that the **UserEmail** column displays the user's email address.
 
    ![](./media/st-op-sb-ex3-g73.png)
 
@@ -919,6 +947,6 @@ In this task, you will build a topic that lets users request support by creating
 
 ## Summary
 
-In this exercise, you enhanced your StoreOps Assistant by building workflows that extended beyond static knowledge responses. You created topics that allowed users to place orders and request support, while integrating your agent with Microsoft Dataverse and SharePoint HelpDesk. These additions let your assistant perform end-to-end operations such as order recording and ticket creation for real-world store operations.
+In this exercise, you enhanced your StoreOps Assistant by building workflows that extended beyond static knowledge responses. You created topics that allowed users to place orders and request support while integrating your agent with Microsoft Dataverse and SharePoint HelpDesk. These additions let your assistant perform end-to-end operations such as order recording and ticket creation for real-world store operations.
 
-### You have successfully completed this exercise, please continue to next one >>
+### You have successfully completed this exercise. Please continue to the next one >>

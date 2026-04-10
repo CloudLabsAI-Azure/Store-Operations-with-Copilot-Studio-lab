@@ -32,7 +32,7 @@ The architecture enables end-to-end store operations automation by ingesting, pr
 
 ## Architecture Diagram
 
-![](./media/archv3.png)
+![](./media/store-ops-archi-v2.png)
 
 ## Explanation of Components
 
