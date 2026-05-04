@@ -110,40 +110,37 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
    > **Note:** We are signing in to the Power Apps portal because it automatically assigns a Developer license, which is required to create and use a Developer environment in the next steps.
 
+1. In the Power Apps portal, select **Tables (1)** from the left menu and select **Create a database (2)**.
+
+   ![](./media/ex3img71.png)
+
+   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 10**.
+
+1. In the new pane for creating a new database, select **Create my Database**.
+
+   ![](./media/ex3img72up.png)
+
+1. Once done, select **Create with Excel or .CSV file**.
+
+   ![](./media/st-store-ex1-g2.png)
+
+1. In the pop-up window to create an environment, select **Create**. This will create a new Power Platform developer environment.
+
+   > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
+   
+1. If you are directly navigated to the **Upload an Excel or .CSV file pane**, please cancel the process.
+
 1. Open a new browser tab and navigate to the Power Platform admin center by entering the following URL:
 
    ```
    https://admin.powerplatform.microsoft.com
    ```
 
-1. In the **Power Platform admin center**, select **Manage** from the left navigation pane.
-
-   ![](./media/nd-d2-cor-g-1.png)
-
-1. In the Power Platform admin center, select **Environments (1)** from the left navigation pane, and then select **New (2)** to create a new environment.
-
-   ![](./media/d2-coor-gs-g2.png)
-
-1. In the **New environment** pane, configure the environment with the following settings, and then select **Next (3)**:
-
-   - Enter **ODL_User <inject key="DeploymentID" enableCopy="false"></inject>'s Environment** in the **Name (1)** field.
-   - Select **Developer (2)** from the **Type** dropdown.
-
-      ![](./media/nimg25.png)
-
-1. In the **Add Dataverse** pane, leave all settings as default, and then select **Save**.
-
-   ![](./media/d2-coor-gs-g4.png)
-
-   > **Environment foundation:** This step creates the foundational environment that will support your agents with company-specific data and knowledge sources.
-
-   > **Note:** Environment provisioning may take 10-15 minutes to complete. Wait until the status shows as ready before proceeding.
-
-   > **Note:** If you see an error stating that the environment list cannot be displayed, this is expected while the environment is being created in the background. After 10-15 minutes, refresh the browser and the environment should appear.
-
 1. In the **Power Platform admin center**, select **Manage (1)**, choose **Environments (2)**, and then select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (3)**.
 
    ![](./media/uppowadminimg1.png)
+
+   >Note: If you’re unable to see any environments, it may still be getting created in the background. This is expected behavior in Power Platform. Please wait 15–20 minutes and refresh the page to view the environment.
 
 1. On the environment page, select **See all** under **S2S apps**.
 
@@ -165,7 +162,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
    ![](./media/pro-activ-gg-g5.png)
 
-1. Under **Business unit**, enter **org (1)** in the search box, and then select the available business unit from the list **(2)**.
+1. Under Business Unit, click on the text input field to view the available options, and then select any one of the listed business units.
 
    ![](./media/pro-activ-gg-g6.png)
 

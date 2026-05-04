@@ -22,25 +22,7 @@ In this task, you will ingest the datasets into Dataverse, which will be created
 
     ![](./media/st-store-ex1-g1.png)
 
-1. In the Power Apps portal, select **Tables (1)** from the left menu and select **Create a database (2)**.
-
-   ![](./media/ex3img71.png)
-
-   >**Note:** If you are not able to see **Create Database** option and you are able to see some tables already, please continue from **Step 4**.
-
-1. In the new pane for creating a new database, select **Create my Database**.
-
-   ![](./media/ex3img72up.png)
-
-1. Once done, select **Create with Excel or .CSV file**.
-
-   ![](./media/st-store-ex1-g2.png)
-
-1. In the pop-up window to create an environment, select **Create**. This will create a new Power Platform developer environment.
-
-   > **Note:** If you see a message stating you don’t have permission to create here, wait for a few minutes and refresh the page, as it may take some time for the environment to be ready.
-   
-   >Note: If you are directly navigated to the **Import an Excel or .CSV file pane**, please cancel the process.
+1. From the left menu of power apps portal, select **Tables** from left menu, and click on **Create with Excel or .CSV file**.
 
 1. In the next pane, select **Select from device**.
 
@@ -179,7 +161,11 @@ In this task, you will create a SharePoint IT HelpDesk site using the built-in I
    > This is your **SharePoint HelpDesk Site Address**, which you will need in Exercise 3 when configuring the agent flow.
 
 1. You should now have the following value saved:
-   - **Site Address:** `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
+   - **Site Address:** 
+
+    ```
+    https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>
+    ```
 
 <validation step="9ec40b7e-aa69-4359-a1f4-833d8ca8d8b4" />
  

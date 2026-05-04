@@ -217,21 +217,27 @@ In this task, you will create a topic that allows users to place product orders 
 
    ![](./media/st-store-ex3-g39.png)
 
-1. Now that you have successfully created the flow to collect the order details, you need to create an agent flow (formerly known as Action) to add these order details to the Dataverse table.
+1. Now that you have successfully created the topic to collect the order details, you need to create an agent flow (formerly known as Action) to add these order details to the Dataverse table.
 
 ## Task 2: Define an Agent Flow to Insert Order Details into Dataverse
 
 In this task, you will create an action that inserts the collected order details, such as customer name, product name, and delivery address into a Dataverse table. This Agent Flow will be triggered by the topic you created earlier and will handle the data insertion into the appropriate table within Microsoft Dataverse.
 
-1. From the left navigation pane, select **Flows (1)** and then choose **New agent flow (2)** to create a flow that will store order details in Dataverse.
+1. Now from the **Topics** page, select the topic **Place Orders**.
 
-   ![](./media/st-store-ex3-g40.png)
+   ![](./media/imgnw1.png)
 
-1. In the **Add a trigger** pane, search for **when an agent calls the flow (1)** and select **When an agent calls the flow (2)**.
+1. Navigate to last node, select **+** to add a new node below the **Question** node.
 
-   ![](./media/st-store-ex3-g41.png)
+   ![](./media/st-store-ex3-g68.png)
 
-   > **Note:** After searching, you may need to scroll down to locate the **When an agent calls the flow** option in the results.
+1. From the list select **Add a tool** and click on **New Agent flow**.
+
+   ![](./media/imgnw2.png)
+
+1. Now, you will be navigated to **flows** page, select **When an agent calls the flow** node.
+
+   ![](./media/imgnw3.png)
 
 1. In the **When an agent calls the flow** node, select **Add an input** to add input parameters.
 
@@ -315,7 +321,7 @@ In this task, you will create an action that inserts the collected order details
 
 1. In the **Confirmation required** page, select **Allow access** to grant permissions for the **Microsoft Dataverse** connection.
 
-   ![](./media/st-store-ex3-g56.png)
+   ![](./media/imgnw4.png)
 
 1. In the **Add a new row** action, select **Order** in the **Table name** field.
 
@@ -364,6 +370,10 @@ In this task, you will create an action that inserts the collected order details
 1. From the top-right corner, select **Publish** to save the agent flow.
 
    ![](./media/st-store-ex3-g65.png)
+
+1. Once published, a pop window will appear, please select **Stay in flow** option.
+
+   ![](./media/imgnw10.png)
 
 1. On the **Overview (1)** tab, select **Edit (2)** to modify the agent flow details.
 
@@ -431,9 +441,9 @@ In this task, you will create an action that inserts the collected order details
 
 1. Now use the **Test** area in the right to validate the working of the flow.
 
-1. In the top menu, select **New test session**.
+1. From the top-right corner, select **Test** to test the agent.
 
-   ![](./media/st-op-sb-ex3-g76.png)
+   ![](./media/st-store-ex2-g21.png)
 
 1. Provide the prompts as given below and check the flow of the agent:
 
@@ -499,21 +509,19 @@ In this task, you will build a topic that lets users request support by creating
 
 1. Navigate to your **SharePoint IT HelpDesk** site and open the **Tickets** list.
 
+   ![](./media/imgnw5.png)
+
 1. In the **Tickets** list, select **+ Add column** from the column header row.
 
-   ![](./media/st-op-sb-ex3-g76.png)
+   ![](./media/imgnw6.png)
 
-1. From the column type options, select **Single line of text**.
+1. From the column type options, select **Text** and click on **Next**.
 
-   ![](./media/st-op-sb-ex3-g77.png)
+   ![](./media/imgnw7.png)
 
 1. In the **Create a column** pane, enter **UserEmail** as the **Name (1)**, and then select **Save (2)**.
 
-   ![](./media/st-op-sb-ex3-g78.png)
-
-1. You can now see the **UserEmail** column added to the **Tickets** list.
-
-   ![](./media/st-op-sb-ex3-g79.png)
+   ![](./media/imgnw11.png)
 
 1. Now navigate back to **Copilot Studio** to create the topic.
 
@@ -653,15 +661,15 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-op-sb-ex3-g43.png)
 
-1. From the left navigation pane, select **Flows (1)** and then choose **+ New agent flow (2)**.
+1. Once created, from the topics page, open `Ticket Creation` topic.
 
-   ![](./media/st-store-ex3-g98.png)
+1. In the topic, navigate to the last node, click on **+** to add a new node.
 
-1. In the **Add a trigger** pane, search for **when an agent calls the flow (1)** and select **When an agent calls the flow (2)**.
+1. From the list select Add a tool and click on New Agent flow.
 
-   ![](./media/st-store-ex3-g41.png)
+1. Once done, you will be navigated to **flow** designer page. Select **When an agent calls the flow** node.
 
-   > **Note:** After searching, you may need to scroll down to locate the **When an agent calls the flow** option in the results.
+   ![](./media/imgnw3.png)
 
 1. In the **When an agent calls the flow** node, select **+ Add an input** to add input parameters.
 
@@ -680,8 +688,6 @@ In this task, you will build a topic that lets users request support by creating
    ![](./media/st-store-ex3-g99.png)
 
 1. Under **Choose the type of user input**, select **Text**.
-
-   ![](./media/st-op-sb-ex3-g45.png)
 
 1. In the **When an agent calls the flow** node, enter the following input name under **Text (1)**, and then select **+ Add an input (2)**.
 
@@ -731,13 +737,13 @@ In this task, you will build a topic that lets users request support by creating
 
 1. In the **Confirmation required** page, select **Allow access** to grant permissions for the **SharePoint** connection.
 
-   ![](./media/st-op-sb-ex3-g11.png)
+   ![](./media/imgnw9.png)
 
 1. In the **Create item** action, under **Site Address**, from the dropdown select the IT HelpDesk site you created. If no values are shown in the dropdown, then manually enter the site address that you copied earlier.
 
    ![](./media/st-op-sb-ex3-g12.png)
 
-   > **Note:** The Site Address should be in the format: `https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>`
+   > **Note:** The Site Address should be in the format: **https://cloudlabssandbox.sharepoint.com/sites/Store-OP-<inject key="Deployment ID" enableCopy="false"></inject>**
 
 1. Under **List Name**, select the dropdown (1) and choose **Tickets (2)**.
 
@@ -749,7 +755,7 @@ In this task, you will build a topic that lets users request support by creating
 
 1. Select **Title**, **Issue Description**, **UserEmail**, and **Priority Value**.
 
-   ![](./media/st-op-sb-ex3-g15.png)
+   ![](./media/imgnw12.png)
 
 1. In the **Title (1)** field, select the **Dynamic content (2)** icon and choose **Subject**.
 
@@ -793,11 +799,11 @@ In this task, you will build a topic that lets users request support by creating
 
 1. In the **UserEmail (1)** field, select the **Dynamic content (2)** icon.
 
-   ![](./media/st-op-sb-ex3-g80.png)
+   ![](./media/imgnw13.png)
 
 1. In the **Dynamic content** pane, select **Email** to populate the **UserEmail** field.
 
-   ![](./media/st-op-sb-ex3-g81.png)
+   ![](./media/imgnw14.png)
 
 1. Under **Priority Value**, select the dropdown.
 
@@ -814,6 +820,10 @@ In this task, you will build a topic that lets users request support by creating
 1. Now, you have successfully set up your agent flow. Select **Publish** from the top-right corner to save the flow.
 
    ![](./media/st-op-sb-ex3-g22.png)
+
+1. Once the flow is published, you will see a pop up window, please select **Stay in flow** option.
+
+   ![](./media/imgnw10.png)
 
 1. On the flow page, ensure you are on the **Overview (1)** tab and select **Edit (2)** from the **Details** section.
 
