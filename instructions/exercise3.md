@@ -597,7 +597,7 @@ In this task, you will build a topic that lets users request support by creating
 
    ![](./media/st-op-sb-ex3-g31.png)
 
-1.  From the list, select **Ask a question**.
+1. From the list, select **Ask a question**.
 
    ![](./media/st-op-sb-ex3-g32.png)
 
